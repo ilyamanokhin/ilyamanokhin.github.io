@@ -6,7 +6,7 @@ const uglify = require('gulp-uglify');//сжатие js
 const del = require('del');//удаление всех файлов из папки build
 const browserSync = require('browser-sync').create();//синхронизация браузера
 const less = require('gulp-less');//препроцессор less
-const smartgrid = require('smart-grid');//фреймворк smar-grid
+const smartgrid = require('smart-grid');//фреймворк smart-grid
 const cssFiles = [
 	'./node_modules/normalize.css/normalize.css',//сброс стилей
 	'./src/css/some.css',
@@ -35,8 +35,8 @@ function styles () {
 	return gulp.src(cssFiles)
 		.pipe(concat('all.css'))
 		.pipe(autoprefixer({
-            browsers: ['> 0.1%'],//для браузеров, которые используются в мире больше 0.1%
-            cascade: false
+            // browsers: ['> 0.1%'],//для браузеров, которые используются в мире больше 0.1%
+            // cascade: false
         }))
         .pipe(cleanCSS({
         	level:2 //жесткое сжатие css
@@ -49,8 +49,8 @@ function sless () {
 	return gulp.src(config.root + config.css.src)
 		.pipe(less())
 		.pipe(autoprefixer({
-            browsers: ['> 0.1%'],//для браузеров, которые используются в мире больше 0.1%
-            cascade: false
+            // browsers: ['> 0.1%'],//для браузеров, которые используются в мире больше 0.1%
+            // cascade: false
         }))
 		.pipe(gulp.dest(config.css.dest))
 		.pipe(browserSync.stream());//обновление css файлов  

@@ -18,6 +18,10 @@
     "gulp-uglify": "^3.0.1",
     "smart-grid": "^2.1.2"
   },
+    "browserslist": [
+      "> 0.1%",
+      "last 4 versions"
+    ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
