@@ -10,7 +10,11 @@
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
+<<<<<<< HEAD
     "gulp-autoprefixer": "^6.1.0",
+=======
+    "gulp-autoprefixer": "^6.0.0",
+>>>>>>> c0f61ae61f1395cfc69490bb9bf61ecab1b20d1d
     "gulp-clean-css": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-group-css-media-queries": "^1.2.2",
@@ -18,10 +22,17 @@
     "gulp-uglify": "^3.0.1",
     "smart-grid": "^2.1.2"
   },
+<<<<<<< HEAD
   "browserslist": [
     "> 0.1%",
     "last 4 versions"
   ],
+=======
+    "browserslist": [
+      "> 0.1%",
+      "last 4 versions"
+    ],
+>>>>>>> c0f61ae61f1395cfc69490bb9bf61ecab1b20d1d
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
