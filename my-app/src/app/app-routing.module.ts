@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ProjectComponent } from './home/project/project.component';
-import { TetrisComponent } from './home/project/tetris/tetris.component';
-import { PortfolioComponent } from './home/portfolio/portfolio.component';
+import { HomeComponent } from './page/home/home.component';
+import { ProjectComponent } from './page/home/project/project.component';
+import { TetrisComponent } from './page/home/project/tetris/tetris.component';
+import { PortfolioComponent } from './page/home/portfolio/portfolio.component';
+import { AppComponent } from './app.component';
 
 
 const routes: Routes = [
-    {path:'', component:HomeComponent},
-    {path:'project', component: ProjectComponent},
-    {path:'tetris', component: TetrisComponent},
-    {path:'portfolio', component: PortfolioComponent}
+  {path:'tetris', component: TetrisComponent},
 ];
 
 @NgModule({
