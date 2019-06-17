@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './page/home/home.component';
-import { ProjectComponent } from './page/home/project/project.component';
 import { TetrisComponent } from './page/home/project/tetris/tetris.component';
-import { PortfolioComponent } from './page/home/portfolio/portfolio.component';
-import { AppComponent } from './app.component';
+import { VrJazzComponent } from './page/home/portfolio/vr-jazz/vr-jazz.component';
 
 
+// конечный путь проекта или проекта-сайта без хедера
 const routes: Routes = [
   {path:'tetris', component: TetrisComponent},
+  {path:'vr-jazz', component: VrJazzComponent},
 ];
 
 @NgModule({

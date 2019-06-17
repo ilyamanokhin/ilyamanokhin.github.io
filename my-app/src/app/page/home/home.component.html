@@ -1,21 +1,3 @@
-<header id="js-nav" class="header">
-    <div class="header__navbar" >
-      <div class="container">
-        <div class="header__inner">
-          <div class="header__logo"><span class="logo">Портфолио</span></div>
-          <nav class="header__nav" role="navigation">
-            <ul class="nav">
-              <li><a [routerLink]="'/'">Главная</a></li>
-              <li><a [routerLink]="'/project'">Мои project</a></li>
-              <li><a [routerLink]="'/portfolio'">Мои portfolio</a></li>
-              <li><a href="">Контакты</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-</header> -->
-
 <section class="intro"  id="home">
     <div class="intro__bg"></div>
     <div class="intro__text">
@@ -23,12 +5,7 @@
     </div>
 </section>
   
-<section  class="works" id="works">
-    <div class="container">
-      <h2 class="works__title title">Мои работы</h2>
-    </div>
-</section>
+
 <app-project></app-project>
-
-
+<app-portfolio></app-portfolio>
 

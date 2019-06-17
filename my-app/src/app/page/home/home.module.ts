@@ -1,22 +1,26 @@
 import { NgModule } from '@angular/core';
-import { ProjectComponent } from './project/project.component';
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
 import { CommonModule } from '@angular/common';
-import { TetrisComponent } from './project/tetris/tetris.component';
+import { HomeComponent } from './home.component';
+import { ProjectComponent } from './project/project.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { TetrisComponent } from './project/tetris/tetris.component';
+import { HomeRoutingModule } from './home-routing.module';
+import { VrJazzComponent } from './portfolio/vr-jazz/vr-jazz.component';
+
+
 
 
 @NgModule({
     declarations:[
         HomeComponent,
         ProjectComponent,
+        PortfolioComponent,
         TetrisComponent,
-        PortfolioComponent
+        VrJazzComponent,
     ],
     imports: [
         CommonModule,
-        HomeRoutingModule,
+        HomeRoutingModule
     ]
 })
 export class HomeModule {}
