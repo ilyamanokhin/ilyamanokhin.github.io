@@ -14,7 +14,6 @@ import { PageRoutingModule } from './page-routing.module';
         CommonModule,
         PageRoutingModule,
         HomeModule,
-       
     ]
 })
 export class PageModule {}
