@@ -6,9 +6,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TetrisComponent } from './project/tetris/tetris.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { VrJazzComponent } from './portfolio/vr-jazz/vr-jazz.component';
-
-
-
+import { BookkeepingModule } from './project/bookkeeping/bookkeeping.module';
 
 @NgModule({
     declarations:[
@@ -20,7 +18,8 @@ import { VrJazzComponent } from './portfolio/vr-jazz/vr-jazz.component';
     ],
     imports: [
         CommonModule,
-        HomeRoutingModule
+        HomeRoutingModule,
+        BookkeepingModule
     ]
 })
 export class HomeModule {}
