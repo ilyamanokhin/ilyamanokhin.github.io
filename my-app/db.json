@@ -5,6 +5,18 @@
       "email": "wfm@mail.ru",
       "password": "12345678",
       "name": "Администратор"
+    },
+    {
+      "email": "manokhin.il@yanex.ru",
+      "password": "123456",
+      "name": "Илья",
+      "id": 2
+    },
+    {
+      "email": "lost_heaven142@mail.ru",
+      "password": "142142",
+      "name": "Lost",
+      "id": 3
     }
   ],
   "bill": {

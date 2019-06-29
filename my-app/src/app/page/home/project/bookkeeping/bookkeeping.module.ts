@@ -5,6 +5,7 @@ import { BookkeepingComponent } from './bookkeeping.component';
 import { AuthService } from './shared/services/auth.service';
 import { UsersService } from './shared/services/user.services';
 import { HttpClientModule } from '@angular/common/http';
+import { SystemModule } from './system/system.module';
 
 @NgModule({
     declarations:[
@@ -12,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
     ],
     imports:[
         AuthModule,
+        SystemModule,
         BookkeepingRoutingModule,
         HttpClientModule,
         
