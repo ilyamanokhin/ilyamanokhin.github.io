@@ -28,11 +28,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less",
-              "./src/assets/vendor.css",
-              "./src/assets/theme.css"
+              "src/styles.less"
             ],
             "scripts": []
+
           },
           "configurations": {
             "production": {
