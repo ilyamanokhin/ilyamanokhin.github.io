@@ -29,7 +29,7 @@ export class UsersService extends BaseApi{
     getUserByEmail(email: string) {
         return this.get(`users?email=${email}`)
             .pipe(
-                map((user: User[]) =>[0] ? user[0] : undefined)
+                map((users: User[]) =>users[0] ? users[0] : undefined)
             )
     }
 
