@@ -1,0 +1,139 @@
+
+            <div class="main_mc">
+
+                <header>
+                        <img class="header_logo" src="./assets/portfolio/obed-master.component/images/logo_obed.png" alt="logo">
+                        <div class="header_phone">+7 (495) 783 48 33</div>
+                </header>
+
+                    <div class="main_mc_first">
+
+                        <img class="main_mc_first_logo2" src="./assets/portfolio/obed-master.component/images/mastercard-logo2.png">
+                        <p>Оплачивай заказы<br>
+                           картой <span class="red">MASTER<span class="yellow">CARD</span></span> <br>
+                           и получи призы<br>
+                           от кхл!<br>
+                        </p>
+                        <a href="#mc_hide_me" class="button_mc_first">Участвовать </a>
+                    </div>
+
+                    <div class="main_mc_second">
+                        <h2> Как получить баллы</h2>
+                        <p class="small">которые Вы можете обмеять на призы</p>
+                        <img src="./assets/portfolio/obed-master.component/images/mastercard_picture.png">
+                            <div class="main_mc_second_spisok">
+                                <ul >
+
+                                    <li><p>Зайдите на сайт или в приложние <a href="#">Obed.ru</a></p></li>
+
+                                    <li><p> Выберете любой из сотен ресторанов<br> по Вашему адресу</p></li>
+
+                                    <li><p>Закажите блюда на сумму более 500 Р</p></li>
+
+                                    <li><p>Оплатите заказ картой MfsterCard</p></li>
+
+                                    <li><p>Получите удвоеный чек</p></li>
+                                    <p class="ready_mc"><span class="orange">Готово!</span><br/>
+                                        Бонусы Ваши! Вы можете обменять <br/> их на призы <a href="mc"> в личном кабинете MasterCard</a>
+                                    </p>
+                                </ul>
+                            </div>
+                    </div>
+
+                    <div class="main_mc_third">
+
+                        <h2 class="white" >Сотни призов от кхл! </h2>
+                            <div class="main_mc_third_ball">
+                                <img class="circle" src="./assets/portfolio/obed-master.component/images/1.png" alt="icon">
+                                <p>500 Баллов</p>
+                            </div>
+
+                             <div class="main_mc_third_ball">
+                                 <img class="circle" src="./assets/portfolio/obed-master.component/images/1.png" alt="icon">
+                                 <p>2 500 баллов</p>
+                             </div>
+
+                             <div class="main_mc_third_ball">
+                                 <img class="circle" src="./assets/portfolio/obed-master.component/images/1.png" alt="icon">
+                                 <p>5 000 Баллов</p>
+                             </div>
+
+                              <div class="main_mc_third_ball">
+                                  <img class="circle" src="./assets/portfolio/obed-master.component/images/1.png" alt="icon">
+                                  <p>10 000 баллов</p>
+                               </div>
+                        <p>Еще больше призов на сайте <a href="mc">MasterCard</a> </p>
+                    </div>
+
+
+                <div class="main_mc_fourth" id='mc_hide_me'>
+                    <h2 >Стань Участником <br>
+                        прямо сейчас
+                    </h2>
+                    <p class="small">Нужно только указать номер телефона</p>
+                    <form>
+                        <input type="text" class="data" name="contactPhoneField" placeholder="Телефон" required>
+
+                            <input id="isready1" class="mc_checkbox" type="checkbox">
+                            <label for="isready1" class="mc_checkbox_label">Я  ознакомлен с
+                                <a href="#rules">правилами акции</a></label>
+                          <br>
+
+                        <input id="isready2" class="mc_checkbox" type="checkbox" >
+                        <label for="isready2" class="mc_checkbox_label">Я принимаю <a href="#rules">политику конфединциальности</a></label>
+                        <br>
+
+                        <input type="submit" class="button" id='mc_registration_ok' value="УЧАСТВОВАТЬ" disabled="disabled" >
+                     </form>
+                </div>
+                <div class="main_mc_five" id='mc_show_me'>
+                    <h2>Спасибо за регистрацию!</h2>
+                    <img class="main_mc_five_ok" src="./assets/portfolio/obed-master.component/images/ok.png">
+                    <p class="main_mc_five_bonus">Отслеживайте баллы на сайте <a href="http://www.obed.ru">Obed.ru</a>  в разделе "Бонусы"<br>
+                        или в личном кабинете <a href="#">MasterCard</a>
+                    </p>
+                    <div class="main_mc_five_logo">
+                        <p class="big">
+                            Пора <br>
+                            Получать<br>
+                            Призы! <br>
+                        </p>
+                        <a href="#"><img class="main_mc_five_logotype" src="./assets/portfolio/obed-master.component/images/logo1.png" alt=""></a>
+                        <a href="#"><img class="main_mc_five_logotype" src="./assets/portfolio/obed-master.component/images/logo2.png" alt=""></a>
+                        <a href="#"><img class="main_mc_five_logotype" src="./assets/portfolio/obed-master.component/images/logo3.png" alt=""></a>
+                        <a href="#"><img class="main_mc_five_logotype" src="./assets/portfolio/obed-master.component/images/logo4.jpg" alt=""></a>
+                        <a class="show_more" href="#">Посмотреть все рестораны</a>
+                    </div>
+                </div>
+                <footer>
+                    © 2004-2017, Obed.ru – единая служба заказов
+                </footer>
+            </div>
+            <script>
+            (function(){
+              var button = document.querySelector("input[value='УЧАСТВОВАТЬ']");
+              var checkbox1 = document.getElementById("isready1");
+              var checkbox2 = document.getElementById("isready2");
+              checkbox1.addEventListener("click", checkTerms);
+              checkbox2.addEventListener("click", checkTerms);
+              function checkTerms(){
+                if(isChecked(this)){
+                  button.disabled = false;
+                }
+                else{
+                  button.disabled = true;
+                }
+              }
+              function isChecked(element){
+                return element.checked ? true : false;
+              }
+            })();
+
+            </script>
+            <script>
+                document.getElementById('mc_registration_ok').onclick = function() {
+                    document.getElementById('mc_hide_me').style.display = 'none';
+                    document.getElementById('mc_show_me').style.display = 'block';
+                }
+            </script>
+  
