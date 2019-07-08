@@ -22,3 +22,5 @@ then add comand
 
 EX.
 git merge origin/project-decoreto --allow-unrelated-histories
+
+TODO настроить gulp file
