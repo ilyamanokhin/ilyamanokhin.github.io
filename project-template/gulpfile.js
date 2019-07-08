@@ -96,3 +96,4 @@ gulp.task('build', gulp.series(clean,
 gulp.task('del', gulp.series('build', 'watch'));//gulp del
 
 gulp.task('grid', grid);//gulp grid
+//TODO вынести smart-grid
