@@ -1,0 +1,240 @@
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  
+    .header__logo {
+      float: left;
+      width: 50%;
+    }
+  
+    .header__nav {
+      float: left;
+      width: 50%;
+    }
+  
+    .header__nav li {
+      float: left;
+      width: 25%;
+    }
+  
+    .works__col {
+      float: left;
+      width: 33.33333%;
+    }
+  
+    .social li {
+      float: left;
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  
+    .header__logo {
+      float: left;
+      width: 33.33333%;
+    }
+  
+    .header__nav {
+      float: left;
+      width: 58.33333%;
+    }
+  
+    .header__nav {
+      margin-left: 8.33333%;
+    }
+  
+    .header__nav li {
+      float: left;
+      width: 25%;
+    }
+  
+    .works__col {
+      float: left;
+      width: 33.33333%;
+    }
+  
+    .social li {
+      float: left;
+      width: 25%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .header__nav a {
+      font-size: 10px;
+      padding: 0;
+    }
+  
+    .works__effect:hover h3 {
+      -webkit-transform: none;
+      transform: none;
+    }
+  
+    .works__effect:hover a {
+      -webkit-transform: none;
+      transform: none;
+    }
+  
+    .works__descr h3 {
+      -webkit-transform: none;
+      transform: none;
+    }
+  
+    .works__descr a {
+      background-color: #7b4397;
+      -webkit-transform: none;
+      transform: none;
+    }
+  
+    .works__effect figcaption::before,
+    .works__effect figcaption::after {
+      border: none;
+      -webkit-transform: none;
+      transform: none;
+    }
+  
+    .works__effect:hover figcaption::before,
+    .works__effect:hover figcaption::after {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  
+    .social i {
+      font-size: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .intro__hello {
+      font-size: 20px;
+    }
+  
+    .intro h1 {
+      font-size: 30px;
+    }
+  
+    .header__nav li {
+      padding: 0 5px;
+    }
+  
+    .works,
+    .skills,
+    .contacts {
+      padding-top: 140px;
+    }
+  
+    .works__effect:hover h3 {
+      -webkit-transform: none;
+      transform: none;
+    }
+  
+    .works__effect:hover a {
+      -webkit-transform: none;
+      transform: none;
+    }
+  
+    .works__descr h3 {
+      -webkit-transform: none;
+      transform: none;
+    }
+  
+    .works__descr a {
+      background-color: #7b4397;
+      -webkit-transform: none;
+      transform: none;
+    }
+  
+    .works__effect figcaption::before,
+    .works__effect figcaption::after {
+      border: none;
+      -webkit-transform: none;
+      transform: none;
+    }
+  
+    .works__effect:hover figcaption::before,
+    .works__effect:hover figcaption::after {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  
+    .skills__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+  
+    .skills ul li {
+      font-size: 12px;
+    }
+  
+    .skills ul i {
+      font-size: 15px;
+    }
+  
+    .social li {
+      text-align: center;
+      padding: 25px 0;
+      font-size: 10px;
+    }
+  
+    .social i {
+      font-size: 12px;
+    }
+  }
+  
+  @media print {
+    *,
+    *:before,
+    *:after {
+      background: transparent !important;
+      color: #000 !important;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+  
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+  
+    a[href^="#"]:after {
+      content: "";
+    }
+  
+    img {
+      page-break-inside: avoid;
+    }
+  
+    img {
+      max-width: 100% !important;
+    }
+  
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+  
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+  }
