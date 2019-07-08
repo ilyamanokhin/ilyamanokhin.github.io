@@ -1,0 +1,1189 @@
+@charset 'UTF-8';
+/* Slider */
+// .slick-loading .slick-list
+// {
+//     background: #fff url('./ajax-loader.gif') center center no-repeat;
+// }
+
+// /* Icons */
+// @font-face
+// {
+//     font-family: 'slick';
+//     font-weight: normal;
+//     font-style: normal;
+
+//     src: url('./fonts/slick.eot');
+//     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+// }
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -25px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '←';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '→';
+}
+
+.slick-next
+{
+    right: -25px;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+.slick-next:before
+{
+    content: '→';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '←';
+}
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -25px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: black;
+}
+
+
+
+
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+a:hover{
+	cursor: pointer;
+}
+header{
+	color: #006699;
+}
+header .strip{
+	background: url(src/assets/portfolio/pulsar.component/images/1.png) no-repeat;
+	height: 30px;
+	background-size: cover;
+}
+header .head{
+    padding-top: 45px;
+    padding-bottom: 10px;
+    box-shadow: 0px 11px 15px -9px #777777;
+}
+header .phone a{
+	position: relative;
+
+
+}
+header .phone a:before{
+	content: "";
+	display: block;
+	position: absolute;	
+	left: -40px;
+	top: 5px;
+	background: url('src/assets/portfolio/pulsar.component/images/phone.png') 0px 0px no-repeat;
+	width: 30px;
+	height: 35px;
+}
+header .time_work{
+	font-size: 14pt;
+	font-family: RobotoBold;
+	padding-top: 5px;
+	padding-left: 20px;
+    text-align: center;
+}
+header .mail{
+	padding-left: 20px;
+    font-size: 13pt;
+    text-align: center;
+}
+header .phone{
+	font-family: RobotoBold;
+	padding-left: 95px;
+	font-size: 16pt;
+}
+header .recall{
+    color: #fff;
+    background: #fd1813;
+    display: block;
+    text-align: center;
+    padding: 8px 0px;
+    border-radius: 5px;
+    margin-top: 2px;
+    font-size: 12pt;
+}
+header .recall:hover{
+	background: #00a1dd;
+	text-decoration: none;
+}
+header .recall:focus{
+	text-decoration: none;
+	outline: none;
+}
+.main_block{
+    background: url(src/assets/portfolio/pulsar.component/images/2.png) 65px -100px no-repeat;
+    padding-bottom: 90px;
+}
+.title_main{
+	font-size: 45pt;
+	font-family: RobotoBold;
+	text-align: center;
+	text-transform: uppercase;
+	color: #333333;
+	line-height: 45px;
+	margin-top: 15px;
+}
+.title_main span{
+	display: block;
+	font-size: 31pt;
+}
+.subtitle_main{
+	font-family: Roboto;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 16pt;
+	margin-top: 90px;
+}
+.main_block .price{
+	background: url(src/assets/portfolio/pulsar.component/images/3.png) center no-repeat;
+    color: #fff;
+    position: relative;
+    font-size: 70pt;
+    font-family: RobotoBlack;
+    text-align: left;
+    padding-left: 110px;
+}
+.main_block .price:after{
+	content: "";
+    display: block;
+    position: absolute;
+    right: 105px;
+    top: 60px;
+    background: url(src/assets/portfolio/pulsar.component/images/4.png) no-repeat;
+    width: 32px;
+    height: 40px;
+}
+.main_block form{
+	background: #fff;
+	border-radius: 5px;
+    box-shadow: 0px 0px 15px 1px #cacaca;
+	padding: 30px 0px;
+	margin-top: 40px;
+}
+.main_block form input{
+	font-family: Roboto;
+    color: #000;
+    border: none;
+    border-bottom: 1px solid #000;
+    display: block;
+    margin: 0px auto;
+    width: 211px;
+    margin-bottom: 30px;
+}
+.main_block form input:focus{
+	outline: none;
+}
+.main_block form button{
+    color: #fff;
+    background: #fd1813;
+    display: block;
+    text-align: center;
+    padding: 8px 70px;
+    border-radius: 5px;
+    margin-top: 2px;
+    font-size: 12pt;
+    margin: 0px auto;
+    border: none;
+}
+.title{
+    color: #006699;
+    font-family: RobotoBold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 33pt;
+    margin-bottom: 40px;
+    margin-top: 25px;
+}
+.point{
+	text-align: center;
+	box-shadow: 0px 0px 15px 1px #cacaca;
+	border-radius: 5px;
+	background: #fff;
+	height: 215px;
+	position: relative;
+}
+.point:after{
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 65px;
+	left: 40%;
+	width: 37px;
+	height: 3px;
+	background: #fd1813;
+}
+.point img{
+	padding-top: 35px;
+}
+.installation_cost .row:nth-child(2){
+	margin-bottom: 15px;
+}
+.installation_cost .row .col-lg-3:nth-child(1) img{
+	padding-top: 45px;
+}
+.installation_cost .row .col-lg-3:nth-child(4) img{
+	padding-top: 50px;
+}
+.flat{
+	background: url('src/assets/portfolio/pulsar.component/images/18.png');
+	padding-bottom: 90px;
+}
+.flat .title{
+	color: #fff;
+}
+.installation_cost{
+	background: url(src/assets/portfolio/pulsar.component/images/5.png) center no-repeat;
+	padding-bottom: 27px;
+	background-size: cover;
+}
+.installation_cost .col-lg-3{
+	width: 235px;
+}
+.installation_cost .row .col-lg-3:first-child{
+	margin-left: 117px;
+}
+.installation_cost .subtitel{
+	font-family: RobotoBold;
+	text-transform: uppercase;
+	position: absolute;
+	bottom: 15px;
+	width: 100%;
+}
+.one_flat{
+	height: 353px;
+	position: relative;
+	background-color: #fff;
+	padding-top: 40px;
+	padding-left: 30px;
+	padding-right: 50px;
+	overflow: hidden;
+}
+.one_flat img{
+	position: absolute;
+	right: 10px;
+	top: 0px;
+}
+.one_flat .flat_title{
+	position: relative;
+	font-family: RobotoBold;
+	padding-left: 75px;
+	text-transform: uppercase;
+	font-size: 15pt;
+	line-height: 30px;
+	margin-bottom: 40px;
+}
+.one_flat .flat_title span{
+	display: block;
+	font-size: 25pt;
+}
+.one_flat .flat_title img{
+	position: absolute;
+	left: 0px;
+}
+.one_flat p{
+	font-size: 14pt;
+	color: #000;
+}
+.one_flat span{
+	text-transform: uppercase;
+	font-family: RobotoBold;
+}
+.one_flat .red{
+	color: #e9292a;
+}
+.one_flat .green{
+	color: #79c600;
+}
+.scheme_of_work{
+	text-align: center;
+	padding-bottom: 32px;
+}
+.scheme_of_work .subtitel{
+    font-family: RobotoBold;
+    text-transform: uppercase;
+    padding: 0px 25px;
+    padding-top: 25px;
+    color: #000;
+}
+.slick-slider button:hover{
+	background: none!important;
+}
+.scheme_of_work .image_center{
+	line-height: 100px;
+}
+.scheme_of_work .col-lg-3{
+	position: relative;
+}
+.scheme_of_work .col-lg-3:after{
+	content: "";
+    display: block;
+    position: absolute;
+    top: 45px;
+    right: -35px;
+    background: url(src/assets/portfolio/pulsar.component/images/23.png) no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.scheme_of_work .col-lg-3:last-child:after{
+	background: none;
+}
+.why_we{
+	background: url('src/assets/portfolio/pulsar.component/images/24.png') no-repeat;
+	background-size: cover;
+	color: #fff;
+	text-align: center;
+	padding-bottom: 36px;
+}
+.why_we .title{
+	color: #fff;
+}
+.why_we .subtitle{
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+.why_we .subtitle span{
+    display: block;
+    font-family: RobotoBold;
+    font-size: 24pt;
+    line-height: 30px;
+}
+.why_we .image_center{
+	line-height: 80px;
+}
+.slick-slide:focus{
+	outline: none;
+}
+.slick-prev:before{
+    content: "";
+    display: block;
+    background: url(src/assets/portfolio/pulsar.component/images/32.png) no-repeat;
+    width: 14px;
+    height: 23px;	
+}
+.slick-prev{
+	z-index: 200;
+}
+.reviews .slick-prev{
+	left: 130px;
+}
+.slick-next:before{
+    content: "";
+    display: block;
+    background: url(src/assets/portfolio/pulsar.component/images/33.png) no-repeat;
+    width: 14px;
+    height: 23px;
+}
+.reviews .slick-next{
+	right: 130px;
+}
+.reviews .one_review{
+	background: #f3f3f3;
+    width: 82%;
+    margin: 0px auto;
+    text-align: center;
+    padding: 50px 78px;
+    color: #747474;
+    position: relative;
+    font-size: 12pt;
+}
+.reviews .one_review:before{
+    content: "";
+    display: block;
+    background: url(src/assets/portfolio/pulsar.component/images/28.png);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: -27px;
+    top: 10px;
+}
+.reviews .title{
+	margin-bottom: 35px;
+	margin-top: 50px;
+}
+.reviews .one_review .name{
+	font-family: RobotoItalic;
+	text-align: right;
+	margin-top: 35px;
+}
+.one_question{
+	cursor: pointer;
+	display: block;
+	width: 82%;
+	margin: 0px auto;
+	border: 2px solid #f3f3f3;
+	color: #006699;
+	padding-left: 40px;
+	padding-right: 70px;
+	font-size: 12pt;
+	margin-bottom: 1px;
+	background: #f3f3f3;
+	overflow: hidden;
+	height: 86px;
+	position: relative;
+}
+.one_question:focus{
+	text-decoration: none;
+}
+.one_question img{
+	position: absolute;
+	right: 30px;
+	top: 30px;
+
+}
+ @keyframes img_rever{
+    0% { 
+    	transform: none; }   
+    100% {  
+    	-moz-transform: rotate(180deg); /* Для Firefox */
+    	-ms-transform: rotate(180deg); /* Для IE */
+    	-webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
+    	-o-transform: rotate(180deg); /* Для Opera */
+    	transform: rotate(180deg);
+    }
+}
+.one_question.active img{
+	animation: img_rever 0.4s 1;
+	-moz-transform: rotate(180deg); /* Для Firefox */
+    -ms-transform: rotate(180deg); /* Для IE */
+    -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(180deg); /* Для Opera */
+    transform: rotate(180deg);
+}
+.one_question:hover{
+	text-decoration: none;
+}
+.one_question .text{
+	color: #747474;
+	padding-bottom: 25px;
+}
+.one_question .subtitle{
+	color: #006699;
+	font-size: 19pt;
+	padding: 25px 0px;
+}
+.questions .one_question.active{
+	height: 100%;
+	background: #fff;
+}
+.contacts{
+	position: relative;
+	height: 371px;
+}
+.contacts form{
+	position: absolute;
+	bottom: 90px;
+	right: 90px;
+	height: 240px;
+	background: #fff;
+	width: 320px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 1px #cacaca;
+}
+.contacts form input{
+	font-family: Roboto;
+    color: #000;
+    border: none;
+    border-bottom: 1px solid #000;
+    display: block;
+    margin: 0px auto;
+    width: 264px;
+    margin-bottom: 30px;
+}
+.contacts form input:focus{
+	outline: none;
+}
+.contacts form button{
+    color: #fff;
+    background: #fd1813;
+    display: block;
+    text-align: center;
+    padding: 8px 40px;
+    border-radius: 5px;
+    margin-top: 2px;
+    font-size: 12pt;
+    margin: 0px auto;
+    border: none;
+}
+.contacts form span{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color: #006699;
+    font-family: RobotoBold;
+    font-size: 18pt;
+    padding: 20px 0px;
+}
+footer{
+	background: url('src/assets/portfolio/pulsar.component/images/31.png') no-repeat;
+	background-size: cover;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: RobotoBold;
+	padding-bottom: 20px;
+	padding-top: 40px;
+}
+footer span{
+	display: block;
+	font-size: 18pt;
+    margin-top: -10px;
+}
+footer .subtitle{
+	font-size: 20pt;
+	/*padding-bottom: 20px;*/
+
+}
+footer .phone{
+	font-size: 40pt;
+	color: #fff;
+}
+footer .copyright{
+	text-transform: none;
+	font-family: Roboto;
+}
+footer .all_info{
+	line-height: 50px;
+}
+.copyright a{
+	color: #fff;
+}
+.back{
+	position: fixed;
+	top:0px;
+	left: 0px;
+	background: #0000009e;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.popup .subtitle{
+	font-family: RobotoBold;
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	width: 200px;
+	margin: 25px auto;
+	font-size: 13pt;
+}
+.popup{
+	position: fixed;
+	top: 0px;
+	background: #fff;
+	width: 300px;
+	border-radius: 5px;
+	display: none;
+}
+.popup form input{
+	font-family: Roboto;
+    color: #000;
+    border: none;
+    border-bottom: 1px solid #000;
+    display: block;
+    margin: 0px auto;
+    width: 200px;
+    margin-bottom: 30px;
+}
+.popup form input:focus{
+	outline: none;
+}
+.popup form button{
+    color: #fff;
+    background: #fd1813;
+    display: block;
+    text-align: center;
+    width: 200px;
+    padding: 8px 0px;
+    border-radius: 5px;
+    margin-top: 2px;
+    font-size: 12pt;
+    margin: 0px auto;
+    border: none;
+    margin-bottom: 25px;
+}
+button:hover{
+	background: #00a1dd!important;
+}
+.popup form button:focus{
+	outline: none;
+}
+.close{
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    color: #fff;
+    z-index: 2000;
+    opacity: 1;
+    line-height: normal;
+    text-shadow: none;
+}
+.close:hover{
+	color: #35e1ff;
+	opacity: 1;
+}
+.thanks{
+	width: 300px;
+	background: #fff;
+	position: fixed;
+	border-radius: 5px;
+	text-align: center;
+	padding: 25px 0px;
+	font-size: 13pt;
+	text-transform: uppercase;
+	font-family: RobotoBold;
+	display: none;
+}
+.thanks span{
+	display: block;
+}
+.thanks .subtitle{
+	text-transform: none;
+	font-family: Roboto;
+	padding: 15px 20px 0px 20px;
+}
+@media (min-width: 320px) and (max-width: 767px){
+	header{
+		text-align: center;
+	}
+	header .phone:before{
+		content: none;
+	}
+	header .phone{
+		font-size: 19pt;
+		padding-left: 0px;
+	}
+	header .recall{
+		width: 260px;
+		margin: 10px auto;
+	}
+	.title_main{
+		font-size: 	35pt;	
+	}
+	.title_main span{
+		font-size: 20pt;
+		line-height: 30px;
+	}
+	.main_block {
+    	background: url(src/assets/portfolio/pulsar.component/images/34.png) center 160px no-repeat;
+    	padding-bottom: 40px;
+
+	}
+	.subtitle_main{
+		margin-top: 325px;
+	}
+	.main_block .price{
+		background-size: contain;
+		font-size: 35px;
+		text-align: center;
+		padding-left: 0px;
+	}
+	.main_block form{
+		width: 290px;
+		margin: 0px auto;
+		margin-top: 20px;
+	}
+	.title{
+		font-size: 25pt;
+	}
+	.installation_cost .row .col-lg-3:first-child{
+		margin-left: 0px;
+	    margin: 0px auto;
+	    margin-bottom: 20px;
+	}
+	.installation_cost .row .col-lg-3:last-child{
+		margin-bottom: 0px;
+	}
+	.installation_cost .col-lg-3{
+		margin: 0px auto;
+		margin-bottom: 20px;
+	}
+	.installation_cost{
+		padding-bottom: 85px;
+	}
+	.one_flat{
+		height: auto;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+	.one_flat .flat_title{
+		padding-left: 0px;
+		font-size: 14pt;
+		margin-bottom: 20px;
+	}
+	.one_flat .flat_title img{
+		position: relative;
+		margin-bottom: 20px;
+	}
+	.one_flat-img-2{
+		right: 41px !important;
+		top: -20px !important;
+	}
+	.one_flat .flat_title span{
+		font-size: 20pt;
+	}
+	.scheme_of_work .col-lg-3:after{
+		content: none;
+	}
+	.why_we .image_center{
+		margin-bottom: 20px;
+	}
+	.reviews .one_review{
+		padding: 50px 0px;
+		width: 92%;
+	}
+	.reviews .slick-next{
+		right: 0px;
+	}
+	.reviews .slick-prev{
+		left: 0px;
+	}
+	.one_question img{
+		right: 5px;
+	}
+	.one_question{
+		width: 92%;
+	    padding: 0px 0px;
+	    padding-left: 10px;
+	    padding-right: 35px;
+	}
+	.one_question .subtitle{
+		padding: 0px 0px;
+		font-size: 15pt;
+	    padding-bottom: 25px;
+	    min-height: 86px;
+	}
+	.slick-next{
+		right: 0px;
+	}
+	.slick-prev{
+		left: 0px;
+	}
+	.slick-slide img{
+		margin: 0px auto;
+	}
+	.contacts{
+		height: auto;
+	}
+	.contacts form{
+		position: relative;
+		bottom: auto;
+		right: auto;
+		width: 300px;
+		margin: 20px auto;
+	}
+	footer .phone{
+		font-size: 25pt;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px){
+	header .phone{
+		padding-left: 0px;
+	}
+	header .recall{
+		width: 100%;
+	    float: right;
+	    margin-top: 10px;
+	    /*margin-right: 25px;*/
+	}
+    .header-btn{width: 80%;float: right}
+    header .phone a{float: right}
+	.main_block {
+   		background: url(src/assets/portfolio/pulsar.component/images/2.png) 0px -100px no-repeat;
+	}
+	.main_block .price{
+		background-size: contain;
+	    width: 350px;
+	    margin: 0px auto;
+	    font-size: 40pt;
+	    padding-left: 0px;
+	    text-align: center;
+	}
+	.main_block .price:after{
+	    right: 40px;
+    	top: 25px;
+	}
+	.main_block form{
+		width: 460px;
+	    margin: 0px auto;
+	    margin-top: 50px;
+	}
+	.main_block{
+		padding-bottom: 30px;
+	}
+	.installation_cost .row .col-lg-3:first-child{
+		margin-left: auto;
+	}
+	.installation_cost .col-sm-6{
+		width: 50%!important;
+		margin-bottom: 20px;
+	}
+	.point:after{
+		left: 44%;
+	}
+	.flat{
+	    padding-bottom: 40px;	
+	}
+	.one_flat{
+		height: auto;
+		margin-bottom: 20px;
+	}
+	.one_flat img{
+		/*height: 100%;*/
+	}
+	.one_flat-img-2{right: 41px !important;}
+	.one_flat .desc{
+		padding-bottom: 20px;
+	}
+	.scheme_of_work .subtitel{
+		padding: 0px 0px;
+	}
+	.one_question{
+		height: 114px;
+	}
+	.one_question .subtitle{
+		height: 114px;
+	}
+	footer .phone{
+		font-size: 15pt;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	header .recall{
+		width: 100%;
+		float: right;
+		/*margin-right: 20px;*/
+	}
+    header .phone{
+        font-size: 23pt;
+    }
+    .header-btn{width: 80%;float: right}
+	.main_block .price{
+	    padding-left: 0px;
+    	text-align: center;
+	}
+	.main_block .price:after{
+		right: 290px;
+	}
+	.main_block form{
+		width: 400px;
+		margin: 0px auto;
+	}
+	.main_block{
+		padding-bottom: 30px;
+	}
+	.installation_cost .row .col-lg-3:first-child{
+		margin-left: auto;
+	}
+	.one_flat{
+		height: 400px;
+	}
+	.slick-next{
+		right: 0px;
+	}
+	.slick-prev{
+		left: 0px;
+	}
+	.slick-slide img{
+		margin: 0px auto;
+	}
+}
+.fa {
+    font-weight: 100;
+    margin-right: 10px;
+    vertical-align: bottom;
+    font-size: 24px;
+}
+.fa-clock-o:before {
+	content: "\f017";
+}
+.fa-envelope-o:before {
+    content: "\f0e0";
+}
+
+@media (min-width: 1199px) {
+    .header-btn{
+        width: 50%;
+        float: right;
+    }
+    header .phone a{float: right}
+}
