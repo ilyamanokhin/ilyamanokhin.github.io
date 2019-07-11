@@ -4,8 +4,10 @@
   "main": "index.js",
   "dependencies": {
     "gulp": "^4.0.0",
+    "gulp-if": "^2.0.2",
     "gulp-sass": "^4.0.2",
     "gulp-scss": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
