@@ -48,7 +48,7 @@ function img(){
 }
 
 function html(){
-	return gulp.src('./src/*.html')
+	return gulp.src('./src/**/*.html')
 			   .pipe(gulp.dest('./build'))
 			   .pipe(browserSync.reload({
 				stream: true
@@ -58,7 +58,7 @@ function html(){
 function styles () {
 	return gulp.src(cssFiles)
 		.pipe(gulpif(isDev, sourcemaps.init()))
-		.pipe(concat('styles.css')) //.pipe(concat('all.min.css'))
+		.pipe(concat('styles-product.css')) //.pipe(concat('all.min.css'))
 		.pipe(autoprefixer({
         }))
         // .pipe(cleanCSS({
