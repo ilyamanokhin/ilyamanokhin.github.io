@@ -97,7 +97,7 @@ function watch () {
 	
 		browserSync.init({
 	        server: {
-	            baseDir: "./",
+	            baseDir: "./build",
 			}
 			// tunnel: true //использование локального сервера
 	    });

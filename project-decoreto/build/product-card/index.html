@@ -45,8 +45,12 @@
         </div>
     </header>
     <section class="product-card">
+           
         <section class="product-card__header">
-            <h1>Экраны радиаторов</h1>
+            <div class="product-card__info-how-work__bg"></div>
+            <div class="content">
+                    <h1>Экраны радиаторов</h1>
+            </div>
         </section>
         <section class="pagination"></section>
         <section class="product-card__product">
@@ -54,38 +58,55 @@
                 <div class="currency-photo">
                     <img src="../assets/img/product-card-photo-2.png" alt="">
                 </div>
-                <!-- <div class="photo-carousel">
-                    <div class="slider">
-                         <ul class="slider__list">
-
-                         </ul>
-                    </div>
-                </div> -->
-                <div class="product-card__carousel">
-                   <div class="product-card__carousel__item">s</div>
-                   <div class="product-card__carousel__item">s</div>
-                   <div class="product-card__carousel__item">s</div>
-                   <div class="product-card__carousel__item">s</div>
-                </div>
-                <!-- <div class="photo-carousel">
-                        <div class="slider">
-                                <ul class="slider__list">
-                                    <li class="slider__item">
-                                            <img src="../assets/img/product-card-photo.png" alt="">
-                                    </li>
-                                    <li class="slider__item">
-                                            <img src="../assets/img/product-card-photo.png" alt="">
-                                    </li>
-                                    <li class="slider__item">
-                                            <img src="../assets/img/product-card-photo.png" alt="">
-                                    </li>
-                                    <li class="slider__item">
-                                            <img src="../assets/img/product-card-photo.png" alt="">
-                                    </li>
-                                </ul>
+                <div id="gallery">
+                        <div class="product-card__carousel photos">
+                                <div class="product-card__carousel__item">
+                                     <img src="../assets/img/product-card-photo.png" alt="">
+                                </div>
+                                <div class="product-card__carousel__item">
+                                     <img src="../assets/img/product-card-photo.png" alt="">
+                                </div>
+                                <div class="product-card__carousel__item">
+                                     <img src="../assets/img/product-card-photo.png" alt="">
+                                </div>
+                                <div class="product-card__carousel__item">
+                                     <img src="../assets/img/product-card-photo.png" alt="">
+                                </div>
                         </div>
+                        <div class="buttons">
+                                <button class="prev">prev</button>
+                                <button class="next">next</button>
+                              
+                          </div>
+                </div>
+              
+                
+                <script>
+                    var btn_perv = document.querySelector('#gallery .buttons .prev');
+                    var btn_next = document.querySelector('#gallery .buttons .next');
+                    var images = document.querySelectorAll('#gallery .photos img');
+                    var i = 0;
+                    btn_perv.onclick = function() {
+                        images[i].className = '';
+                        i = i - 1; /* i-- не отрабатывает разобрать почему*/
 
-                </div> -->
+                        if(i < 0){
+                            i = images.length - 1;
+                        }
+                        images[i].className = 'showed';
+                    }
+                    btn_next.onclick = function() {
+                        images[i].className = '';
+                        i = i + 1; /* i-1*/
+
+                        if(i >= images.length){
+                            i = 0;
+                        }
+                        images[i].className = 'showed';
+                    }
+                    /* добавить проверку если меньше или ровно фото*/
+                </script>
+               
             </div>
             <div class="product-card__product__info">
                 <h1>Экран MODERM</h1>
@@ -147,52 +168,56 @@
                </div>
         </section>
         <section class="product-card__info-how-work">
-                <h1>Как мы работаем</h1>
-            <div class="wrapper product-card__info-how-work-wrapper">
-                <div class="product-card__info-how-work__block">
-                        <div class="product-card__info-how-work__item">
-                                <div class="product-card__info-how-work__item__text">
-                                        <h3>Заявка на сайте</h3>
-                                        <p>Вы оставляете заявку на нашем сайте</p>
-                                </div>
-                            </div>
-                            <div class="product-card__info-how-work__item">
-                                    <div class="product-card__info-how-work__item__text">
-                                        <h3>Согласование эскизов проекта</h3>
-                                        <p>Составление и согласование эскиза проекта с менеджером-дизайнер</p>
-                                </div>
-                            </div>
-                            <div class="product-card__info-how-work__item">
-                                    <div class="product-card__info-how-work__item__text">
-                                        <h3>Заключение договора</h3>
-                                        <p>Заключение договора и оплата</p>
-                                </div>
-                            </div>
-                </div>
-                
-                <div class="product-card__info-how-work__block">
-                         <div class="product-card__info-how-work__item">
-                                <div class="product-card__info-how-work__item__text">
-                                        <h3>Проектирование</h3>
-                                        <p>Проектирование заказа по эскизам</p>
-                                </div>
-                            </div>
-                            <div class="product-card__info-how-work__item">
-                                    <div class="product-card__info-how-work__item__text">
-                                        <h3>Производство</h3>
-                                        <p>Производство заказа</p>
-                                </div>
-                            </div>
-                            <div class="product-card__info-how-work__item">
-                                    <div class="product-card__info-how-work__item__text">
-                                        <h3>Доставка и установка</h3>
-                                        <p>Доставка и установка</p>
-                                </div>
-                            </div>
-                </div>
-                
-
+            <div class="product-card__info-how-work__bg"></div>
+            <div class="content">
+                    <h1>Как мы работаем</h1>
+                    <div class="wrapper product-card__info-how-work-wrapper">
+                        <div class="product-card__info-how-work__block">
+                                <div class="product-card__info-how-work__item">
+                                        <div class="product-card__info-how-work__item__text">
+                                                <h3>Заявка на сайте</h3>
+                                                <p>Вы оставляете заявку на нашем сайте</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-card__info-how-work__item">
+                                            <div class="product-card__info-how-work__item__text">
+                                                <h3>Согласование эскизов проекта</h3>
+                                                <p>Составление и согласование эскиза проекта с менеджером-дизайнер</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-card__info-how-work__item">
+                                            <div class="product-card__info-how-work__item__text">
+                                                <h3>Заключение договора</h3>
+                                                <p>Заключение договора и оплата</p>
+                                        </div>
+                                    </div>
+                        </div>
+                        
+                        <div class="product-card__info-how-work__block">
+                                 <div class="product-card__info-how-work__item">
+                                        <div class="product-card__info-how-work__item__text">
+                                                <h3>Проектирование</h3>
+                                                <p>Проектирование заказа по эскизам</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-card__info-how-work__item">
+                                            <div class="product-card__info-how-work__item__text">
+                                                <h3>Производство</h3>
+                                                <p>Производство заказа</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-card__info-how-work__item">
+                                            <div class="product-card__info-how-work__item__text">
+                                                <h3>Доставка и установка</h3>
+                                                <p>Доставка и установка</p>
+                                        </div>
+                                    </div>
+                        </div>
+                        
+        
+                    </div>
             </div>
+               
         </section>
         <section class="product-card__payment">
             <div class="wrapper product-card__payment-wrapper">
@@ -233,22 +258,38 @@
         <section class="product-card__other">
                 <h1>Другие экраны</h1>
             <div class="wrapper product-card__other-wrapper">
-                
-                <div class="product-card__other_item">
-                    <img src="../assets/img/product-card-photo.png" alt="">
-                    <h3>Экран MODERM</h3>
-                    <span  class="bold">30 000 руб.</span>
-                </div>
-                <div class="product-card__other_item">
-                        <img src="../assets/img/product-card-photo.png" alt="">
+                  
+                    <ul class="works__list product-card__other-wrapper">
+                        <a href="#" class="works__item product-card__other_item">
+                            <img src="../assets/img/product-card-photo.png" alt="">
+                            <div class="works__item__hover">
+                                <img src="../assets/img/plus.png" alt="plus" class="works__item__hover__img">
+                        </div>
+                        </a>
                         <h3>Экран MODERM</h3>
-                        <span class="bold">30 000 руб.</span>
-                </div>
-                <div class="product-card__other_item">
-                        <img src="../assets/img/product-card-photo.png" alt="">
-                        <h3>Экран MODERM</h3>
-                        <span class="bold">30 000 руб.</span>
-                </div>
+                        <span  class="bold">30 000 руб.</span>
+                    </ul>
+                    <ul class="works__list product-card__other-wrapper">
+                            <a href="#" class="works__item product-card__other_item">
+                                <img src="../assets/img/product-card-photo.png" alt="">
+                                <div class="works__item__hover">
+                                    <img src="../assets/img/plus.png" alt="plus" class="works__item__hover__img">
+                            </div>
+                            </a>
+                            <h3>Экран MODERM</h3>
+                        <span  class="bold">30 000 руб.</span>
+                        </ul>
+                        <ul class="works__list product-card__other-wrapper">
+                            <a href="#" class="works__item product-card__other_item">
+                                <img src="../assets/img/product-card-photo.png" alt="">
+                                <div class="works__item__hover">
+                                    <img src="../assets/img/plus.png" alt="plus" class="works__item__hover__img">
+                                </div>
+                            </a>
+                            <h3>Экран MODERM</h3>
+                            <span  class="bold">30 000 руб.</span>
+                        </ul>
+              
                     
             </div>
         </section>
