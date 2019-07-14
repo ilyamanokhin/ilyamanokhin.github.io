@@ -544,6 +544,38 @@ input:focus ~ .bar:after{
         transform: translate(200px, 380px);
         height: 490px;
     }
+    .works__nav{
+        &__list{
+            margin-bottom: 10px;
+           .active{
+                color: @color-beige-high;
+                background-color: @color-black;
+                }
+        }
+        &__item{
+            padding: 10px 20px;
+            width: 230px;
+            text-transform: inherit;
+            color: @color-black;
+            background-color: @color-beige-high;
+            border: 1px solid @color-beige-high;
+        }
+    }
+    .about_text{
+        
+        padding-left: 30px;
+        padding-right: 0px; 
+       // width: 40%;
+        img{
+            z-index: -1;
+            position: absolute;
+            right: 0;
+         //   bottom: -200px;
+        }
+        .title{
+            text-align: left;
+        }
+    }
 }
 .modal{
     // #popup1{

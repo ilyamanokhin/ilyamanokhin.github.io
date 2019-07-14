@@ -2091,6 +2091,39 @@ input:focus ~ .bar:after {
   height: 490px;
 }
 
+.furniture .works__nav__list {
+  margin-bottom: 10px;
+}
+
+.furniture .works__nav__list .active {
+  color: #d3b869;
+  background-color: #242625;
+}
+
+.furniture .works__nav__item {
+  padding: 10px 20px;
+  width: 230px;
+  text-transform: inherit;
+  color: #242625;
+  background-color: #d3b869;
+  border: 1px solid #d3b869;
+}
+
+.furniture .about_text {
+  padding-left: 30px;
+  padding-right: 0px;
+}
+
+.furniture .about_text img {
+  z-index: -1;
+  position: absolute;
+  right: 0;
+}
+
+.furniture .about_text .title {
+  text-align: left;
+}
+
 .modal-open {
   overflow: hidden;
 }
