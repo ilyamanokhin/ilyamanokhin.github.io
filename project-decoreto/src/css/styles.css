@@ -2225,6 +2225,52 @@ input:focus ~ .bar:after {
   margin-bottom: 70px;
 }
 
+.contacts .contacts-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contacts .product-card__info {
+  margin-bottom: 20px;
+}
+
+.contacts .product-card__info__item__icon {
+  width: 70px;
+  margin-right: 20px;
+}
+
+.contacts .product-card__info__item__text {
+  width: 100%;
+}
+
+.contacts .title {
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contacts .item {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.contacts .item-text {
+  margin-bottom: 70px;
+}
+
+.contacts .item-img {
+  width: 50px;
+}
+
+.contacts .wrapper {
+  max-width: 1560px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .modal-open {
   overflow: hidden;
 }
