@@ -86,15 +86,168 @@ img{
         flex-direction: column;
         width: 55%;
         margin-right: 3%;
+        position: relative;
+        #gallery1 {
+            .photos {
+                position: relative;
+                height: 650px;
+                img{
+                    width: 100%;
+                    position: absolute;
+                    opacity: 0;
+                    transition: opacity 1s;
+                }
+                .showed{
+                    transition: opacity 1s;
+                    opacity: 1;
+                    
+                }
+                
+            }
+            .buttons{
+                position: absolute;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                top: 35%;
+                left: 0;
+                padding-left: 15px;
+                padding-right: 15px;
+                &__slider{
+                    &__prev{
+    
+                    }
+                    &__next{
+                        transform: rotate(180deg);
+                        right: 0;
+                    }
+                }
+                img{
+                    cursor: pointer;
+                }
+            }
+        }
+        #gallery{
+            .buttons{
+                position: absolute;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                top: 87%;
+                left: 0;
+                padding-left: 15px;
+                padding-right: 15px;
+                &__slider{
+                    &__prev{
+    
+                    }
+                    &__next{
+                        transform: rotate(180deg);
+                        right: 0;
+                    }
+                }
+                img{
+                    cursor: pointer;
+                }
+            }
+        }
+        #gallery2 {
+            .photos {
+                position: relative;
+                height: 650px;
+                img{
+                    width: 100%;
+                    position: absolute;
+                    opacity: 0;
+                    transition: opacity 1s;
+                }
+                .showed{
+                    transition: opacity 1s;
+                    opacity: 1;
+                    
+                }
+                
+            }
+            .buttons{
+                position: absolute;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                top: 35%;
+                left: 0;
+                padding-left: 15px;
+                padding-right: 15px;
+                &__slider{
+                    &__prev{
+    
+                    }
+                    &__next{
+                        transform: rotate(180deg);
+                        right: 0;
+                    }
+                }
+                img{
+                    cursor: pointer;
+                }
+            }
+        }
+        #gallery3 {
+            .photos {
+                position: relative;
+               
+                img{
+                    width: 100%;
+                   
+                    opacity: 0;
+                    transition: opacity 1s;
+                }
+                .showed{
+                    transition: opacity 1s;
+                    opacity: 1;
+                    
+                }
+                
+            }
+            .buttons{
+                position: absolute;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                top: 35%;
+                left: 0;
+                padding-left: 15px;
+                padding-right: 15px;
+                &__slider{
+                    &__prev{
+    
+                    }
+                    &__next{
+                        transform: rotate(180deg);
+                        right: 0;
+                    }
+                }
+                img{
+                    cursor: pointer;
+                }
+            }
+        }
+        
     }
     &__carousel{
         display: flex;
         justify-content: center;
         &__item{
-            width: 130px;
-            height: 180px;
+            width: 100px;
+            height: 130px;
             background: #eee;
-            margin: 10px
+            margin: 10px;
+            img{
+                opacity: 0.1;
+                transition: opacity 1s;
+            }
+            .showed{
+                opacity: 1;
+            }
         }
     }
     &__info{
@@ -378,7 +531,7 @@ input:focus ~ .bar:after{
     width: 50%
   }
 
-.furniture{
+.shield{
     .product-card__other-wrapper{
         h3{
             width: 100%;
@@ -391,4 +544,185 @@ input:focus ~ .bar:after{
         transform: translate(200px, 380px);
         height: 490px;
     }
+    .works__nav{
+        &__list{
+            margin-bottom: 10px;
+           .active{
+                color: @color-beige-high;
+                background-color: @color-black;
+                }
+        }
+        &__item{
+            padding: 10px 20px;
+            width: 230px;
+            text-transform: inherit;
+            color: @color-black;
+            background-color: @color-beige-high;
+            border: 1px solid @color-beige-high;
+        }
+    }
+    .about_text{
+        
+        padding-left: 30px;
+        padding-right: 0px; 
+       // width: 40%;
+        img{
+            z-index: -1;
+            position: absolute;
+            right: 0;
+         //   bottom: -200px;
+        }
+        .title{
+            text-align: left;
+        }
+    }
 }
+.furniture{
+    .produse__col{
+        width: 49%;
+        margin-right: 1%;
+        margin-bottom: 1%;
+    }
+    .produse__col:nth-child(even){
+        margin-right: 0;
+    }
+    .produse__list{
+        
+    flex-wrap: wrap;
+    }
+    
+    .produse__btn.mebel{
+        top: 35%;
+        bottom: auto;
+        width: 65%;
+        text-align: center;
+        transform: translate(-30%);
+    }
+    .produse__btn{
+        padding: 40px 100px;
+    }
+    
+    
+}
+.delivery{
+    text-align: left;
+    p{
+        color: #000;
+        font-family: "ProximaNova-Semibold";
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        line-height: 22px;
+    }
+    ul{
+        list-style: disc;
+        margin: 30px 0px 30px 20px;
+    }
+    .item-img{
+        position: absolute;
+        z-index: -1;
+        left: 0;
+    }
+    .wrapper{
+        padding-left: 6.8%;
+        max-width: 100%;
+        /* max-width: 1300px; */
+        margin: 0 auto;
+        padding-right: 6.28%;
+    }
+    .delivery-wrapper{
+        display: flex;
+    }
+    .title{
+        color: #000;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    .item:nth-child(1){
+        width: 71%;
+        margin-right: 3%;
+    }
+    .item:nth-child(2){
+        width: 50%;
+    }
+    .item-text{
+        margin-bottom: 70px
+    }
+
+}
+.contacts{
+    .contacts-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        
+
+    }
+    .product-card__info{
+        margin-bottom: 20px;
+    }
+    .product-card__info__item__icon{
+        width: 70px;
+        margin-right: 20px;
+    }
+    .product-card__info__item__text{
+        width: 100%;
+    }
+    .title{
+        text-align: left;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .item{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .item-text{
+        margin-bottom: 70px;
+    }
+    .item-img{
+        width: 50px;
+    }
+    .wrapper{
+        max-width: 1560px;
+        justify-content: space-around;
+    }
+}
+.modal{
+    // #popup1{
+    //     display: none;
+    // }
+    &-open{
+        overflow: hidden;
+    }
+    .b-modal{
+        width:100%;
+        height: 100%;
+        min-height:100%;
+        background-color: rgba(0,0,0,0.5);
+        overflow:hidden;
+        opacity: 0;
+        position:fixed;
+        top:0px;
+        z-index: 1;
+    }
+    .b-modal .b-modal-content{
+        margin:40px auto 0px auto;
+        width: 70%;
+        //height: 70%;
+
+        padding:10px;
+        background-color: #c5c5c5;
+        //border-radius:5px;
+        box-shadow: 0px 0px 10px #000;
+        a{
+            float: right;
+        }
+    }
+    .product-card__payment{
+        padding: 0;
+    }
+    .product-card__product__price{
+        width: 400px;
+    }
+}
+// Вынести в отдельные шаблоны модал форму другие экраны

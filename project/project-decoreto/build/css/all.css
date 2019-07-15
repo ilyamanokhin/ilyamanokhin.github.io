@@ -524,6 +524,13 @@ html {
 }
 
 @font-face {
+  font-family: "Playfair Display";
+  src: url("../assets/font/playfair-display-bold_[allfont.ru].ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
   font-family: "ProximaNova-Black";
   src: url("../assets/font/ProximaNova-Black.eot");
   src: url("../assets/font/ProximaNova-Black.eot?#iefix") format("embedded-opentype"), url("../assets/font/ProximaNova-Black.woff") format("woff"), url("../assets/font/ProximaNova-Black.ttf") format("truetype");
@@ -784,7 +791,21 @@ html {
 }
 
 .header_rigth.active {
+  width: 18%;
   display: block;
+  background-color: #ddcb9a;
+}
+
+.header_rigth.active a {
+  color: #000;
+  font-weight: 600;
+  padding: 25px 25px 25px 0px;
+  margin-bottom: 0px;
+}
+
+.header_rigth.active a:hover {
+  background-color: #242625;
+  color: #d3b869;
 }
 
 .header_rigth__list {

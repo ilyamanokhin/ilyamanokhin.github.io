@@ -54,58 +54,57 @@
         </section>
         <section class="pagination"></section>
         <section class="product-card__product">
+                
             <div class="product-card__gallery">
-                <div class="currency-photo">
+                <!-- <div class="currency-photo">
                     <img src="../assets/img/product-card-photo-2.png" alt="">
+                    <img src="../assets/img/product-card-photo-2.png" alt="">
+                    <img src="../assets/img/product-card-photo-2.png" alt="">
+                    <img src="../assets/img/product-card-photo-2.png" alt="">
+                </div> -->
+                <div id="gallery1">
+                    <div class="photos">
+                            <img src="../assets/img/product-card-photo-2.png" alt="">
+                            <img src="../assets/img/product-card-photo-2.png" alt="">
+                            <img src="../assets/img/product-card-photo-2.png" alt="">
+                            <img src="../assets/img/product-card-photo-2.png" alt="">
+                            <img src="../assets/img/product-card-photo-2.png" alt="">
+                    </div>
+                    <div class="buttons">
+                            <img src="../assets/img/arrow_black.png" alt="arrow" class="buttons__slider__prev prev">
+                            <img src="../assets/img/arrow_black.png" alt="arrow" class="buttons__slider__next next">
+                    </div>
                 </div>
+                
                 <div id="gallery">
                         <div class="product-card__carousel photos">
                                 <div class="product-card__carousel__item">
-                                     <img src="../assets/img/product-card-photo.png" alt="">
+                                        <img src="../assets/img/product-card-photo.png" alt="">
                                 </div>
                                 <div class="product-card__carousel__item">
-                                     <img src="../assets/img/product-card-photo.png" alt="">
+                                        <img src="../assets/img/product-card-photo.png" alt="">
                                 </div>
                                 <div class="product-card__carousel__item">
-                                     <img src="../assets/img/product-card-photo.png" alt="">
+                                        <img src="../assets/img/product-card-photo.png" alt="">
                                 </div>
                                 <div class="product-card__carousel__item">
-                                     <img src="../assets/img/product-card-photo.png" alt="">
+                                        <img src="../assets/img/product-card-photo-2.png" alt="">
+                                </div>
+                                <div class="product-card__carousel__item">
+                                        <img src="../assets/img/product-card-photo-2.png" alt="">
                                 </div>
                         </div>
-                        <!-- <div class="buttons">
-                                <button class="prev">prev</button>
-                                <button class="next">next</button>
-                              
-                          </div> -->
+                        <div class="buttons">
+                                <img src="../assets/img/arrow_black.png" alt="arrow" class="buttons__slider__prev prev">
+                                <img src="../assets/img/arrow_black.png" alt="arrow" class="buttons__slider__next next">
+                        </div>
                 </div>
-              
+               
+            
                 
-                <!-- <script>
-                    var btn_perv = document.querySelector('#gallery .buttons .prev');
-                    var btn_next = document.querySelector('#gallery .buttons .next');
-                    var images = document.querySelectorAll('#gallery .photos img');
-                    var i = 0;
-                    btn_perv.onclick = function() {
-                        images[i].className = '';
-                        i = i - 1; /* i-- не отрабатывает разобрать почему*/
-
-                        if(i < 0){
-                            i = images.length - 1;
-                        }
-                        images[i].className = 'showed';
-                    }
-                    btn_next.onclick = function() {
-                        images[i].className = '';
-                        i = i + 1; /* i-1*/
-
-                        if(i >= images.length){
-                            i = 0;
-                        }
-                        images[i].className = 'showed';
-                    }
-                    /* добавить проверку если меньше или ровно фото*/
-                </script> -->
+                <script>
+              
+                </script>
                
             </div>
             <div class="product-card__product__info">
@@ -120,7 +119,7 @@
                         <li><span class="bold">Срок изготовления</span> до 30 дней</li>
                     </ul>
                     <div class="product-card__product__price">
-                        <button class="product-card__product__price__btn">Заказать</button>
+                        <a href="javascript:modalUpShow()" class="product-card__product__price__btn">Заказать</a>
                         <div class="product-card__product__text-info">
                             Оставить заявку на выез замерщика
                         </div>
@@ -252,7 +251,7 @@
                     
                     <button class="btn" type="submit" > 
                             Рассчитать стоимость  </button>
-                    </form>
+                </form>
             </div>
         </section>
         <section class="product-card__other">
@@ -260,7 +259,7 @@
             <div class="wrapper product-card__other-wrapper">
                   
                     <ul class="works__list product-card__other-wrapper">
-                        <a href="#" class="works__item product-card__other_item">
+                        <a href="javascript:modalUpShow()" class="works__item product-card__other_item">
                             <img src="../assets/img/product-card-photo.png" alt="">
                             <div class="works__item__hover">
                                 <img src="../assets/img/plus.png" alt="plus" class="works__item__hover__img">
@@ -270,7 +269,7 @@
                         <span  class="bold">30 000 руб.</span>
                     </ul>
                     <ul class="works__list product-card__other-wrapper">
-                            <a href="#" class="works__item product-card__other_item">
+                            <a href="javascript:modalUpShow()" class="works__item product-card__other_item">
                                 <img src="../assets/img/product-card-photo.png" alt="">
                                 <div class="works__item__hover">
                                     <img src="../assets/img/plus.png" alt="plus" class="works__item__hover__img">
@@ -280,7 +279,7 @@
                         <span  class="bold">30 000 руб.</span>
                         </ul>
                         <ul class="works__list product-card__other-wrapper">
-                            <a href="#" class="works__item product-card__other_item">
+                            <a href="javascript:modalUpShow()" class="works__item product-card__other_item">
                                 <img src="../assets/img/product-card-photo.png" alt="">
                                 <div class="works__item__hover">
                                     <img src="../assets/img/plus.png" alt="plus" class="works__item__hover__img">
@@ -294,6 +293,109 @@
             </div>
         </section>
     </section>
+        <section class="modal" >
+                <div class="b-modal" id="modal">
+                        <div class="b-modal-content">
+                                <a href="javascript:modalUpHide()"><img src="../assets/img/close.png" alt=""></a>
+                            <section class="product-card__product">
+                
+                                        <div class="product-card__gallery">
+                                            <!-- <div class="currency-photo">
+                                                <img src="../assets/img/product-card-photo-2.png" alt="">
+                                                <img src="../assets/img/product-card-photo-2.png" alt="">
+                                                <img src="../assets/img/product-card-photo-2.png" alt="">
+                                                <img src="../assets/img/product-card-photo-2.png" alt="">
+                                            </div> -->
+                                            <div id="gallery2">
+                                                <div class="photos">
+                                                        <img src="../assets/img/product-card-photo-2.png" alt="">
+                                                        <img src="../assets/img/product-card-photo-2.png" alt="">
+                                                        <img src="../assets/img/product-card-photo-2.png" alt="">
+                                                        <img src="../assets/img/product-card-photo-2.png" alt="">
+                                                        <img src="../assets/img/product-card-photo-2.png" alt="">
+                                                </div>
+                                                <div class="buttons">
+                                                        <img src="../assets/img/arrow_black.png" alt="arrow" class="buttons__slider__prev prev">
+                                                        <img src="../assets/img/arrow_black.png" alt="arrow" class="buttons__slider__next next">
+                                                </div>
+                                            </div>
+                                            
+                                            <div id="gallery3">
+                                                    <div class="product-card__carousel photos">
+                                                            <div class="product-card__carousel__item">
+                                                                    <img src="../assets/img/product-card-photo.png" alt="">
+                                                            </div>
+                                                            <div class="product-card__carousel__item">
+                                                                    <img src="../assets/img/product-card-photo.png" alt="">
+                                                            </div>
+                                                            <div class="product-card__carousel__item">
+                                                                    <img src="../assets/img/product-card-photo.png" alt="">
+                                                            </div>
+                                                            <div class="product-card__carousel__item">
+                                                                    <img src="../assets/img/product-card-photo-2.png" alt="">
+                                                            </div>
+                                                            <div class="product-card__carousel__item">
+                                                                    <img src="../assets/img/product-card-photo-2.png" alt="">
+                                                            </div>
+                                                    </div>
+                                                    <div class="buttons">
+                                                            <img src="../assets/img/arrow_black.png" alt="arrow" class="buttons__slider__prev prev">
+                                                            <img src="../assets/img/arrow_black.png" alt="arrow" class="buttons__slider__next next">
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__product__info">
+                                            <h1>Экран MODERM</h1>
+                                            <div class="price">Цена 30 000 руб.</div>
+                                            <div class="characteristics">
+                                                <ul>
+                                                    <li><span class="bold">Материал</span> массив дерева</li>
+                                                    <li><span class="bold">Цвет</span> выбор</li>
+                                                    <li><span class="bold">Стиль</span> классика/современный</li>
+                                                    <li><span class="bold">Размер</span> индивидуально</li>
+                                                    <li><span class="bold">Срок изготовления</span> до 30 дней</li>
+                                                </ul>
+                                                <div class="product-card__product__price">
+                                                        <section class="product-card__payment">
+                                                                <div class="wrapper product-card__payment-wrapper">
+                                                                   <form class="product-card__payment-form" action="">
+                                                                            <div class="group">      
+                                                                                <input type="text" required>
+                                                                                <span class="bar"></span>
+                                                                                <label>Имя</label>
+                                                                            </div>
+                                                                                    
+                                                                            <div class="group">      
+                                                                                <input type="text" required>
+                                                                                <span class="bar"></span>
+                                                                                <label>Email</label>
+                                                                            </div>
+                                                                            <div class="group">      
+                                                                                    <textarea name="" id="">Ваше сообщение</textarea>
+                                                                            </div>
+                                                                        
+                                                                        
+                                                                       
+                                                                        <input id="mcCheckbox" class="mc_checkbox" type="checkbox" required>
+                                                                        <label for="mcCheckbox" class="mc_checkbox_label">Согласие на обработку персональных данных</label>
+                                                                        
+                                                                        <a class="agreement" href="">Пользовательское соглашение</a>
+                                                                        <a class="attach" href="" >Прикрепить файл</a>
+                                                                        
+                                                                        <button class="btn" type="submit" > 
+                                                                                Рассчитать стоимость  </button>
+                                                                    </form>
+                                                                </div>
+                                                            </section>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                            </section>
+                        </div>
+                    </div>
+        </section>
+    
     
      <footer class="footer">
             <div class="footer-c">
@@ -358,6 +460,11 @@
                 <div class="footer__bottomn_copy">© 1995-2019 Мебельная фабрика Decoreto. Все права защищены.</div>
                 <a href="#" class="footer__bottomn__link">Политика конфиндециальности</a>
             </div>
-        </footer> 
+    </footer> 
+    
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/main.js"></script>
+    
+    <script src="../js/script.js"></script>
 </body>
 </html>
