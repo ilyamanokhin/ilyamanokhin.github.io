@@ -434,10 +434,25 @@ html {
   text-align: right;
   right: 92px;
   top: 80px;
+  z-index: 1;
 }
 
 .header_rigth.active {
+  width: 18%;
   display: block;
+  background-color: #ddcb9a;
+}
+
+.header_rigth.active a {
+  color: #000;
+  font-weight: 600;
+  padding: 25px 25px 25px 0px;
+  margin-bottom: 0px;
+}
+
+.header_rigth.active a:hover {
+  background-color: #242625;
+  color: #d3b869;
 }
 
 .header_rigth__list {
