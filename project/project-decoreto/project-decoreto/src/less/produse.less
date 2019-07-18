@@ -1,0 +1,140 @@
+
+.title {
+    color: #242625;
+    font-family: "Playfair Display";
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 33px;
+
+    &--produse {
+        margin-bottom: 63px;
+        margin-top: 0;
+    }
+
+    &--pluses {
+        margin-top: 86px;
+        margin-bottom: 99px;
+    }
+}
+
+// .produse__title {
+// }
+
+.produse__list {
+    display: flex;
+}
+
+.produse__col {
+    width: 35.15%; //675
+    margin-right: 0.15625%; //3
+
+    &:nth-child(2) {
+        width: 30.89%; //593px
+        margin-right: 0.3125%; //6
+    }
+
+    &:nth-child(3) {
+        width: 32.8125; //630
+        margin-right: 0;
+    }
+}
+
+.produse__item {
+    margin-bottom: 4px;
+    position: relative;  
+
+    &:hover {
+
+        .produse__btn {
+            opacity: .5;
+        }
+
+        .produse__item__hover {
+            opacity: 0.7;
+
+        }
+    }
+}
+.produse__item__hover {
+    opacity: 0;
+    transition: all .75s;
+    z-index: 2;
+    position: absolute;
+    top: 0;left: 0;
+    bottom: 0;right: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #8e58a3;
+}
+
+.produse__item__hover__title {
+    color: #fff;
+    font-family: "Playfair Display";
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 19px;
+}
+
+.produse__item__hover__btn {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: "ProximaNova-Semibold";
+    font-size: 16px;
+    font-weight: 400;
+
+    &:after {
+        content: '';
+        background-image: url('../assets/img/arrow_circle.png');
+        width: 26px;
+        height: 22px;
+        margin-left: 6px;
+    }
+}
+
+.produse__img {
+    width: 100%;
+}
+
+.produse__btn {
+    position: absolute;
+    padding: 41px 150px;
+    color: #242625;
+    font-family: "Playfair Display";
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #ffffff;
+    opacity: 0.7;
+    z-index: 1;
+    cursor: pointer;
+
+    &.mebel {
+        right: 0;
+        bottom: 43px;
+    }
+
+    &.pereg {
+        left: 0;
+        bottom: 19px;
+    }
+
+    &.ekran {
+        top: 0;
+        left: 96px;
+    }
+
+    &.frez {
+        right: 0;
+        top: 41px;
+    }
+
+    &.potolok {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
