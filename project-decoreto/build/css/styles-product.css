@@ -2450,14 +2450,36 @@ input:focus ~ .bar:after {
 }
 
 .shield .pluses__list {
-  -webkit-transform: translate(200px, 380px);
-      -ms-transform: translate(200px, 380px);
-          transform: translate(200px, 380px);
-  height: 490px;
+  -webkit-transform: translate(40px, 63px);
+      -ms-transform: translate(40px, 63px);
+          transform: translate(40px, 63px);
+  padding: 5% 5% 0% 6%;
 }
 
 .shield .works__item {
   width: auto;
+}
+
+.shield .order-c-c {
+  padding: 100px 50px;
+  background-image: url(../assets/img/shield-bg-left.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.shield .order__list {
+  float: right;
+}
+
+.shield .order__form {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.shield .order__item {
+  width: 60%;
 }
 
 .shield .works__nav__list {
@@ -2478,15 +2500,25 @@ input:focus ~ .bar:after {
   border: 1px solid #d3b869;
 }
 
+.shield .about {
+  padding-top: 50px;
+}
+
+.shield .about_text-content {
+  padding-left: 5%;
+  padding-right: 15%;
+  padding-top: 10%;
+}
+
 .shield .about_text {
-  padding-left: 30px;
-  padding-right: 0px;
+  padding: 0;
 }
 
 .shield .about_text img {
   z-index: -1;
   position: absolute;
   right: 0;
+  width: 30%;
 }
 
 .shield .about_text .title {
@@ -2500,6 +2532,14 @@ input:focus ~ .bar:after {
 
 .shield .order-c {
   width: 55%;
+}
+
+.shield .about__img-wrapp {
+  width: 56%;
+}
+
+.shield .btn__item {
+  padding: 20px 40px;
 }
 
 .furniture .product-card__header {
