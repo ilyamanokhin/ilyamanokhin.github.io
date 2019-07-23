@@ -1623,6 +1623,8 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 50px;
@@ -1836,7 +1838,8 @@ img {
   position: relative;
   background-image: url(../assets/img/product-card-header.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-position: 50% 10%;
+  background-size: cover;
   padding: 50px 0;
   text-align: center;
   color: #fff;
@@ -1920,6 +1923,7 @@ img {
   width: 75%;
   text-align: center;
   font-weight: bold;
+  margin-top: 5%;
 }
 
 .product-card__gallery {
@@ -2145,6 +2149,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2152,11 +2158,14 @@ img {
 
 .product-card__info__item__text {
   font-family: "ProximaNova-Bold";
-  width: 50%;
+  margin-left: 14px;
+  margin-top: 14px;
 }
 
 .product-card__info__item__text h3 {
   font-size: 24px;
+  margin-bottom: 7%;
+  text-transform: uppercase;
   font-weight: bold;
 }
 
@@ -2196,14 +2205,12 @@ img {
   width: 19%;
 }
 
-.product-card__info-how-work__item__text {
-  font-family: "ProximaNova-Bold";
-}
-
 .product-card__info-how-work__item__text h3 {
   text-transform: uppercase;
   font-size: 20px;
+  line-height: 22px;
   margin-bottom: 15%;
+  font-weight: bold;
 }
 
 .product-card__info-how-work__item__text h3:before {
@@ -2216,7 +2223,11 @@ img {
 }
 
 .product-card__info-how-work__item__text p {
+  width: 80%;
+  margin: 0 auto;
   font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
 }
 
 .product-card__info-how-work__block {
@@ -2248,18 +2259,21 @@ img {
 }
 
 .product-card__payment h1 {
+  font-family: 'Playfair Display';
   font-size: 36px;
+  margin-bottom: 3%;
 }
 
 .product-card__payment p {
   display: inline-block;
   font-size: 16px;
   font-family: "ProximaNova-Bold";
+  width: 350px;
   margin: 0 auto;
 }
 
 .product-card__payment-form {
-  width: 50%;
+  width: 45%;
   text-align: center;
 }
 
@@ -2316,7 +2330,8 @@ img {
   font-size: 18px;
   position: absolute;
   pointer-events: none;
-  left: 15px;
+  left: 0;
+  width: 100%;
   top: 15px;
   -o-transition: 0.2s ease all;
   transition: 0.2s ease all;
@@ -2417,7 +2432,11 @@ img {
 }
 
 .product-card__other_item {
-  margin: 10px;
+  margin: 5px;
+}
+
+.product-card .works__item {
+  width: auto;
 }
 
 .bold {
@@ -2469,13 +2488,12 @@ input:focus ~ .bar:after {
 }
 
 .shield .order__list {
+  margin-bottom: 50px;
   float: right;
 }
 
 .shield .order__form {
-  position: static;
-  width: auto;
-  height: auto;
+  width: 45%;
 }
 
 .shield .order__item {
@@ -2771,9 +2789,8 @@ input:focus ~ .bar:after {
 
 .modal .b-modal .b-modal-content {
   margin: 40px auto 0px auto;
-  width: 70%;
-  padding: 10px;
-  background-color: #c5c5c5;
+  padding: 20px;
+  background-color: #fff;
   -webkit-box-shadow: 0px 0px 10px #000;
           box-shadow: 0px 0px 10px #000;
 }
@@ -2782,12 +2799,26 @@ input:focus ~ .bar:after {
   float: right;
 }
 
-.modal .product-card__payment {
-  padding: 0;
+.modal .attach,
+.modal .agreement {
+  float: none !important;
 }
 
-.modal .product-card__product__price {
-  width: 400px;
+.modal .product-card__payment {
+  padding: 25px;
+  width: 100%;
+}
+
+.modal .product-card__payment-form .btn {
+  font-size: 14px;
+}
+
+.modal .product-card__product__info {
+  width: 40%;
+}
+
+.modal .product-card__payment-form {
+  width: 80%;
 }
 
 @media screen and (max-width: 1560px) {

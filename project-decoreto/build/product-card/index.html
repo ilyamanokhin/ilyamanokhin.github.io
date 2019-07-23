@@ -9,6 +9,9 @@
 </head>
 <body>
     <header >
+      
+
+        
        <div class="header header-product">
             <div class="nav">
             <a  href="/" class="logo">
@@ -43,6 +46,7 @@
                         <a href="#" class="header-nav__nav__item">Фрезеровка</a>
                 </ul>
         </div>
+   
     </header>
     <section class="product-card">
            
@@ -121,7 +125,7 @@
                     <div class="product-card__product__price">
                         <a href="javascript:modalUpShow()" class="product-card__product__price__btn">Заказать</a>
                         <div class="product-card__product__text-info">
-                            Оставить заявку на выез замерщика
+                            Оставить заявку <br> на выезд замерщика
                         </div>
                     </div>
                     
@@ -174,19 +178,19 @@
                         <div class="product-card__info-how-work__block">
                                 <div class="product-card__info-how-work__item">
                                         <div class="product-card__info-how-work__item__text">
-                                                <h3>Заявка на сайте</h3>
+                                                <h3>Заявка <br> на сайте</h3>
                                                 <p>Вы оставляете заявку на нашем сайте</p>
                                         </div>
                                     </div>
                                     <div class="product-card__info-how-work__item">
                                             <div class="product-card__info-how-work__item__text">
-                                                <h3>Согласование эскизов проекта</h3>
+                                                <h3>Согласование <br>эскизов проекта</h3>
                                                 <p>Составление и согласование эскиза проекта с менеджером-дизайнер</p>
                                         </div>
                                     </div>
                                     <div class="product-card__info-how-work__item">
                                             <div class="product-card__info-how-work__item__text">
-                                                <h3>Заключение договора</h3>
+                                                <h3>Заключение <br>договора</h3>
                                                 <p>Заключение договора и оплата</p>
                                         </div>
                                     </div>
@@ -247,7 +251,7 @@
                     <label for="mcCheckbox" class="mc_checkbox_label">Согласие на обработку персональных данных</label>
                     
                     <a class="agreement" href="">Пользовательское соглашение</a>
-                    <a class="attach" href="" >Прикрепить файл</a>
+                    <label for="myfile" class="attach order_get_price__input_file_label" href="" >Прикрепить файл</label>
                     
                     <button class="btn" type="submit" > 
                             Рассчитать стоимость  </button>
@@ -294,7 +298,11 @@
         </section>
     </section>
         <section class="modal" >
+         
                 <div class="b-modal" id="modal">
+                        <div class="wrapper">
+                
+                           
                         <div class="b-modal-content">
                                 <a href="javascript:modalUpHide()"><img src="../assets/img/close.png" alt=""></a>
                             <section class="product-card__product">
@@ -370,20 +378,18 @@
                                                                                 <span class="bar"></span>
                                                                                 <label>Email</label>
                                                                             </div>
-                                                                            <div class="group">      
-                                                                                    <textarea name="" id="">Ваше сообщение</textarea>
-                                                                            </div>
+                                                                           
                                                                         
                                                                         
                                                                        
                                                                         <input id="mcCheckbox" class="mc_checkbox" type="checkbox" required>
                                                                         <label for="mcCheckbox" class="mc_checkbox_label">Согласие на обработку персональных данных</label>
-                                                                        
+                                                                        <br>
                                                                         <a class="agreement" href="">Пользовательское соглашение</a>
-                                                                        <a class="attach" href="" >Прикрепить файл</a>
+                                                                        
                                                                         
                                                                         <button class="btn" type="submit" > 
-                                                                                Рассчитать стоимость  </button>
+                                                                                Заказать  </button>
                                                                     </form>
                                                                 </div>
                                                             </section>
@@ -394,10 +400,14 @@
                             </section>
                         </div>
                     </div>
+                    </div>
         </section>
     
     
      <footer class="footer">
+         <div class="wrapper">
+
+        
             <div class="footer-c">
                 <div class="footer__about">
                     <div class="footer__about__logo">
@@ -460,6 +470,7 @@
                 <div class="footer__bottomn_copy">© 1995-2019 Мебельная фабрика Decoreto. Все права защищены.</div>
                 <a href="#" class="footer__bottomn__link">Политика конфиндециальности</a>
             </div>
+        </div>
     </footer> 
     
     <script src="../js/jquery-3.4.1.min.js"></script>

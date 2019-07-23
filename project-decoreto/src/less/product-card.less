@@ -7,7 +7,9 @@ img{
         position: relative;
         background-image: url(../assets/img/product-card-header.png);
         background-repeat: no-repeat;
-        background-size: 100%;
+    
+        background-position: 50% 10%;
+        background-size: cover;
         padding: 50px 0;
         text-align: center;
         color: @color-base-white;  
@@ -79,6 +81,7 @@ img{
             width: 75%;
             text-align: center;
             font-weight: bold;
+            margin-top: 5%;
         }
     }
     &__gallery{
@@ -261,14 +264,23 @@ img{
         &__item{
             // width: 33%;
              display: flex;
+             flex-basis: 50%;
              justify-content: center;
              &__text{
                 font-family: "ProximaNova-Bold";
-                width: 50%;
+                // width: 56%;
+                margin-left: 14px;
+                margin-top: 14px;
                 h3{
                     font-size:24px;
+                    margin-bottom: 7%;
+                    text-transform: uppercase;
                     font-weight: bold;
                 }
+            }
+            &__icon{
+                // width: 50px;
+                // height: 50px;
             }
          }
          &-how-work{
@@ -304,11 +316,13 @@ img{
                 // justify-content: center;
                 width: 19%;
                 &__text {
-                    font-family: "ProximaNova-Bold";
+                   // font-family: "ProximaNova-Bold";
                     h3{
                         text-transform: uppercase;
                          font-size: 20px;
-                         margin-bottom: 15%
+                         line-height: 22px;
+                         margin-bottom: 15%;
+                         font-weight: bold;
                      
                      }
                      h3:before{
@@ -321,8 +335,11 @@ img{
                         
                     }
                     p{
-      
+                        width: 80%;
+                        margin: 0 auto;
                         font-size: 13px;
+                        line-height: 16px;
+                        font-weight: 600;
                     }
                 }
             }
@@ -349,18 +366,21 @@ img{
         
         }
         h1{
+            font-family: 'Playfair Display';
             font-size: 36px;
+            margin-bottom: 3%;
         }
         p{
             display: inline-block;
             font-size: 16px;
             font-family: "ProximaNova-Bold";
           //  width: 55%;
+          width: 350px;
             margin: 0 auto;
         
         }
         &-form{
-            width: 50%;
+            width: 45%;
             text-align: center;
             p, .agreement{
                 font-size: 12px;
@@ -412,7 +432,8 @@ img{
                 font-size: 18px;
                 position: absolute;
                 pointer-events: none;
-                left: 15px;
+                left: 0;
+                width: 100%;
                 top: 15px;
                 transition: 0.2s ease all;
                 -moz-transition: 0.2s ease all;
@@ -509,10 +530,13 @@ img{
             text-transform: uppercase;
         }
         &_item{
-            margin: 10px;
+            margin: 5px;
            
         }
         
+    }
+    .works__item{
+       width: auto; 
     }
     
 }
@@ -558,13 +582,13 @@ input:focus ~ .bar:after{
     height: 100%;
     }
     .order__list{
-       
+        margin-bottom: 50px;
         float: right;
     }
     .order__form{
-        position: static;
-        width: auto;
-        height: auto;
+        // position: static;
+        width: 45%;
+       // height: auto;
     }
     .order__item{
         width: 60%;
@@ -860,6 +884,7 @@ input:focus ~ .bar:after{
     // #popup1{
     //     display: none;
     // }
+   
     &-open{
         overflow: hidden;
     }
@@ -876,22 +901,35 @@ input:focus ~ .bar:after{
     }
     .b-modal .b-modal-content{
         margin:40px auto 0px auto;
-        width: 70%;
+      //  width: 70%;
         //height: 70%;
 
-        padding:10px;
-        background-color: #c5c5c5;
+        padding:20px;
+        background-color: #fff;
         //border-radius:5px;
         box-shadow: 0px 0px 10px #000;
         a{
             float: right;
         }
     }
+    .attach, .agreement{
+        float: none !important;
+    }
     .product-card__payment{
-        padding: 0;
+        padding: 25px;
+        width: 100%;
+    }
+    .product-card__payment-form .btn{
+        font-size: 14px;
     }
     .product-card__product__price{
-        width: 400px;
+       // width: 400px;
+    }
+    .product-card__product__info{
+        width: 40%;
+    }
+    .product-card__payment-form{
+        width: 80%;
     }
 }
 // Вынести в отдельные шаблоны модал форму другие экраны
