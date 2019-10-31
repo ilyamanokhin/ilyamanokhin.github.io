@@ -1,5 +1,5 @@
 function divCreating(param) {
-    let debugGrid = document.querySelector(param);
+    var debugGrid = document.querySelector(param);
     let divCreate = document.createElement('div');
     debugGrid.appendChild(divCreate);
 

@@ -4,6 +4,7 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
 const gulpif = require('gulp-if');
 const gcmq = require('gulp-group-css-media-queries');
@@ -45,6 +46,10 @@ let cssFiles = [
 	'./src/css/humans.css'
 ];
 */
+const jsFiles = [
+	'./src/js/debugGrid.js',
+	'./src/js/main.js',
+];//порядок сборки js файлов
 
 function clear(){
 	return del('build/*');
@@ -54,9 +59,11 @@ function styles(){
 	return gulp.src('./src/less/+(styles|styles-per).less')
 			   .pipe(gulpif(isDev, sourcemaps.init()))
 			   .pipe(less())
-			   //.pipe(concat('style.css'))
+			   //.pipe(concat('style.css')) 
+			   //.pipe(concat('all.min.css'))
 			   .pipe(gcmq())
 			   .pipe(autoprefixer({
+				   //in package.json
 		        }))
 			   //.on('error', console.error.bind(console))
 			   .pipe(gulpif(isProd, cleanCSS({
@@ -67,9 +74,13 @@ function styles(){
 			   .pipe(gulpif(isSync, browserSync.stream()));
 }
 function scripts () {
-	 return gulp.src('./src/js/+(debugGrid).js')
+	 return gulp.src(jsFiles)
 				.pipe(gulpif(isDev, sourcemaps.init()))
-				
+				// .pipe(concat('all.js')) 
+				// .pipe(concat('all.min.js'))
+				// .pipe(uglify({
+				// 	toplevel: false//жесткое сжатие js
+				// }))
 				.pipe(gulpif(isDev, sourcemaps.write()))
 				.pipe(gulp.dest('./build/js'))
 				.pipe(gulpif(isSync, browserSync.stream()));
@@ -93,7 +104,8 @@ function watch(){
 		browserSync.init({
 	        server: {
 	            baseDir: "./build/",
-	        }
+			}
+			// tunnel: true //использование локального сервера
 	    });
 	}
 
