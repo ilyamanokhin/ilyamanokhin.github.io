@@ -22,6 +22,10 @@ gulp.task('default', function () {
 		.pipe(gulp.dest('./src/img/icons'))
 		.pipe(gulp.dest('./src/fonts'))
 		.pipe(gulp.dest('./src/less'))
+		.pipe(gulp.dest('./src/less/blocks'))
+		.pipe(gulp.dest('./src/less/smartgrid'))
+		.pipe(gulp.dest('./src/less/mixins'))
+		.pipe(gulp.dest('./src/less/variables'))
 		.pipe(gulp.dest('./src/js'))
 });
 
@@ -47,7 +51,7 @@ function clear(){
 }
 
 function styles(){
-	return gulp.src('./src/less/+(styles|styles-per|styles-ie9).less')
+	return gulp.src('./src/less/+(styles|styles-per).less')
 			   .pipe(gulpif(isDev, sourcemaps.init()))
 			   .pipe(less())
 			   //.pipe(concat('style.css'))
@@ -103,11 +107,11 @@ function grid(done){
 	delete require.cache[require.resolve('./smartgrid.js')];
 
 	let settings = require('./smartgrid.js');
-	smartgrid('./src/less', settings);
+	smartgrid('./src/less/smartgrid', settings);
 
 	settings.offset = '3.1%';
 	settings.filename = 'smart-grid-per';
-	smartgrid('./src/less', settings);
+	smartgrid('./src/less/smartgrid', settings);
 
 	done();
 }

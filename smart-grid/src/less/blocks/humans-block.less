@@ -1,0 +1,62 @@
+.humans{ 
+    background: @color_green;
+    padding: 10px 0;
+
+    h2{
+        color: @color_black;
+    }
+
+    .h2sub{
+        color: #fff;
+    }
+
+    .items{
+        .row-flex();
+        justify-content: center;
+
+        .item{
+            .col();
+            .size(3);
+            .size-md(5);
+            .size-sm(6);
+            .size-xs(12);
+            .xs(max-width, 400px);
+           /* .size-xxs(24);*/
+
+
+
+            background: #fff;
+            border-radius: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+
+            img{
+                margin: 10px auto;
+                width: 90%;
+            }
+
+            .subtitle{
+                color: #222;
+                font-size: 24px;
+                margin: 10px;
+            }
+
+            .job{
+                margin: auto 10px 10px 10px;
+            }
+
+            .follow{
+                background: #6cc372;
+                color: #fff;
+                font-size: 24px;
+                cursor: pointer;
+                border-radius: 5px;
+                padding: 5px;
+            }
+        }
+    }
+}

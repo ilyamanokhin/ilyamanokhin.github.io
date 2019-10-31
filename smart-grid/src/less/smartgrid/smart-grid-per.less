@@ -6,7 +6,7 @@
 @break_xs: 576px;
 @break_xxs: 420px;
 
-@offset: 30px;
+@offset: 3.1%;
 @offset_md: @offset;
 @offset_sm: @offset;
 @offset_xs: @offset;
@@ -83,188 +83,153 @@
 }
 
 .size(@n){
-    @val: 100% / @columns * @n;
-    width: ~"calc(@{val} - @{offset})";
+    width: @atom * @n - @offset;
 }
 
 .size-md(@n){
-    @val: 100% / @columns * @n;
-    .md(width, ~"calc(@{val} - @{offset_md})");
+    .md(width, @atom * @n - @offset_md);
 }
 
 .size-sm(@n){
-    @val: 100% / @columns * @n;
-    .sm(width, ~"calc(@{val} - @{offset_sm})");
+    .sm(width, @atom * @n - @offset_sm);
 }
 
 .size-xs(@n){
-    @val: 100% / @columns * @n;
-    .xs(width, ~"calc(@{val} - @{offset_xs})");
+    .xs(width, @atom * @n - @offset_xs);
 }
 
 .size-xxs(@n){
-    @val: 100% / @columns * @n;
-    .xxs(width, ~"calc(@{val} - @{offset_xxs})");
+    .xxs(width, @atom * @n - @offset_xxs);
 }
 
 .shift(@n){
-    @val: 100% / @columns * @n;
-    margin-left: ~"calc(@{val} + @{offset_one_side})";
-    margin-right: ~"calc(@{val} + @{offset_one_side})";
+    margin-left: @atom * @n + @offset_one_side;
+    margin-right: @atom * @n + @offset_one_side;
 }
 
 .shift-left(@n){
-    @val: 100% / @columns * @n;
-    margin-left: ~"calc(@{val} + @{offset_one_side})";
+    margin-left: @atom * @n + @offset_one_side;
 }
 
 .shift-right(@n){
-    @val: 100% / @columns * @n;
-    margin-right: ~"calc(@{val} + @{offset_one_side})";
+    margin-right: @atom * @n + @offset_one_side;
 }
 
 .shift-padding(@n){
-    @val: 100% / @columns * @n;
-    padding-left: ~"calc(@{val} + @{offset_one_side})";
-    padding-right: ~"calc(@{val} + @{offset_one_side})";
+    padding-left: @atom * @n + @offset_one_side;
+    padding-right: @atom * @n + @offset_one_side;
 }
 
 .shift-padding-left(@n){
-    @val: 100% / @columns * @n;
-    padding-left: ~"calc(@{val} + @{offset_one_side})";
+    padding-left: @atom * @n + @offset_one_side;
 }
 
 .shift-padding-right(@n){
-    @val: 100% / @columns * @n;
-    padding-right: ~"calc(@{val} + @{offset_one_side})";
+    padding-right: @atom * @n + @offset_one_side;
 }
 
 .shift-md(@n){
-    @val: 100% / @columns * @n;
-    .md(margin-left, ~"calc(@{val} + @{offset_md_one_side})");
-    .md(margin-right, ~"calc(@{val} + @{offset_md_one_side})");
+    .md(margin-left, @atom * @n + @offset_md_one_side);
+    .md(margin-right, @atom * @n + @offset_md_one_side);
 }
 
 .shift-md-left(@n){
-    @val: 100% / @columns * @n;
-    .md(margin-left, ~"calc(@{val} + @{offset_md_one_side})");
+    .md(margin-left, @atom * @n + @offset_md_one_side);
 }
 
 .shift-md-right(@n){
-    @val: 100% / @columns * @n;
-    .md(margin-right, ~"calc(@{val} + @{offset_md_one_side})");
+    .md(margin-right, @atom * @n + @offset_md_one_side);
 }
 
 .shift-md-padding(@n){
-    @val: 100% / @columns * @n;
-    .md(padding-left, ~"calc(@{val} + @{offset_md_one_side})");
-    .md(padding-right, ~"calc(@{val} + @{offset_md_one_side})");
+    .md(padding-left, @atom * @n + @offset_md_one_side);
+    .md(padding-right, @atom * @n + @offset_md_one_side);
 }
 
 .shift-md-padding-left(@n){
-    @val: 100% / @columns * @n;
-    .md(padding-left, ~"calc(@{val} + @{offset_md_one_side})");
+    .md(padding-left, @atom * @n + @offset_md_one_side);
 }
 
 .shift-md-padding-right(@n){
-    @val: 100% / @columns * @n;
-    .md(padding-right, ~"calc(@{val} + @{offset_md_one_side})");
+    .md(padding-right, @atom * @n + @offset_md_one_side);
 }
 
 .shift-sm(@n){
-    @val: 100% / @columns * @n;
-    .sm(margin-left, ~"calc(@{val} + @{offset_sm_one_side})");
-    .sm(margin-right, ~"calc(@{val} + @{offset_sm_one_side})");
+    .sm(margin-left, @atom * @n + @offset_sm_one_side);
+    .sm(margin-right, @atom * @n + @offset_sm_one_side);
 }
 
 .shift-sm-left(@n){
-    @val: 100% / @columns * @n;
-    .sm(margin-left, ~"calc(@{val} + @{offset_sm_one_side})");
+    .sm(margin-left, @atom * @n + @offset_sm_one_side);
 }
 
 .shift-sm-right(@n){
-    @val: 100% / @columns * @n;
-    .sm(margin-right, ~"calc(@{val} + @{offset_sm_one_side})");
+    .sm(margin-right, @atom * @n + @offset_sm_one_side);
 }
 
 .shift-sm-padding(@n){
-    @val: 100% / @columns * @n;
-    .sm(padding-left, ~"calc(@{val} + @{offset_sm_one_side})");
-    .sm(padding-right, ~"calc(@{val} + @{offset_sm_one_side})");
+    .sm(padding-left, @atom * @n + @offset_sm_one_side);
+    .sm(padding-right, @atom * @n + @offset_sm_one_side);
 }
 
 .shift-sm-padding-left(@n){
-    @val: 100% / @columns * @n;
-    .sm(padding-left, ~"calc(@{val} + @{offset_sm_one_side})");
+    .sm(padding-left, @atom * @n + @offset_sm_one_side);
 }
 
 .shift-sm-padding-right(@n){
-    @val: 100% / @columns * @n;
-    .sm(padding-right, ~"calc(@{val} + @{offset_sm_one_side})");
+    .sm(padding-right, @atom * @n + @offset_sm_one_side);
 }
 
 .shift-xs(@n){
-    @val: 100% / @columns * @n;
-    .xs(margin-left, ~"calc(@{val} + @{offset_xs_one_side})");
-    .xs(margin-right, ~"calc(@{val} + @{offset_xs_one_side})");
+    .xs(margin-left, @atom * @n + @offset_xs_one_side);
+    .xs(margin-right, @atom * @n + @offset_xs_one_side);
 }
 
 .shift-xs-left(@n){
-    @val: 100% / @columns * @n;
-    .xs(margin-left, ~"calc(@{val} + @{offset_xs_one_side})");
+    .xs(margin-left, @atom * @n + @offset_xs_one_side);
 }
 
 .shift-xs-right(@n){
-    @val: 100% / @columns * @n;
-    .xs(margin-right, ~"calc(@{val} + @{offset_xs_one_side})");
+    .xs(margin-right, @atom * @n + @offset_xs_one_side);
 }
 
 .shift-xs-padding(@n){
-    @val: 100% / @columns * @n;
-    .xs(padding-left, ~"calc(@{val} + @{offset_xs_one_side})");
-    .xs(padding-right, ~"calc(@{val} + @{offset_xs_one_side})");
+    .xs(padding-left, @atom * @n + @offset_xs_one_side);
+    .xs(padding-right, @atom * @n + @offset_xs_one_side);
 }
 
 .shift-xs-padding-left(@n){
-    @val: 100% / @columns * @n;
-    .xs(padding-left, ~"calc(@{val} + @{offset_xs_one_side})");
+    .xs(padding-left, @atom * @n + @offset_xs_one_side);
 }
 
 .shift-xs-padding-right(@n){
-    @val: 100% / @columns * @n;
-    .xs(padding-right, ~"calc(@{val} + @{offset_xs_one_side})");
+    .xs(padding-right, @atom * @n + @offset_xs_one_side);
 }
 
 .shift-xxs(@n){
-    @val: 100% / @columns * @n;
-    .xxs(margin-left, ~"calc(@{val} + @{offset_xxs_one_side})");
-    .xxs(margin-right, ~"calc(@{val} + @{offset_xxs_one_side})");
+    .xxs(margin-left, @atom * @n + @offset_xxs_one_side);
+    .xxs(margin-right, @atom * @n + @offset_xxs_one_side);
 }
 
 .shift-xxs-left(@n){
-    @val: 100% / @columns * @n;
-    .xxs(margin-left, ~"calc(@{val} + @{offset_xxs_one_side})");
+    .xxs(margin-left, @atom * @n + @offset_xxs_one_side);
 }
 
 .shift-xxs-right(@n){
-    @val: 100% / @columns * @n;
-    .xxs(margin-right, ~"calc(@{val} + @{offset_xxs_one_side})");
+    .xxs(margin-right, @atom * @n + @offset_xxs_one_side);
 }
 
 .shift-xxs-padding(@n){
-    @val: 100% / @columns * @n;
-    .xxs(padding-left, ~"calc(@{val} + @{offset_xxs_one_side})");
-    .xxs(padding-right, ~"calc(@{val} + @{offset_xxs_one_side})");
+    .xxs(padding-left, @atom * @n + @offset_xxs_one_side);
+    .xxs(padding-right, @atom * @n + @offset_xxs_one_side);
 }
 
 .shift-xxs-padding-left(@n){
-    @val: 100% / @columns * @n;
-    .xxs(padding-left, ~"calc(@{val} + @{offset_xxs_one_side})");
+    .xxs(padding-left, @atom * @n + @offset_xxs_one_side);
 }
 
 .shift-xxs-padding-right(@n){
-    @val: 100% / @columns * @n;
-    .xxs(padding-right, ~"calc(@{val} + @{offset_xxs_one_side})");
+    .xxs(padding-right, @atom * @n + @offset_xxs_one_side);
 }
 
 .md(@name, @value){
@@ -422,47 +387,6 @@
             }
         }
     }
-    
-}
-.debugBtn(){
-    &-btn{
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #ff0;
-    border-radius: 50%;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.4);
-    
-    &__hidden{
-        display: none;
-    }
-    &:before,
-    &:after {
-        content: '';
-        align-self: center;
-        background: #000;
-    }
-    &:before {
-        width: 25px;
-        height: 2px;
-    }
-    &__create {
-        &:after {
-            width: 2px;
-            height: 25px; 
-            position: absolute;
-        }
-    }
-   
-}
-&__z-index-negative{
-    z-index: -1;
-}
 }
 
 .clearfix(){
