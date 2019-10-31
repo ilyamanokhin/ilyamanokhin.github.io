@@ -10,6 +10,7 @@ const gulpif = require('gulp-if');
 const gcmq = require('gulp-group-css-media-queries');
 const less = require('gulp-less');
 const smartgrid = require('smart-grid');
+const pug = require('gulp-pug');
 
 const isDev = (process.argv.indexOf('--dev') !== -1);
 const isProd = !isDev;
@@ -30,13 +31,6 @@ gulp.task('default', function () {
 		.pipe(gulp.dest('./src/js'))
 });
 
-/*
-	1. browserSync для html
-	2. 
-		gulp-uncss - удаление неиспользуемого css
-		gulp-group-css-media-queries - соединение media-запрос
-	3. по желанию pug html препроц
-*/
 
 /*
 let cssFiles = [
@@ -47,8 +41,8 @@ let cssFiles = [
 ];
 */
 const jsFiles = [
-	'./src/js/debugGrid.js',
-	'./src/js/main.js',
+	// './src/js/debugGrid.js',
+	 './src/js/main.js',
 ];//порядок сборки js файлов
 
 function clear(){
@@ -98,6 +92,12 @@ function html(){
 			   .pipe(gulp.dest('./build'))
 			   .pipe(gulpif(isSync, browserSync.stream()));
 }
+function pugc(){
+	return gulp.src('./src/*.pug')
+			.pipe(pug({pretty: '\t'}))
+			.pipe(gulp.dest('./build'))
+			.pipe(gulpif(isSync, browserSync.stream()));
+}
 
 function watch(){
 	if(isSync){
@@ -112,6 +112,7 @@ function watch(){
 	gulp.watch('./src/less/**/*.less', styles);
 	gulp.watch('./src/js/**/*.js', scripts);
 	gulp.watch('./src/**/*.html', html);
+	gulp.watch('./src/**/*.pug', pugc);
 	gulp.watch('./smartgrid.js', grid);
 }
 
@@ -131,7 +132,7 @@ function grid(done){
 
 
 let build = gulp.series(clear, 
-	gulp.parallel(styles, scripts, img, html)
+	gulp.parallel(styles, scripts, img, html, pugc)
 );
 
 gulp.task('build', gulp.series(grid, build));
