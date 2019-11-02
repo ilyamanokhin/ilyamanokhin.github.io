@@ -41,7 +41,7 @@ let cssFiles = [
 ];
 */
 const jsFiles = [
-	// './src/js/debugGrid.js',
+	'./src/js/debugGridCreate.js',
 	 './src/js/main.js',
 ];//порядок сборки js файлов
 
