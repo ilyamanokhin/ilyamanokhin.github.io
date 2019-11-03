@@ -37,3 +37,9 @@
     z-index: -1;
 }
 }
+.font(@font; @fontName; @urlName: @fontName; @weight: normal; @style: normal) {
+    font-family: '@{fontName}';
+    src: url('../fonts/@{font}/@{urlName}.ttf') format('truetype');
+      font-weight: @weight;
+      font-style: @style;
+  }

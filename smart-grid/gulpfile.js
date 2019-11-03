@@ -86,6 +86,10 @@ function img(){
 	return gulp.src('./src/img/**/*')
 			   .pipe(gulp.dest('./build/img'))
 }
+function fonts(){
+	return gulp.src('./src/fonts/**/*')
+			   .pipe(gulp.dest('./build/fonts'))
+}
 
 function html(){
 	return gulp.src('./src/*.html')
@@ -132,7 +136,7 @@ function grid(done){
 
 
 let build = gulp.series(clear, 
-	gulp.parallel(styles, scripts, img, html, pugc)
+	gulp.parallel(styles, scripts, img, fonts, html, pugc)
 );
 
 gulp.task('build', gulp.series(grid, build));
