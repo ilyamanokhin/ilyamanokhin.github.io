@@ -1,10 +1,12 @@
-doctype html
-html(lang='en') 
-    head
-        title Hello, World!
-        link(rel='stylesheet', href='css/styles.css', type='text/css')
-        script(src='js/debugGridCreate.js')
-    body
-       button.debugGrid-btn.debugGrid-btn__create(onclick="debugGridCreate()")
-       button.debugGrid-btn.debugGrid-btn__remove.debugGrid-btn__hidden(onclick="debugGridRemove()")
-       div.debugGrid.debugGrid__z-index-negative
+extends templates/template-head
+
+block title
+	title Заголовок страницы
+
+block content
+	include modules/debuggrid
+	include modules/header
+	include contents/content
+	include modules/footer
+
+	

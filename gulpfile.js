@@ -43,6 +43,8 @@ let cssFiles = [
 const jsFiles = [
 	'./src/js/debugGridCreate.js',
 	 './src/js/main.js',
+	 './src/js/libs.js',
+	 './src/js/custom.js',
 ];//порядок сборки js файлов
 
 function clear(){
@@ -50,7 +52,7 @@ function clear(){
 }
 
 function styles(){
-	return gulp.src('./src/less/+(styles|styles-per).less')
+	return gulp.src(['./src/less/+(styles|styles-per).less','./src/less/portfolio/*.less'])
 			   .pipe(gulpif(isDev, sourcemaps.init()))
 			   .pipe(less())
 			   //.pipe(concat('style.css')) 
@@ -67,6 +69,7 @@ function styles(){
 			   .pipe(gulp.dest('./build/css'))
 			   .pipe(gulpif(isSync, browserSync.stream()));
 }
+
 function scripts () {
 	 return gulp.src(jsFiles)
 				.pipe(gulpif(isDev, sourcemaps.init()))
@@ -97,7 +100,7 @@ function html(){
 			   .pipe(gulpif(isSync, browserSync.stream()));
 }
 function pugc(){
-	return gulp.src('./src/*.pug')
+	return gulp.src(['./src/**/*.pug', '!./src/**/content.pug','!./src/modules/*.pug','!./src/templates/*.pug'])
 			.pipe(pug({pretty: '\t'}))
 			.pipe(gulp.dest('./build'))
 			.pipe(gulpif(isSync, browserSync.stream()));
@@ -136,7 +139,7 @@ function grid(done){
 
 
 let build = gulp.series(clear, 
-	gulp.parallel(styles, scripts, img, fonts, html, pugc)
+	gulp.parallel(styles,scripts, img, fonts, html, pugc)
 );
 
 gulp.task('build', gulp.series(grid, build));
