@@ -11,6 +11,6 @@ export class CurrencyCardComponent {
  
   @Input() currency:any;
 
-  currencies:string[] = ['USD', 'RUB'];
+  currencies:string[] = ['USD', 'EUR'];
 
 }
