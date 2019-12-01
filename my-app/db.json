@@ -20,7 +20,7 @@
     }
   ],
   "bill": {
-    "value": 100000,
+    "value": 101999,
     "currency": "RUB"
   },
   "categories": [
@@ -35,9 +35,14 @@
       "id": 2
     },
     {
-      "id": 3,
       "name": "Машина",
-      "capacity": 7000
+      "capacity": 8000,
+      "id": 3
+    },
+    {
+      "name": "Новое",
+      "capacity": 1200,
+      "id": 4
     }
   ],
   "events": [
@@ -80,6 +85,102 @@
       "date": "10.06.2017 14:01:58",
       "id": 5,
       "description": "Заправка + проход ТО"
+    },
+    {
+      "type": "outcome",
+      "amount": 3000,
+      "category": 3,
+      "date": "01.12.2019 11:23:33",
+      "description": "test",
+      "id": 6
+    },
+    {
+      "type": "outcome",
+      "amount": 1000,
+      "category": 3,
+      "date": "01.12.2019 11:24:14",
+      "description": "test",
+      "id": 7
+    },
+    {
+      "type": "income",
+      "amount": 2000,
+      "category": 3,
+      "date": "01.12.2019 11:24:36",
+      "description": "test",
+      "id": 8
+    },
+    {
+      "type": "income",
+      "amount": 1000,
+      "category": 3,
+      "date": "01.12.2019 11:24:59",
+      "description": "test",
+      "id": 9
+    },
+    {
+      "type": "income",
+      "amount": 1000,
+      "category": 3,
+      "date": "01.12.2019 11:25:45",
+      "description": "test",
+      "id": 10
+    },
+    {
+      "type": "income",
+      "amount": 1000,
+      "category": 3,
+      "date": "01.12.2019 11:26:02",
+      "description": "test",
+      "id": 11
+    },
+    {
+      "type": "outcome",
+      "amount": 2000,
+      "category": 2,
+      "date": "01.12.2019 11:26:19",
+      "description": "test",
+      "id": 12
+    },
+    {
+      "type": "income",
+      "amount": 2000,
+      "category": 2,
+      "date": "01.12.2019 11:26:59",
+      "description": "test",
+      "id": 13
+    },
+    {
+      "type": "income",
+      "amount": 1000,
+      "category": 2,
+      "date": "01.12.2019 11:27:20",
+      "description": "test",
+      "id": 14
+    },
+    {
+      "type": "income",
+      "amount": 1000,
+      "category": 1,
+      "date": "01.12.2019 11:27:47",
+      "description": "test",
+      "id": 15
+    },
+    {
+      "type": "outcome",
+      "amount": 1,
+      "category": 4,
+      "date": "01.12.2019 11:34:10",
+      "description": "800",
+      "id": 16
+    },
+    {
+      "type": "outcome",
+      "amount": 1000,
+      "category": 4,
+      "date": "01.12.2019 11:34:31",
+      "description": "test",
+      "id": 17
     }
   ]
 }
