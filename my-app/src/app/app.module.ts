@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BookkeepingModule } from './bookkeeping/bookkeeping.module';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { BookkeepingModule } from './bookkeeping/bookkeeping.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BookkeepingModule
+    BookkeepingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
