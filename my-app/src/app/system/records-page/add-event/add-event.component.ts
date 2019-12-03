@@ -7,7 +7,7 @@ import { EventsService } from '../../shared/services/events.service';
 import { BillService } from '../../shared/services/bill.service';
 import { Bill } from '../../shared/models/bill.model';
 import { mergeMap } from 'rxjs/operators';
-import { Message } from 'src/app/bookkeeping/shared/models/message.model';
+import { Message } from 'src/app/shared/models/message.model';
 import { Subscription } from 'rxjs';
 
 @Component({

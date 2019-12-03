@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { CategoriesService } from '../../shared/services/categories.service';
 import { Category } from '../../shared/models/category.model';
 import { Subscription } from 'rxjs';
-import { Message } from 'src/app/bookkeeping/shared/models/message.model';
+import { Message } from 'src/app/shared/models/message.model';
 
 @Component({
   selector: 'app-add-category',

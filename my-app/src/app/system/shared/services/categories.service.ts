@@ -1,4 +1,4 @@
-import { BaseApi } from 'src/app/bookkeeping/shared/core/base-api';
+import { BaseApi } from 'src/app/shared/core/base-api';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Category } from '../models/category.model';
