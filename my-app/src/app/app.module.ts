@@ -8,24 +8,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthService } from './shared/services/auth.service';
 import { UsersService } from './shared/services/user.services';
 import { AuthModule } from './auth/auth.module';
-import { SystemModule } from './system/system.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './shared/services/auth.guard';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    AuthModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AuthModule,
-    SystemModule,
-    HttpClientModule
   ],
   providers: [
     UsersService,
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
