@@ -10,6 +10,7 @@ const API_URL_LATEST = API+ENDPOINT_URL_LATEST+API_KEY;
 
 @Injectable()
 export class BaseApi{
+    // private baseUrl = 'https://bookkeeping-42039.firebaseio.com/';
     private baseUrl = 'http://localhost:3000/';
     private apiUrlLatest = API_URL_LATEST;
     constructor(

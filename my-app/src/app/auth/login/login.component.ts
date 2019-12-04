@@ -7,6 +7,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { User } from '../../shared/models/user.model';
 import { fadeStateTrigger } from 'src/app/shared/animation/fade.animation';
 import { Title, Meta } from '@angular/platform-browser';
+import { BackendService } from 'src/app/shared/services/backend.service';
 
 @Component({
   selector: 'app-login',
@@ -25,7 +26,8 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private title: Title,
-    private meta: Meta
+    private meta: Meta,
+    private backendService: BackendService,
   ) {
     title.setTitle('Вход в систему');
     meta.addTags([
@@ -90,5 +92,17 @@ export class LoginComponent implements OnInit {
         }
 
       })
+  }
+  login(loginType: string, formData?): void {
+    this.backendService.login(loginType, formData)
+  }
+
+  logout(): void {
+    this.backendService.logout()
+      .then(() => {
+        this.router.navigate(['/login']);
+      }).catch((err: Error) => {
+        console.log(err);
+      });
   }
 }
