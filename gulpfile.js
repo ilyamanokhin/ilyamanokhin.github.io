@@ -97,7 +97,7 @@ function html(){
 			   .pipe(gulpif(isSync, browserSync.stream()));
 }
 function pugc(){
-	return gulp.src('./src/*.pug')
+	return gulp.src(['./src/**/*.pug','!./src/modules/*.pug','!./src/templates/*.pug'])
 			.pipe(pug({pretty: '\t'}))
 			.pipe(gulp.dest('./build'))
 			.pipe(gulpif(isSync, browserSync.stream()));
