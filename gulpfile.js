@@ -11,6 +11,10 @@ const gcmq = require('gulp-group-css-media-queries');
 const less = require('gulp-less');
 const smartgrid = require('smart-grid');
 const pug = require('gulp-pug');
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+const notify = require('gulp-notify');
+const spritesmith = require('gulp.spritesmith');
 
 const isDev = (process.argv.indexOf('--dev') !== -1);
 const isProd = !isDev;
@@ -82,13 +86,30 @@ function scripts () {
 
 }
 
-function img(){
-	return gulp.src('./src/img/**/*')
-			   .pipe(gulp.dest('./build/img'))
-}
 function fonts(){
 	return gulp.src('./src/fonts/**/*')
 			   .pipe(gulp.dest('./build/fonts'))
+}
+
+function images() {
+	return gulp.src(['./src/img/*', '!./src/img/icons'])
+		.pipe(imagemin({ optimizationLevel: 3,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant()],
+			progressive: true,
+			interlaced: true }))
+		.pipe(gulp.dest('./build/img'))
+		// .pipe(notify({ message: 'Images task complete' }));
+}
+function sprite() {
+	return gulp.src('./src/img/icons/*.png').pipe(spritesmith({
+		imgName: 'sprite.png',
+		imgPath: './build/img/sprite.png',
+		padding:10,
+		cssName: 'sprite.less',
+	  }))
+	  .pipe(gulp.dest('./build/img/'))
+	  .pipe(gulp.dest('./src/less/sprite'))
 }
 
 function html(){
@@ -136,7 +157,7 @@ function grid(done){
 
 
 let build = gulp.series(clear, 
-	gulp.parallel(styles, scripts, img, fonts, html, pugc)
+	gulp.parallel(styles, scripts, sprite, images, fonts, html, pugc)
 );
 
 gulp.task('build', gulp.series(grid, build));
