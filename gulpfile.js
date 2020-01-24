@@ -36,14 +36,10 @@ gulp.task('default', function () {
 });
 
 
-/*
-let cssFiles = [
-	'./node_modules/normalize.css/normalize.css',
-	'./src/css/base.css',
-	'./src/css/grid.css',
-	'./src/css/humans.css'
+let lessFiles = [
+	// './node_modules/normalize.css/normalize.css',
+	'./src/less/+(styles|styles-per).less',
 ];
-*/
 const jsFiles = [
 	'./src/js/debug-grid-create.js',
 	'./src/js/main.js',
@@ -95,7 +91,7 @@ function pugc() {
 }
 
 function styles() {
-	return gulp.src('./src/less/+(styles|styles-per).less')
+	return gulp.src(lessFiles)
 		.pipe(gulpif(isDev, sourcemaps.init()))
 		.pipe(less())
 		//.pipe(concat('style.css')) 
@@ -106,7 +102,11 @@ function styles() {
 		}))
 		//.on('error', console.error.bind(console))
 		.pipe(gulpif(isProd, cleanCSS({
-			level: 2
+			level: {
+				2: {
+				  all: true, // sets all values to `false`
+				}
+			  }
 		})))
 		.pipe(gulpif(isDev, sourcemaps.write()))
 		.pipe(gulp.dest('./build/css'))
@@ -163,4 +163,7 @@ let build = gulp.series(clear,
 gulp.task('build', gulp.series(grid, build));
 gulp.task('watch', gulp.series(build, watch));
 gulp.task('grid', grid);
+// gulp sprite запускать отдельно(после) т.к. тормозит общую сборку
 gulp.task('sprite', sprite);
+// минификация в конце
+gulp.task('styles', styles);

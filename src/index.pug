@@ -2,8 +2,10 @@ extends templates/template
 
 block title
 	title Заголовок страницы
+block append style
 block content
-	include modules/debuggrid
-	include modules/header
-	h1 Заголовок
-	p Текст абзаца
+	include modules/header-module
+	.wrapper
+		h1 Заголовок
+		p Текст абзаца
+block append script

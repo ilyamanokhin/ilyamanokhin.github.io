@@ -1,11 +1,15 @@
 doctype html
 html(lang='ru') 
     head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        block base
         block title
         block style
-        link(rel='stylesheet', href='css/styles.css', type='text/css')
-        block script
-        script(src='js/debugGridCreate.js')
+            link(rel='stylesheet', href='css/styles.css', type='text/css')
     body
-        block content
-        
+        .page
+            block content
+        block script
+            script(src='js/debug-grid-create.js')
+            script(src='js/main.js')

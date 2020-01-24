@@ -8,8 +8,23 @@
 .scrollbar(@color_scrollbar-track, @color_scrollbar-thumb);
 
 @font-face {
-    .font(@font; @fontRegular);
+  .font(@font; @fontBold);
 }
-body{
+@font-face {
+  .font(@font; @fontRegular);
+}
+body {
   font-family: @fontRegular;
+}
+a, button{
+  cursor: pointer;
+  &:focus{
+      outline: none;
+  }
+}
+input{
+  cursor: text;
+  &:focus{
+      outline: none;
+  }
 }
