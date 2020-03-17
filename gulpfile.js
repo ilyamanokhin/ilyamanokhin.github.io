@@ -43,8 +43,6 @@ let cssFiles = [
 const jsFiles = [
 	'./src/js/debugGridCreate.js',
 	 './src/js/main.js',
-	 './src/js/libs.js',
-	 './src/js/custom.js',
 ];//порядок сборки js файлов
 
 function clear(){
@@ -100,7 +98,7 @@ function html(){
 			   .pipe(gulpif(isSync, browserSync.stream()));
 }
 function pugc(){
-	return gulp.src(['./src/**/*.pug', '!./src/**/content.pug','!./src/modules/*.pug','!./src/templates/*.pug'])
+	return gulp.src(['./src/**/*.pug', '!./src/modules/*.pug','!./src/templates/*.pug'])
 			.pipe(pug({pretty: '\t'}))
 			.pipe(gulp.dest('./build'))
 			.pipe(gulpif(isSync, browserSync.stream()));
