@@ -43,6 +43,7 @@ let lessFiles = [
 const jsFiles = [
 	'./src/js/debug-grid-create.js',
 	'./src/js/main.js',
+	'./src/js/canvans-rings.js',
 ];//порядок сборки js файлов
 
 function clear() {
