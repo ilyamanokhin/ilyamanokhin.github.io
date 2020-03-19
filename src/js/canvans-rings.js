@@ -6,7 +6,7 @@
     const ringRadiusOffset = 10;
     const ringRadius = 300;
     const waveOffset = 15;
-    const colors = ['#917c2e', '#bda042', '#f6d667'];
+    const colors = document.querySelectorAll('.theme-color');
     let startAngle = 0;
 
     const maxWavesAmplitude = 17;
@@ -34,8 +34,8 @@
         startAngle >= 360 ? startAngle = 0 : startAngle++;
     }
 
-    function drawRing(radius, colors, offsetAngle){
-        ctx.strokeStyle = colors;
+    function drawRing(radius, color, offsetAngle){
+        ctx.strokeStyle = getComputedStyle(color).color;
         ctx.lineWidth = 11;
 
         ctx.beginPath();
