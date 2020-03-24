@@ -4,7 +4,7 @@
 
     const numberOfRings = 3;
     const ringRadiusOffset = 10;
-    const ringRadius = 300;
+    const ringRadius = 325;
     const waveOffset = 15;
     const colors = document.querySelectorAll('.theme-color');
     let startAngle = 0;
@@ -16,8 +16,9 @@
     let centerY;
 
     function init() {
-        cnv.width = innerWidth;
-        cnv.height = innerHeight;
+        // cnv.width = innerWidth-5;
+        cnv.width = cnv.offsetParent.offsetWidth;
+        cnv.height = innerHeight - document.querySelector('.header').offsetHeight * 2;
 
         centerX = cnv.width / 2;
         centerY = cnv.height / 2;

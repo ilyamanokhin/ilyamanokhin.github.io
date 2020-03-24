@@ -1,6 +1,35 @@
 .header{
-    position: relative;
-    z-index: 1;
-    color: #fff;
-    font-family: @fontBold;
+    text-align: left;
+    color: @color_white;
+   
+
+    
+    &-content{
+        .row-flex();
+        padding-top: 42px;
+    }
+    &__logo{
+        .size(1);
+    }
+    &__navbar{
+        .row-flex();
+        .size(4);
+        &-link{
+            .size(1);
+            
+           &:not(:first-child){
+            font-weight: 200;
+            font-size: 16px;
+            line-height: 31px;
+            letter-spacing: 2px;
+            text-transform: lowercase;
+            font-style: normal;
+           }
+        }
+    }
+
+    .page__subtitle{
+        font-size: 20px;
+        line-height: 24px;
+    }
 }

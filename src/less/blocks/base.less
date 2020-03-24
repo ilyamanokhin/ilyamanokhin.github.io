@@ -13,16 +13,26 @@
 @font-face {
   .font(@font; @fontRegular);
 }
+@font-face {
+  .font(@font; @fontThin);
+}
 body {
   font-family: @fontRegular;
   background: @color_bg;
 
   color: @color_white;
 }
+a{
+  color: @color_white;
+  text-decoration: none;
+}
 a, button{
   cursor: pointer;
   &:focus{
       outline: none;
+  }
+  &:hover{
+    color: @color_theme-1;
   }
 }
 input{
