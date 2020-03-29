@@ -1,7 +1,6 @@
 section.about
-    .page__title
-        h2.page__subtitle_big.page_transform-uppercase.page_text-center Обо мне
-        h2.page__title_main.page__title-h2.page_bold.page_transform-uppercase.page_text-center Обо мне
+    include mixins/mixin-page-title
+    +page-title("Обо мне")
     .wrapper
         .about-content
             .page__img

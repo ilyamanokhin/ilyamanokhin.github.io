@@ -66,7 +66,7 @@ function fonts() {
 }
 
 function images() {
-	return gulp.src(['./src/assets/img/*', '!./src/assets/icons'])
+	return gulp.src(['./src/assets/img/**/*', '!./src/assets/icons'])
 		.pipe(imagemin({
 			optimizationLevel: 3,
 			svgoPlugins: [{ removeViewBox: false }],

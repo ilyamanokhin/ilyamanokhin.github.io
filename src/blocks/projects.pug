@@ -1,34 +1,24 @@
 section.projects
-    .page__title
-        h2.page__subtitle_big.page_transform-uppercase.page_text-center Проекты
-        h2.page__title_main.page__title-h2.page_bold.page_transform-uppercase.page_text-center Проекты
+    include mixins/mixin-page-title
+    +page-title("Проекты")
     .wrapper
         .projects-content
-            .project
-                figure.works__effect
-                    img.page__img(src="../assets/img/img-vr-jazz-bg.png", alt="img-vr-jazz-bg")
-                    figcaption.works__descr
-                        h3.page__title-h3 Вёрстка сайта гроссмейстера
-                        p text
-                        a.btn-works(href="/") посмотреть
-            .project
-                figure.works__effect
-                    img.page__img(src="../assets/img/img-vr-jazz-bg.png", alt="img-vr-jazz-bg")
-                    figcaption.works__descr
-                        h3.page__title-h3
-                        p text
-                        a(href="/") посмотреть
-            .project
-                figure.works__effect
-                    img.page__img(src="../assets/img/img-vr-jazz-bg.png", alt="img-vr-jazz-bg")
-                    figcaption.works__descr
-                        h3.page__title-h3
-                        p text
-                        a(href="/") посмотреть
-            .project
-                figure.works__effect
-                    img.page__img(src="../assets/img/img-vr-jazz-bg.png", alt="img-vr-jazz-bg")
-                    figcaption.works__descr
-                        h3.page__title-h3
-                        p text
-                        a(href="/") посмотреть
+            include mixins/mixin-project
+            +project("../assets/img/projects/","Estate","Estate","Estate","/project-page/project-page.html")
+            +project("../assets/img/projects/","IDS","IDS","IDS","/project-page/project-page.html")
+            +project("../assets/img/projects/","Estate","Estate","Estate","/project-page/project-page.html")
+            +project("../assets/img/projects/","Estate","Estate","Estate","/project-page/project-page.html")
+            +project("../assets/img/projects/","Decoretto","Decoretto","Decoretto","/project-page/project-page.html")
+            +project("../assets/img/projects/","Estate","Estate","Estate","/project-page/project-page.html")
+            +project("../assets/img/projects/","Estate","Estate","Estate","/project-page/project-page.html")
+            +project("../assets/img/projects/","The optical shop","shop","shop","/project-page/project-page.html")
+            +project("../assets/img/projects/","Estate","Estate","Estate","/project-page/project-page.html")
+            +project("../assets/img/projects/img-vr-jazz-bg.png","img-vr-jazz-bg","VR Jazz","VR Jazz","/project-page/project-page.html")
+            +project("../assets/img/projects/finansvest.png","finansvest","Finans Invest","Finans Invest","/project-page/project-page.html")
+            +project("../assets/img/projects/evakuator.png","evakuator","Evakuator","Evakuator","/project-page/project-page.html")
+            +project("../assets/img/projects/akvahit.png","akvahit","akvahit","akvahit","/project-page/project-page.html")
+            +project("../assets/img/projects/pulsar.png","pulsar","pulsar","pulsar","/project-page/project-page.html")
+            +project("../assets/img/projects/danfoss.png","danfoss","danfoss","danfoss","/project-page/project-page.html")
+            +project("../assets/img/projects/furycoins.png","furycoins","furycoins","furycoins","/project-page/project-page.html")
+            +project("../assets/img/projects/obed-ru.png","obed","obed","obed","/project-page/project-page.html")
+            +project("../assets/img/projects/img-vr-jazz-bg.png","img-vr-jazz-bg","Вёрстка сайта гроссмейстера","Сетка Bootstrap4, flex, lightbox, owl, адаптив, изотоп, счётчик цифр.","/project-page/project-page.html")

@@ -1,0 +1,8 @@
+mixin project(src, alt, title, description, link)
+    .project
+        figure.page__figure.works__effect
+            img.page__img(src=src, alt=alt)
+            figcaption.page__figcaption
+                h3.page__title-h3=title
+                p.page__text=description
+                a.page__btn(href=link) посмотреть

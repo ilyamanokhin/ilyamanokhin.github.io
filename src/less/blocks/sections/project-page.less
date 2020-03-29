@@ -1,0 +1,46 @@
+.project{
+    &-page{
+    
+        &-content{
+            .row-flex();
+            
+            &__description{
+                .size(3);
+                .page__text{
+                    font-size: 18px;
+                    line-height: 24px;
+                    padding-right: 50px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+    &-info{
+        .size(1);
+        &__element{
+            padding: 20px 0;
+            .page__title-h3{
+                padding-bottom: 12px;
+            }
+            
+            &_list{
+                .page__link{
+                    position: relative;
+                    padding-left: 25px;
+                  
+                    &::before{
+                        content: "\203A";
+                        position: absolute;
+                        top: -1px;
+                        left: 8px;
+                        width: 14px;
+                        height: 19px;
+                    }
+                }
+            }
+            .page__text{
+                font-size: 14px;
+            }
+        }
+    }
+}
