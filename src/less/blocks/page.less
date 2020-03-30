@@ -206,13 +206,13 @@
         }
 
         &::before {
-            border-top: 1px solid @color_theme-1;
-            border-bottom: 1px solid @color_theme-1;
+            border-top: 1px solid @color_white;
+            border-bottom: 1px solid @color_white;
         }
 
         &::after {
-            border-right: 1px solid @color_theme-1;
-            border-left: 1px solid @color_theme-1;
+            border-right: 1px solid @color_white;
+            border-left: 1px solid @color_white;
         }
 
         .page__title-h3,
@@ -255,9 +255,25 @@
         }
     }
     &__list{
+        padding-left: 26px;
         &_text{
             padding-bottom:16px;
+            list-style: disc;
+            .page__list{
+                padding-left: 0;
+                display: flex;
+                padding-top: 10px;
+            }
         }
+        &_icon{
+            width: 30px;
+            &:not(:last-child){
+                padding-right: 12px;
+            }
+        }
+    }
+    &_flex{
+        display: flex;
     }
     &_bold {
         font-family: @fontBold;

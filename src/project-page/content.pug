@@ -1,12 +1,13 @@
 section.project-page
     .wrapper
         .project-page-content
-            .page__title.page_transform-uppercase
-                h2.page__subtitle_big Проект
-                h2.page__title_main.page__title-h2.page_bold Get-advanced
+            include ../blocks/mixins/mixin-project-title
+            +project-title("Интернет-магазин", "Get-advanced")
             .project-page-content__description
                 .page__text Мы – группа компаний Advanced, а лучше сказать – группа людей. Мы развиваем консалтинговый бизнес с тремя дополняющими друг друга подразделениями – Analytix, Adwise и Augmento – которые преследуют одну важную цель – помогать бизнесу становиться проще, быстрее и, главное, совершеннее. Это в нашей ДНК, все именно с этого и началось – с IT-решений. Мы придирчиво выбираем признанные и восходящие платформы со всего мира, которые призваны упростить работу, ускорить бизнес процессы и в итоге усовершенствовать процессы планирования и управления данными. Чтобы бизнес был сконцентрирован на объяснении своих успешных решений, а не причин неудач.
-            
+                .project-tab__tab
+                    .page__img
+                        img(src="")
             aside.project-info
                     .project-info__element
                         h3.page__title-h3 Ссылка:
@@ -25,17 +26,24 @@ section.project-page
                         h3.page__title-h3 Используемые технологии:
                         ul.page__list
                             li.page__list_text Frontend:
-                                ul.page_list
+                                ul.page__list
                                     li.page__list_icon
+                                        img.apge__img(src="../assets/img/logos/img-html-logo.png")
                                     li.page__list_icon
+                                        img.apge__img(src="../assets/img/logos/img-css-logo.png")
                                     li.page__list_icon
+                                        img.apge__img(src="../assets/img/logos/img-javascript-logo.png")
+                                    li.page__list_icon
+                                        img.apge__img(src="../assets/img/logos/img-jq-logo.png")
                                 
                             li.page__list_text Backend:
-                                ul.page_list
+                                ul.page__list
                                         li.page__list_icon
+                                            img.apge__img(src="../assets/img/logos/img-php-logo.png")
                             li.page__list_text CMS:
-                                ul.page_list
+                                ul.page__list
                                         li.page__list_icon
+                                            img.apge__img(src="../assets/img/logos/img-wordpress-logo.png")
                     .project-info__element
                         h3.page__title-h3 Сроки:
                         p.page__text 40 дней.

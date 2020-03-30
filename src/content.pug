@@ -9,7 +9,21 @@ section.banner
 include blocks/skills
 include blocks/services
 include blocks/advantages
-include blocks/projects
+section.projects
+    include blocks/mixins/mixin-page-title
+    +page-title("Проекты")
+    .wrapper
+        .projects-content
+            include blocks/mixins/mixin-project
+            +project("../assets/img/projects/yoga.jpg","Estate","Estate","Estate","/project-page/project-page.html")
+            +project("../assets/img/projects/idsmedia.png","IDS","IDS","IDS","/project-page/project-page.html")
+            +project("../assets/img/projects/fitnes.jpg","Estate","Estate","Estate","/project-page/project-page.html")
+            +project("../assets/img/projects/medical.jpg","Estate","Estate","Estate","/project-page/project-page.html")
+            +project("../assets/img/projects/decoreto.png","Decoreto","Decoreto","Decoreto","/project-page/project-page.html")
+            +project("../assets/img/projects/hospital.jpg","Estate","Estate","Estate","/project-page/project-page.html")
+            +project("../assets/img/projects/multi.jpg","Estate","Estate","Estate","/project-page/project-page.html")
+            +project("../assets/img/projects/event.jpg","Estate","Estate","Estate","/project-page/project-page.html")
+
 .page__toogle
     a.page__btn(href="./projects/projects.html") Смотреть больше
 include blocks/about
