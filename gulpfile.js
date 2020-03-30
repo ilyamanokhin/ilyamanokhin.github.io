@@ -44,6 +44,7 @@ const jsFiles = [
 	'./src/js/debug-grid-create.js',
 	'./src/js/main.js',
 	'./src/js/canvans-rings.js',
+	'./src/js/tabs.js',
 ];//порядок сборки js файлов
 
 function clear() {

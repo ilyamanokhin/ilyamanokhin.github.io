@@ -1,0 +1,20 @@
+/* Tabs */
+.tab{
+	&-nav {
+
+	}
+	&-link {
+		&.is-active {
+			color: @color_theme-1;
+		}
+	}
+	/* Tab Content */
+	&-content {
+		display: none;
+	
+		&.is-active {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+}

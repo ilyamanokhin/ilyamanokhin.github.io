@@ -1,0 +1,49 @@
+.modal{
+    display: flex;
+    align-items: center;
+    width:100%;
+    min-height:100%;
+    
+    overflow: scroll;
+    position:fixed;
+    top:0px;
+    z-index: 2;
+    height: 100%;
+  
+    &-callback{
+       
+        background-color: rgba(185, 185, 185, 0.4);
+        .modal__content{
+            .animated({
+                .zoomIn();
+            });
+            background-color: @color_white;
+         
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 50px 80px;
+           
+        }
+        .modal__action{
+            .animated({
+                .zoomIn();
+            });
+        }
+    }
+  
+   
+    &-content{
+        margin:40px auto 0px auto;
+        width:100px;
+        height: 40px;
+        padding:10px;
+        
+        border-radius:5px;
+        box-shadow: 0px 0px 10px #000;
+    }
+    &__action{
+        position: relative;
+    }
+    
+}

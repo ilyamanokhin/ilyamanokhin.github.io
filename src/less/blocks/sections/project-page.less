@@ -3,6 +3,7 @@
     
         &-content{
             .row-flex();
+            padding-bottom: 25px;
             .page__title{
                 width: 100%;
             }
@@ -20,18 +21,27 @@
                     letter-spacing: 1px;
                 }
             }
+            &__info{
+                .size(1);
+            }
         }
     }
     &-info{
-        .size(1);
+        position: sticky;
+        // top: 5px;
+        top: 85px;
+        padding-left: 25px;
         &__element{
-            padding:0 0 25px;
+            padding:0 0 30px;
             .page__title-h3{
                 padding-bottom: 12px;
             }
             
             &_list{
-                .page__link{
+                .tab-link{
+                    display: inline-block;
+                    width: 100%;
+                    letter-spacing: 2px;
                     position: relative;
                     padding-left: 25px;
                     line-height: 22px;

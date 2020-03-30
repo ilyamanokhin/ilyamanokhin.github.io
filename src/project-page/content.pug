@@ -1,24 +1,29 @@
 section.project-page
     .wrapper
-        .project-page-content
+        #tabs.project-page-content.tab-contents
             include ../blocks/mixins/mixin-project-title
             +project-title("Интернет-магазин", "Get-advanced")
             .project-page-content__description
-                .page__text Мы – группа компаний Advanced, а лучше сказать – группа людей. Мы развиваем консалтинговый бизнес с тремя дополняющими друг друга подразделениями – Analytix, Adwise и Augmento – которые преследуют одну важную цель – помогать бизнесу становиться проще, быстрее и, главное, совершеннее. Это в нашей ДНК, все именно с этого и началось – с IT-решений. Мы придирчиво выбираем признанные и восходящие платформы со всего мира, которые призваны упростить работу, ускорить бизнес процессы и в итоге усовершенствовать процессы планирования и управления данными. Чтобы бизнес был сконцентрирован на объяснении своих успешных решений, а не причин неудач.
-                .project-tab__tab
+                .tab-content.is-active
+                    .page__text Мы – группа компаний Advanced, а лучше сказать – группа людей. Мы развиваем консалтинговый бизнес с тремя дополняющими друг друга подразделениями – Analytix, Adwise и Augmento – которые преследуют одну важную цель – помогать бизнесу становиться проще, быстрее и, главное, совершеннее. Это в нашей ДНК, все именно с этого и началось – с IT-решений. Мы придирчиво выбираем признанные и восходящие платформы со всего мира, которые призваны упростить работу, ускорить бизнес процессы и в итоге усовершенствовать процессы планирования и управления данными. Чтобы бизнес был сконцентрирован на объяснении своих успешных решений, а не причин неудач.
+                .tab-content
                     .page__img
-                        img(src="")
-            aside.project-info
+                        img(src="../assets/img/projects/estate/real-estate.jpg")
+                .tab-content
+                    div empty
+            .project-page-content__info
+                aside.project-info
                     .project-info__element
                         h3.page__title-h3 Ссылка:
-                        a.page__link.page__link_site(href="") get-advanced.com
+                        a.page__link.page__link_site(href="#") get-advanced.com
                     .project-info__element.project-info__element_list
                         h3.page__title-h3 Список страниц:
-                        a.page__link.page__link_active(href="") О проекте
-                        a.page__link(href="") Главная
-                        a.page__link(href="") Услуги
-                        a.page__link(href="") Команда
-                        a.page__link(href="") Контакты
+                        nav.tab-nav
+                            a.tab-link.is-active(href="") О проекте
+                            a.tab-link(href="#") Главная
+                            a.tab-link(href="#") Услуги
+                            a.tab-link(href="#") Команда
+                            a.tab-link(href="#") Контакты
                     .project-info__element
                         h3.page__title-h3 Задача:
                         p.page__text Разработка сайта для компании Get-advanced.
