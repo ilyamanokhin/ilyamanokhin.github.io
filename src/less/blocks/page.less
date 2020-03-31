@@ -50,6 +50,7 @@
     height: 100%;
     min-height: 100vh;
     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+    transition: all .35s;
     &__content {
         display: flex;
         flex-direction: column;
@@ -305,6 +306,12 @@
     &_hidden{
         display: none !important;
     }
+    &_overflow{
+        &-hidden{
+            overflow: hidden;
+            margin-right: 5px;
+        }
+    }
 }
 
 .social {
@@ -313,7 +320,7 @@
     &__item-link {
         width: 30px;
         height: 30px;
-        margin: 0 10px;
+        margin-right: 20px;
         background-color: @color_gray-1;
     }
 }
