@@ -15,6 +15,8 @@ const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const notify = require('gulp-notify');
 const spritesmith = require('gulp.spritesmith');
+const data = require('gulp-data');
+
 
 const isDev = (process.argv.indexOf('--dev') !== -1);
 const isProd = !isDev;
@@ -26,6 +28,7 @@ gulp.task('default', function () {
 		.pipe(gulp.dest('./src/assets'))
 		.pipe(gulp.dest('./src/assets/img'))
 		.pipe(gulp.dest('./src/assets/icons'))
+		.pipe(gulp.dest('./src/assets/data'))
 		.pipe(gulp.dest('./src/fonts'))
 		.pipe(gulp.dest('./src/less'))
 		.pipe(gulp.dest('./src/less/blocks'))
@@ -35,8 +38,15 @@ gulp.task('default', function () {
 		.pipe(gulp.dest('./src/js'))
 });
 
-
-let lessFiles = [
+const pugFiles = [
+	'./src/**/*.pug',
+	'!./src/**/content.pug', 
+	'!./src/modules/*.pug', 
+	'!./src/blocks/*.pug', 
+	'!./src/blocks/**/*.pug', 
+	'!./src/templates/*.pug'
+];
+const lessFiles = [
 	// './node_modules/normalize.css/normalize.css',
 	'./src/less/+(styles|styles-per).less',
 ];
@@ -59,12 +69,16 @@ function sprite() {
 	}))
 		.pipe(gulp.dest('./build/assets/icons/'))
 		.pipe(gulp.dest('./src/less/sprite'))
+		// .pipe(notify({ message: 'Sprite task complete' }));
 }
 
 function fonts() {
 	return gulp.src('./src/fonts/**/*')
 		.pipe(gulp.dest('./build/fonts'))
+		// .pipe(notify({ message: 'Fonts task complete' }));
 }
+
+
 
 function images() {
 	return gulp.src(['./src/assets/img/**/*', '!./src/assets/icons'])
@@ -76,20 +90,29 @@ function images() {
 			interlaced: true
 		}))
 		.pipe(gulp.dest('./build/assets/img/'))
-	// .pipe(notify({ message: 'Images task complete' }));
+		// .pipe(notify({ message: 'Images task complete' }));
 }
 
 function html() {
 	return gulp.src('./src/*.html')
 		.pipe(gulp.dest('./build'))
-		.pipe(gulpif(isSync, browserSync.stream()));
+		.pipe(gulpif(isSync, browserSync.stream()))
+		// .pipe(notify({ message: 'Html task complete' }));
 }
 
 function pugc() {
-	return gulp.src(['./src/**/*.pug','!./src/**/content.pug', '!./src/modules/*.pug', '!./src/blocks/*.pug', '!./src/blocks/**/*.pug', '!./src/templates/*.pug'])
-		.pipe(pug({ pretty: '\t' }))
+	
+	return gulp.src(pugFiles)
+				
+		.pipe(data(file => require('./src/assets/data/data.json')))
+		.pipe(pug({
+			 pretty: '\t',
+		}))
 		.pipe(gulp.dest('./build'))
-		.pipe(gulpif(isSync, browserSync.stream()));
+		
+		.pipe(gulpif(isSync, browserSync.stream()))
+		// .pipe(notify({ message: 'pugc task complete' }));
+		
 }
 
 function styles() {
@@ -112,7 +135,8 @@ function styles() {
 		})))
 		.pipe(gulpif(isDev, sourcemaps.write()))
 		.pipe(gulp.dest('./build/css'))
-		.pipe(gulpif(isSync, browserSync.stream()));
+		.pipe(gulpif(isSync, browserSync.stream()))
+		// .pipe(notify({ message: 'Styles task complete' }));
 }
 
 function scripts() {
@@ -125,7 +149,8 @@ function scripts() {
 		// }))
 		.pipe(gulpif(isDev, sourcemaps.write()))
 		.pipe(gulp.dest('./build/js'))
-		.pipe(gulpif(isSync, browserSync.stream()));
+		.pipe(gulpif(isSync, browserSync.stream()))
+		// .pipe(notify({ message: 'Scripts task complete' }));
 }
 
 function watch() {
@@ -138,6 +163,7 @@ function watch() {
 		});
 	}
 
+	gulp.watch('./src/assets/data/**/*.json', pugc);
 	gulp.watch('./src/less/**/*.less', styles);
 	gulp.watch('./src/js/**/*.js', scripts);
 	gulp.watch('./src/**/*.html', html);
@@ -158,6 +184,8 @@ function grid(done) {
 	done();
 }
 
+
+
 let build = gulp.series(clear,
 	gulp.parallel(sprite, images, fonts, html, pugc, styles, scripts)
 );
@@ -167,5 +195,7 @@ gulp.task('watch', gulp.series(build, watch));
 gulp.task('grid', grid);
 // gulp sprite запускать отдельно(после) т.к. тормозит общую сборку
 gulp.task('sprite', sprite);
+// gulp json обновляет json
+gulp.task('json',  gulp.series( pugc));
 // минификация в конце
 gulp.task('styles', styles);

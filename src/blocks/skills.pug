@@ -4,25 +4,6 @@ section.skills
     .wrapper
         .skills-content
             include mixins/mixin-skill
-            +skill("../assets/img/logos/img-html-logo.png", "HTML 5")
-            +skill("../assets/img/logos/img-css-logo.png", "CSS 3")
-            +skill("../assets/img/logos/img-javascript-logo.png", "JavaScript")
-            +skill("../assets/img/logos/img-typescript-logo.png", "TypeScript")
-            +skill("../assets/img/logos/img-git-logo.png", "Git")
-            +skill("../assets/img/logos/img-bem-logo.png", "БЭМ")
-            +skill("../assets/img/logos/img-jq-logo.png", "JQuery")
-            +skill("../assets/img/logos/img-angular-logo.png", "Angular 2+")
-            +skill("../assets/img/logos/img-less-logo.png", "Less")
-            +skill("../assets/img/logos/img-sass-logo.png", "Sass")
-            +skill("../assets/img/logos/img-gulp-logo.png", "Gulp")
-            +skill("../assets/img/logos/img-smartgrid-logo.png", "SmartGrid")
-            +skill("../assets/img/logos/img-pug-logo.png", "Pug")
-            +skill("../assets/img/logos/img-bootstrap-logo.png", "Bootstrap")
-            +skill("../assets/img/logos/img-webpack-logo.png", "WebPack")
-            +skill("../assets/img/logos/img-nodejs-logo.png", "Node.js")
-            +skill("../assets/img/logos/img-nestjs-logo.png", "Nest.js")
-            +skill("../assets/img/logos/img-wordpress-logo.png", "Wordpress")
-            +skill("../assets/img/logos/img-1c-bitrix-logo.png", "1C Bitrix")
-            +skill("../assets/img/logos/img-modx-logo.png", "modx")
-            +skill("../assets/img/logos/img-php-logo.png", "Php")
+            each item, index in technology
+                +skill(item.images, item.name)
                 
