@@ -2,15 +2,16 @@
     "projects": [
         {
             "name": "Yoga",
+            "code": "yoga",
             "format": "Landing-Page",
             "miniature":"../assets/img/projects/yoga.jpg",
             "background": "../assets/img/projects/yoga.jpg",
             "title": "Yoga",
             "description": "yoga desc",
-            "short-description": "yoga desc",
+            "short_description": "yoga desc",
             "description-company": "Мы – группа компаний Advanced, а лучше сказать – группа людей. Мы развиваем консалтинговый бизнес с тремя дополняющими друг друга подразделениями – Analytix, Adwise и Augmento – которые преследуют одну важную цель – помогать бизнесу становиться проще, быстрее и, главное, совершеннее. Это в нашей ДНК, все именно с этого и началось – с IT-решений. Мы придирчиво выбираем признанные и восходящие платформы со всего мира, которые призваны упростить работу, ускорить бизнес процессы и в итоге усовершенствовать процессы планирования и управления данными. Чтобы бизнес был сконцентрирован на объяснении своих успешных решений, а не причин неудач.",
             "link": "/project-page/project-page.html",
-            "site-link": "get-advanced.com",
+            "site_link": "get-advanced.com",
             "pages":[
                 {
                     "page":"Главная",
@@ -57,6 +58,7 @@
         },
         {
             "name": "IDS",
+            "code": "ids",
             "background": "../assets/img/projects/idsmedia.png",
             "title": "IDS",
             "description": "IDS desc",
@@ -64,6 +66,7 @@
         },
         {
             "name": "fitnes",
+            "code": "fitnes",
             "background": "../assets/img/projects/fitnes.jpg",
             "title": "fitnes",
             "description": "fitnes desc",
@@ -71,6 +74,7 @@
         },
         {
             "name": "medical",
+            "code": "medical",
             "background": "../assets/img/projects/medical.jpg",
             "title": "medical",
             "description": "medical desc",
@@ -78,6 +82,7 @@
         },
         {
             "name": "decoreto",
+            "code": "decoreto",
             "background": "../assets/img/projects/decoreto.png",
             "title": "decoreto",
             "description": "decoreto desc",
@@ -85,6 +90,7 @@
         },
         {
             "name": "hospital",
+            "code": "hospital",
             "background": "../assets/img/projects/hospital.jpg",
             "title": "hospital",
             "description": "hospital desc",
@@ -92,6 +98,7 @@
         },
         {
             "name": "multi",
+            "code": "multi",
             "background": "../assets/img/projects/multi.jpg",
             "title": "multi",
             "description": "multi desc",
@@ -99,6 +106,7 @@
         },
         {
             "name": "event",
+            "code": "event",
             "background": "../assets/img/projects/event.jpg",
             "title": "event",
             "description": "event desc",
@@ -106,6 +114,7 @@
         },
         {
             "name": "ebook",
+            "code": "ebook",
             "background": "../assets/img/projects/ebook.jpg",
             "title": "ebook",
             "description": "ebook desc",
@@ -113,6 +122,7 @@
         },
         {
             "name": "edication",
+            "code": "edication",
             "background": "../assets/img/projects/edication.jpg",
             "title": "edication",
             "description": "edication desc",
@@ -120,6 +130,7 @@
         },
         {
             "name": "theopticalshop",
+            "code": "theopticalshop",
             "background": "../assets/img/projects/theopticalshop.png",
             "title": "theopticalshop",
             "description": "theopticalshop desc",
@@ -127,6 +138,7 @@
         },
         {
             "name": "estate",
+            "code": "estate",
             "background": "../assets/img/projects/estate.jpg",
             "title": "estate",
             "description": "estate desc",
@@ -134,6 +146,7 @@
         },
         {
             "name": "VR Jazz",
+            "code": "vrjazz",
             "background": "../assets/img/projects/img-vr-jazz-bg.png",
             "title": "VR Jazz",
             "description": "VR Jazz desc",
@@ -141,6 +154,7 @@
         },
         {
             "name": "finansvest",
+            "code": "finansvest",
             "background": "../assets/img/projects/finansvest.png",
             "title": "finansvest",
             "description": "finansvest desc",
@@ -148,6 +162,7 @@
         },
         {
             "name": "evakuator",
+            "code": "evakuator",
             "background": "../assets/img/projects/evakuator.png",
             "title": "evakuator",
             "description": "evakuator desc",
@@ -155,6 +170,7 @@
         },
         {
             "name": "euchet",
+            "code": "euchet",
             "background": "../assets/img/projects/euchet.png",
             "title": "euchet",
             "description": "euchet desc",
@@ -162,6 +178,7 @@
         },
         {
             "name": "akvahit",
+            "code": "akvahit",
             "background": "../assets/img/projects/akvahit.png",
             "title": "akvahit",
             "description": "akvahit desc",
@@ -169,6 +186,7 @@
         },
         {
             "name": "pulsar",
+            "code": "pulsar",
             "background": "../assets/img/projects/pulsar.png",
             "title": "pulsar",
             "description": "pulsar desc",
@@ -176,6 +194,7 @@
         },
         {
             "name": "danfoss",
+            "code": "danfoss",
             "background": "../assets/img/projects/danfoss.png",
             "title": "danfoss",
             "description": "danfoss desc",
@@ -183,6 +202,7 @@
         },
         {
             "name": "furycoins",
+            "code": "furycoins",
             "background": "../assets/img/projects/furycoins.png",
             "title": "furycoins",
             "description": "furycoins desc",
@@ -190,6 +210,7 @@
         },
         {
             "name": "obed-ru",
+            "code": "obed",
             "background": "../assets/img/projects/obed-ru.png",
             "title": "obed-ru",
             "description": "obed-ru desc",
@@ -197,6 +218,7 @@
         },
         {
             "name": "test",
+            "code": "test",
             "background": "../assets/img/projects/img-vr-jazz-bg.png",
             "title": "Вёрстка сайта гроссмейстера",
             "description": "Сетка Bootstrap4, flex, lightbox, owl, адаптив, изотоп, счётчик цифр.",
@@ -204,6 +226,7 @@
         },
         {
             "name": "bookkeeping",
+            "code": "bookkeeping",
             "background": "../assets/img/projects/bookkeeping.png",
             "title": "bookkeeping",
             "description": "bookkeeping desc",
@@ -211,6 +234,7 @@
         },
         {
             "name": "tetris",
+            "code": "tetris",
             "background": "../assets/img/projects/tetris-demo.jpg",
             "title": "tetris",
             "description": "tetris desc",

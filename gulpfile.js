@@ -55,6 +55,7 @@ const jsFiles = [
 	'./src/js/main.js',
 	'./src/js/canvans-rings.js',
 	'./src/js/tabs.js',
+	'./src/js/render-content.js',
 ];//порядок сборки js файлов
 
 function clear() {
@@ -163,7 +164,7 @@ function watch() {
 		});
 	}
 
-	gulp.watch('./src/assets/data/**/*.json', pugc);
+	gulp.watch('./src/assets/data/**/*.json', dataJson);
 	gulp.watch('./src/less/**/*.less', styles);
 	gulp.watch('./src/js/**/*.js', scripts);
 	gulp.watch('./src/**/*.html', html);
@@ -183,11 +184,17 @@ function grid(done) {
 
 	done();
 }
-
+function dataJson() {
+	return gulp.src('./src/assets/data/**/*')
+	
+		.pipe(gulp.dest('./build/assets/data/'))
+		.pipe(gulpif(isSync, browserSync.stream()))
+		// .pipe(notify({ message: 'dataJson task complete' }));
+}
 
 
 let build = gulp.series(clear,
-	gulp.parallel(sprite, images, fonts, html, pugc, styles, scripts)
+	gulp.parallel(sprite, images, fonts,dataJson, html, pugc, styles, scripts)
 );
 
 gulp.task('build', gulp.series(grid, build));
@@ -196,6 +203,6 @@ gulp.task('grid', grid);
 // gulp sprite запускать отдельно(после) т.к. тормозит общую сборку
 gulp.task('sprite', sprite);
 // gulp json обновляет json
-gulp.task('json',  gulp.series( pugc));
+gulp.task('json',  gulp.series( dataJson));
 // минификация в конце
 gulp.task('styles', styles);
