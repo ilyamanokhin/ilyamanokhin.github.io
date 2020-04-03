@@ -1,5 +1,5 @@
 // Start tabs.js
-(function () {
+function tab () {
 
     'use strict';
 
@@ -83,18 +83,14 @@
      */
     window.tabs = tabs;
 
-})();
+};
 // End tabs.js
 
 
 // Initialise at bottom of HTML in a <script> tag or within your main js bundle somewhere.
 
 // Set 1 
-var myTabs = tabs({
-    el: '#tabs',
-    tabNavigationLinks: '.tab-link',
-    tabContentContainers: '.tab-content'
-});
+
 
 // Set 2
 // var myTabs2 = tabs({
@@ -104,8 +100,17 @@ var myTabs = tabs({
 // });
 
 // Initialise Set 1
-if(myTabs){
-    myTabs.init();
-}
+setTimeout(()=>{
+    tab();
+    var myTabs = tabs({
+        el: '#tabs',
+        tabNavigationLinks: '.tab-link',
+        tabContentContainers: '.tab-content'
+    });
+    if(myTabs){
+        myTabs.init();
+    }
+ },1000);
+
 // // Initialise Set 2 
 // myTabs2.init();

@@ -17,7 +17,7 @@ section.projects
             include blocks/mixins/mixin-project
             each item, index in projects
                 if index < 8
-                    +project(item.background,item.title,item.description,item.link,item.title)
+                    +project(item.miniature,item.title,item.short_description,item.code)
           
 
 .page__toogle

@@ -5,4 +5,4 @@ section.projects
         .projects-content
             include mixins/mixin-project
             each item, index in projects
-                +project(item.background,item.title,item.description,item.link,item.code)
+                +project(item.miniature,item.title,item.short_description,item.code)
