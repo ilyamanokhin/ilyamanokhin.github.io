@@ -14,7 +14,8 @@ footer.footer
             .footer-content__item
                 .page__subtitle.page_padding-bottom-25 социальные сети
                 .social
-                    .social__item-link.social__item-icon.social__item-icon_fb
-                    .social__item-link.social__item-icon.social__item-icon_fb
-                    .social__item-link.social__item-icon.social__item-icon_fb
-                    .social__item-link.social__item-icon.social__item-icon_fb
+                    include mixins/mixin-social
+                    +social("../assets/img/social/icon-social-fb.svg","https://www.facebook.com/profile.php?id=100013452931335&ref=bookmarks")
+                    +social("../assets/img/social/icon-social-vk.svg", "https://vk.com/ilya_manokhin")
+                    +social("../assets/img/social/icon-social-skype.svg", "https://join.skype.com/invite/fcSLPdcmNNcH")
+                    +social("../assets/img/social/icon-social-telegram.svg", "telegram.me/@ilya_manokhin")

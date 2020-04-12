@@ -52,6 +52,7 @@ const lessFiles = [
 ];
 const jsFiles = [
 	'./src/js/debug-grid-create.js',
+	'./src/js/app.js',
 	'./src/js/main.js',
 	'./src/js/store-scroll.js',
 	'./src/js/canvans-rings.js',
