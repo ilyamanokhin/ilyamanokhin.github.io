@@ -1,0 +1,9 @@
+section.skills
+    include mixins/mixin-page-title
+    +page-title("Навыки")
+    .wrapper
+        .skills-content
+            include mixins/mixin-skill
+            each item, index in technology
+                +skill(item.images, item.name)
+                

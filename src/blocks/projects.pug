@@ -1,0 +1,8 @@
+section.projects
+    include mixins/mixin-page-title
+    +page-title("Проекты")
+    .wrapper
+        .projects-content
+            include mixins/mixin-project
+            each item, index in projects
+                +project(item.miniature,item.title,item.short_description,item.code)

@@ -1,0 +1,40 @@
+.header{
+    
+    position: sticky;
+    text-align: left;
+    top: 0;
+    color: @color_white;
+    padding: 12px 0;
+   
+    z-index: 1;
+    
+    transition: all .35s ease-in-out;
+    
+    &-content{
+        .row-flex();
+    }
+    &__logo{
+        .size(1);
+    }
+    &__navbar{
+        .row-flex();
+        .size(4);
+        &-link{
+            .size(1);
+            
+           &:not(:first-child){
+            font-weight: 200;
+            font-size: 16px;
+            line-height: 31px;
+            letter-spacing: 2px;
+            text-transform: lowercase;
+            font-style: normal;
+           }
+        }
+    }
+
+    .page__subtitle{
+        font-size: 20px;
+        line-height: 24px;
+    }
+}

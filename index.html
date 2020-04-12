@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/x-icon" href="./build/assets/img/favicon.ico">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="./build/css/styles.css" type="text/css">
+	</head>
+	<body>
+		<div class="page">
+			<button class="debugGrid-btn debugGrid-btn__create" onclick="debugGridCreate()"></button>
+			<button class="debugGrid-btn debugGrid-btn__remove debugGrid-btn__hidden" onclick="debugGridRemove()"></button>
+			<div class="debugGrid debugGrid__z-index-negative"></div>
+			<section class="theme">
+				<div class="theme-color theme-color-3"></div>
+				<div class="theme-color theme-color-2"></div>
+				<div class="theme-color theme-color-1"></div>
+			</section>
+			<section class="bg">
+				<div class="wrapper">
+					<div class="bg-grid">
+						<div class="bg-grid__line"></div>
+						<div class="bg-grid__line"></div>
+						<div class="bg-grid__line"></div>
+						<div class="bg-grid__line"></div>
+					</div>
+				</div>
+			</section>
+			<header class="header">
+				<div class="wrapper">
+					<div class="header-content">
+						<nav class="header__navbar"><a class="header__navbar-link page__subtitle" href="./">Ilya<span class="page_bold">Manokhin</span></a>
+							<div class="header__navbar-link"><a href="./">Навыки </a></div>
+							<div class="header__navbar-link"><a href="./build/projects/projects.html">Проекты</a></div>
+							<div class="header__navbar-link"><a href="./build/project-page/project-page.html">Обо мне </a></div>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<section class="banner">
+				<canvas class="canvas"></canvas>
+				<div class="banner__logo">
+					<div class="page__subtitle">Ilya<span class="page_bold">Manokhin</span></div>
+					<div class="page__img"><img src="./build/assets/img/img-frontend-developer.png"></div>
+				</div>
+				<div class="page__icon_mouse-down"></div>
+			</section>
+			<section class="skills">
+								<div class="page__title page_transform-uppercase page_text-center">
+									<h2 class="page__subtitle_big">Навыки</h2>
+									<h2 class="page__title_main page__title-h2 page_bold">Навыки</h2>
+								</div>
+				<div class="wrapper">
+					<div class="skills-content">
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-html-logo.png"></div>
+													<div class="page__subtitle">HTML 5</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-css-logo.png"></div>
+													<div class="page__subtitle">CSS 3</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-javascript-logo.png"></div>
+													<div class="page__subtitle">JavaScript</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-typescript-logo.png"></div>
+													<div class="page__subtitle">TypeScript</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-git-logo.png"></div>
+													<div class="page__subtitle">Git</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-bem-logo.png"></div>
+													<div class="page__subtitle">БЭМ</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-jq-logo.png"></div>
+													<div class="page__subtitle">JQuery</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-angular-logo.png"></div>
+													<div class="page__subtitle">Angular 2+</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-less-logo.png"></div>
+													<div class="page__subtitle">Less</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-sass-logo.png"></div>
+													<div class="page__subtitle">Sass</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-gulp-logo.png"></div>
+													<div class="page__subtitle">Gulp</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-smartgrid-logo.png"></div>
+													<div class="page__subtitle">SmartGrid</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-pug-logo.png"></div>
+													<div class="page__subtitle">Pug</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-bootstrap-logo.png"></div>
+													<div class="page__subtitle">Bootstrap</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-webpack-logo.png"></div>
+													<div class="page__subtitle">WebPack</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-nodejs-logo.png"></div>
+													<div class="page__subtitle">Node.js</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-nestjs-logo.png"></div>
+													<div class="page__subtitle">Nest.js</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-wordpress-logo.png"></div>
+													<div class="page__subtitle">Wordpress</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-1c-bitrix-logo.png"></div>
+													<div class="page__subtitle">1C Bitrix</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-modx-logo.png"></div>
+													<div class="page__subtitle">modx</div>
+												</div>
+												<div class="skill">
+													<div class="page__img"><img src="./build/assets/img/logos/img-php-logo.png"></div>
+													<div class="page__subtitle">Php</div>
+												</div>
+					</div>
+				</div>
+			</section>
+			<section class="services">
+								<div class="page__title page_transform-uppercase page_text-center">
+									<h2 class="page__subtitle_big">Услуги</h2>
+									<h2 class="page__title_main page__title-h2 page_bold">Услуги</h2>
+								</div>
+				<div class="wrapper">
+					<div class="services-content">
+												<div class="service">
+													<div class="page__img"><img src="./build/assets/img/shared/img-Email.png"></div>
+													<h4 class="page__subtitle">E-mail письма</h4>
+													<div class="page__description">
+														<h4 class="page__subtitle page_text-center">E-mail письма</h4>
+														<p class="page__text">Расскажем об особенностях верстки email шаблонов — в чем основные проблемы верстки, как работать с мультимедиа, шрифтами.</p>
+													</div>
+												</div>
+												<div class="service">
+													<div class="page__img"><img src="./build/assets/img/shared/img-landing.png"></div>
+													<h4 class="page__subtitle">Landing page</h4>
+													<div class="page__description">
+														<h4 class="page__subtitle page_text-center">Landing page</h4>
+														<p class="page__text">Расскажем об особенностях верстки email шаблонов — в чем основные проблемы верстки, как работать с мультимедиа, шрифтами.</p>
+													</div>
+												</div>
+												<div class="service">
+													<div class="page__img"><img src="./build/assets/img/shared/img-pages.png"></div>
+													<h4 class="page__subtitle">Многостраничный сайт</h4>
+													<div class="page__description">
+														<h4 class="page__subtitle page_text-center">Многостраничный сайт</h4>
+														<p class="page__text">Расскажем об особенностях верстки email шаблонов — в чем основные проблемы верстки, как работать с мультимедиа, шрифтами.</p>
+													</div>
+												</div>
+												<div class="service">
+													<div class="page__img"><img src="./build/assets/img/shared/img-shop.png"></div>
+													<h4 class="page__subtitle">Интернет магазин</h4>
+													<div class="page__description">
+														<h4 class="page__subtitle page_text-center">Интернет магазин</h4>
+														<p class="page__text">Расскажем об особенностях верстки email шаблонов — в чем основные проблемы верстки, как работать с мультимедиа, шрифтами.</p>
+													</div>
+												</div>
+												<div class="service">
+													<div class="page__img"><img src="./build/assets/img/shared/img-quiz.png"></div>
+													<h4 class="page__subtitle">Quiz сайт</h4>
+													<div class="page__description">
+														<h4 class="page__subtitle page_text-center">Quiz сайт</h4>
+														<p class="page__text">Расскажем об особенностях верстки email шаблонов — в чем основные проблемы верстки, как работать с мультимедиа, шрифтами.</p>
+													</div>
+												</div>
+												<div class="service">
+													<div class="page__img"><img src="./build/assets/img/shared/img-completion.png"></div>
+													<h4 class="page__subtitle">Доработка</h4>
+													<div class="page__description">
+														<h4 class="page__subtitle page_text-center">Доработка</h4>
+														<p class="page__text">Расскажем об особенностях верстки email шаблонов — в чем основные проблемы верстки, как работать с мультимедиа, шрифтами.</p>
+													</div>
+												</div>
+												<div class="service">
+													<div class="page__img"><img src="./build/assets/img/shared/img-cms.png"></div>
+													<h4 class="page__subtitle">Интеграция</h4>
+													<div class="page__description">
+														<h4 class="page__subtitle page_text-center">Интеграция</h4>
+														<p class="page__text">Расскажем об особенностях верстки email шаблонов — в чем основные проблемы верстки, как работать с мультимедиа, шрифтами.</p>
+													</div>
+												</div>
+												<div class="service">
+													<div class="page__img"><img src="./build/assets/img/shared/img-script.png"></div>
+													<h4 class="page__subtitle">Написание скриптов</h4>
+													<div class="page__description">
+														<h4 class="page__subtitle page_text-center">Написание скриптов</h4>
+														<p class="page__text">Расскажем об особенностях верстки email шаблонов — в чем основные проблемы верстки, как работать с мультимедиа, шрифтами.</p>
+													</div>
+												</div>
+					</div>
+				</div>
+			</section>
+			<section class="advantages">
+								<div class="page__title page_transform-uppercase page_text-center">
+									<h2 class="page__subtitle_big">Преимущества</h2>
+									<h2 class="page__title_main page__title-h2 page_bold">Преимущества</h2>
+								</div>
+				<div class="wrapper">
+					<div class="advantages-content">
+						<ol class="page__lists">
+														<li class="page__list-item"> <span class="page__line_before">Профессиональные навыки</span></li>
+														<li class="page__list-item"> <span class="page__line_before">Соблюдение сроков</span></li>
+														<li class="page__list-item"> <span class="page__line_before">Оптимизация изображения и кода</span></li>
+														<li class="page__list-item"> <span class="page__line_before">Чистый валидный код</span></li>
+														<li class="page__list-item"> <span class="page__line_before">Ответсвенное отношение к работе</span></li>
+														<li class="page__list-item"> <span class="page__line_before">Всегда открыт к диалогу</span></li>
+														<li class="page__list-item"> <span class="page__line_before">Большую часть дня online</span></li>
+														<li class="page__list-item"> <span class="page__line_before">Поддержка своего кода</span></li>
+						</ol>
+					</div>
+				</div>
+			</section>
+			<section class="projects">
+								<div class="page__title page_transform-uppercase page_text-center">
+									<h2 class="page__subtitle_big">Проекты</h2>
+									<h2 class="page__title_main page__title-h2 page_bold">Проекты</h2>
+								</div>
+				<div class="wrapper">
+					<div class="projects-content">
+												<div class="project">
+													<figure class="page__figure works__effect"><img class="page__img" src="./build/assets/img/projects/yoga.jpg" alt="Yoga">
+														<figcaption class="page__figcaption" data-code="yoga">
+															<h3 class="page__title-h3">Yoga</h3>
+															<p class="page__text">yoga desc</p>
+															<button class="page__btn">посмотреть</button>
+														</figcaption>
+													</figure>
+												</div>
+												<div class="project">
+													<figure class="page__figure works__effect"><img class="page__img" src="./build/assets/img/projects/idsmedia.png" alt="IDS">
+														<figcaption class="page__figcaption" data-code="ids">
+															<h3 class="page__title-h3">IDS</h3>
+															<p class="page__text"></p>
+															<button class="page__btn">посмотреть</button>
+														</figcaption>
+													</figure>
+												</div>
+												<div class="project">
+													<figure class="page__figure works__effect"><img class="page__img" src="./build/assets/img/projects/fitnes.jpg" alt="fitnes">
+														<figcaption class="page__figcaption" data-code="fitnes">
+															<h3 class="page__title-h3">fitnes</h3>
+															<p class="page__text"></p>
+															<button class="page__btn">посмотреть</button>
+														</figcaption>
+													</figure>
+												</div>
+												<div class="project">
+													<figure class="page__figure works__effect"><img class="page__img" src="./build/assets/img/projects/medical.jpg" alt="medical">
+														<figcaption class="page__figcaption" data-code="medical">
+															<h3 class="page__title-h3">medical</h3>
+															<p class="page__text"></p>
+															<button class="page__btn">посмотреть</button>
+														</figcaption>
+													</figure>
+												</div>
+												<div class="project">
+													<figure class="page__figure works__effect"><img class="page__img" src="./build/assets/img/projects/decoreto.png" alt="decoreto">
+														<figcaption class="page__figcaption" data-code="decoreto">
+															<h3 class="page__title-h3">decoreto</h3>
+															<p class="page__text"></p>
+															<button class="page__btn">посмотреть</button>
+														</figcaption>
+													</figure>
+												</div>
+												<div class="project">
+													<figure class="page__figure works__effect"><img class="page__img" src="./build/assets/img/projects/hospital.jpg" alt="hospital">
+														<figcaption class="page__figcaption" data-code="hospital">
+															<h3 class="page__title-h3">hospital</h3>
+															<p class="page__text"></p>
+															<button class="page__btn">посмотреть</button>
+														</figcaption>
+													</figure>
+												</div>
+												<div class="project">
+													<figure class="page__figure works__effect"><img class="page__img" src="./build/assets/img/projects/multi.jpg" alt="multi">
+														<figcaption class="page__figcaption" data-code="multi">
+															<h3 class="page__title-h3">multi</h3>
+															<p class="page__text"></p>
+															<button class="page__btn">посмотреть</button>
+														</figcaption>
+													</figure>
+												</div>
+												<div class="project">
+													<figure class="page__figure works__effect"><img class="page__img" src="./build/assets/img/projects/event.jpg" alt="event">
+														<figcaption class="page__figcaption" data-code="event">
+															<h3 class="page__title-h3">event</h3>
+															<p class="page__text"></p>
+															<button class="page__btn">посмотреть</button>
+														</figcaption>
+													</figure>
+												</div>
+					</div>
+				</div>
+			</section>
+			<div class="page__toogle"><a class="page__btn" href="./projects/projects.html">Смотреть больше</a></div>
+			<section class="about">
+								<div class="page__title page_transform-uppercase page_text-center">
+									<h2 class="page__subtitle_big">Обо мне</h2>
+									<h2 class="page__title_main page__title-h2 page_bold">Обо мне</h2>
+								</div>
+				<div class="wrapper">
+					<div class="about-content">
+						<div class="page__img"><img src="./build/assets/img/img-about.png" alt=""></div>
+						<div class="page__content">
+							<p class="page__text">Разработчик сайтов + интренет-маркетолог(навык рекламы) + смм специалист прототипирование юзабилити сео специалист </p>
+							<p class="page__text page_padding-bottom-40">Имею выше перечисленные навыки Делаю сайты на любыэ этапах разработки  могу помочь проконсультировать с макетами и удоббством пользовотеля и реализацией  на этиапе протатипирования </p>
+							<p class="page__text">Чистый и валидный код который сможет прочитать любой программист </p>
+							<p class="page__text">Поддержка по сайту после сдачи проекта </p>
+							<p class="page__text page_padding-bottom-40">Будем настраиваться на длительное сотруднечества а не "верстальщик на одну ночь" </p>
+							<p class="page__text page_padding-bottom-40">Если вы из Москвы, то при сотрудничестве буду рад встретиться лично для обсуждения тонкостей работы!</p>
+							<button class="page__btn js__create-modal">Связаться со мной</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="modal modal-callback page_hidden">
+				<div class="wrapper">
+					<div class="modal__action">
+						<button class="page__btn page__btn_circle page__btn_close"></button>
+					</div>
+					<div class="modal__content">
+						<h2 class="page__title-h2">Связаться со мной</h2>
+						<p class="page__text">Свяжитесь со мной любым из способов ниже</p>
+						<div class="social"><a class="social__item-link social__item-icon" href="89680548333" target="_blank"><img class="page__img" src="./build/assets/img/social/icon-social-phone.svg"></a><a class="social__item-link social__item-icon" href="89680548333" target="_blank"><img class="page__img" src="./build/assets/img/social/icon-social-email.svg"></a><a class="social__item-link social__item-icon" href="https://www.facebook.com/profile.php?id=100013452931335&amp;ref=bookmarks" target="_blank"><img class="page__img" src="./build/assets/img/social/icon-social-fb.svg"></a><a class="social__item-link social__item-icon" href="https://vk.com/ilya_manokhin" target="_blank"><img class="page__img" src="./build/assets/img/social/icon-social-vk.svg"></a><a class="social__item-link social__item-icon" href="https://join.skype.com/invite/fcSLPdcmNNcH" target="_blank"><img class="page__img" src="./build/assets/img/social/icon-social-skype.svg"></a><a class="social__item-link social__item-icon" href="telegram.me/@ilya_manokhin" target="_blank"><img class="page__img" src="./build/assets/img/social/icon-social-telegram.svg"></a>
+						</div>
+						<p class="page__text">Любую сделку Вы можете оформить безопасным способом через <a class="page__link" href="https://www.fl.ru/users/manokhinil/">FL </a><a class="page__link" href="https://freelance.habr.com/info/safe_deal">Freelansim </a><a class="page__link" href="https://freelance.habr.com/info/safe_deal">Сбербанк</a></p>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="footer">
+			<div class="wrapper">
+				<div class="footer-content">
+					<div class="footer-content__item">
+						<h2 class="page__title-h2 page_bold page_transform-uppercase page_padding-bottom-25">Контакты</h2>
+						<div class="page__copyright">Москва, 2020</div>
+					</div>
+					<div class="footer-content__item">
+						<div class="page__subtitle page_padding-bottom-25">телефон</div><a class="page__subtitle page_bold" href="tel:89680548333">89680548333</a>
+					</div>
+					<div class="footer-content__item">
+						<div class="page__subtitle page_padding-bottom-25">почта</div><a class="page__subtitle page_bold" href="tel:89680548333">manokhin.il.@yandex.ru</a>
+					</div>
+					<div class="footer-content__item">
+						<div class="page__subtitle page_padding-bottom-25">социальные сети</div>
+						<div class="social"><a class="social__item-link social__item-icon" href="https://www.facebook.com/profile.php?id=100013452931335&amp;ref=bookmarks" target="_blank"><img class="page__img" src="./build/assets/img/social/icon-social-fb.svg"></a><a class="social__item-link social__item-icon" href="https://vk.com/ilya_manokhin" target="_blank"><img class="page__img" src="./build/assets/img/social/icon-social-vk.svg"></a><a class="social__item-link social__item-icon" href="https://join.skype.com/invite/fcSLPdcmNNcH" target="_blank"><img class="page__img" src="./build/assets/img/social/icon-social-skype.svg"></a><a class="social__item-link social__item-icon" href="telegram.me/@ilya_manokhin" target="_blank"><img class="page__img" src="./build/assets/img/social/icon-social-telegram.svg"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- The core Firebase JS SDK is always required and must be listed first-->
+		<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-storage.js"></script>
+		<!--
+		TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries
+		-->
+		<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+		<script src="./build/js/debug-grid-create.js"></script>
+		<script src="./build/js/main.js"></script>
+		<script src="./build/js/store-scroll.js"></script>
+		<script src="./build/js/canvans-rings.js"></script>
+	</body>
+</html>

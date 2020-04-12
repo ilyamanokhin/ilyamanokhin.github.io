@@ -1,0 +1,21 @@
+
+footer.footer
+    .wrapper
+        .footer-content
+            .footer-content__item
+                h2.page__title-h2.page_bold.page_transform-uppercase.page_padding-bottom-25 Контакты
+                .page__copyright Москва, 2020
+            .footer-content__item
+                .page__subtitle.page_padding-bottom-25 телефон
+                a(href="tel:89680548333").page__subtitle.page_bold 89680548333
+            .footer-content__item
+                .page__subtitle.page_padding-bottom-25 почта
+                a(href="tel:89680548333").page__subtitle.page_bold manokhin.il.@yandex.ru
+            .footer-content__item
+                .page__subtitle.page_padding-bottom-25 социальные сети
+                .social
+                    include mixins/mixin-social
+                    +social("../assets/img/social/icon-social-fb.svg","https://www.facebook.com/profile.php?id=100013452931335&ref=bookmarks")
+                    +social("../assets/img/social/icon-social-vk.svg", "https://vk.com/ilya_manokhin")
+                    +social("../assets/img/social/icon-social-skype.svg", "https://join.skype.com/invite/fcSLPdcmNNcH")
+                    +social("../assets/img/social/icon-social-telegram.svg", "telegram.me/@ilya_manokhin")

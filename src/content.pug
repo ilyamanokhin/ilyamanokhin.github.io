@@ -1,0 +1,26 @@
+section.banner
+    canvas.canvas
+    .banner__logo
+        .page__subtitle Ilya
+            span.page_bold Manokhin
+        .page__img
+            img(src="../assets/img/img-frontend-developer.png")
+    .page__icon_mouse-down
+include blocks/skills
+include blocks/services
+include blocks/advantages
+section.projects
+    include blocks/mixins/mixin-page-title
+    +page-title("Проекты")
+    .wrapper
+        .projects-content
+            include blocks/mixins/mixin-project
+            each item, index in projects
+                if index < 8
+                    +project(item.miniature,item.title,item.short_description,item.code)
+          
+
+.page__toogle
+    a.page__btn(href="./projects/projects.html") Смотреть больше
+include blocks/about
+include blocks/modal/modal

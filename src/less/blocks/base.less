@@ -1,0 +1,65 @@
+@import '../fonts/fonts.less';
+.reset();
+
+.wrapper{
+    .wrapper();
+}
+
+.scrollbar(@color_scrollbar-track, @color_scrollbar-thumb);
+
+@font-face {
+  .font(@font; @fontBold);
+}
+@font-face {
+  .font(@font; @fontRegular);
+}
+@font-face {
+  .font(@font; @fontThin);
+}
+html:not([data-scroll='0']) {
+ 
+  
+  header {
+    background: rgba(2, 2, 2, 0.4);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+}
+body {
+  font-family: @fontRegular;
+  background: @color_bg;
+
+  color: @color_white;
+ 
+}
+a{
+  color: @color_white;
+  text-decoration: none;
+}
+a, button{
+  cursor: pointer;
+  &:focus{
+      outline: none;
+  }
+  &:hover{
+    color: @color_theme-1;
+  }
+  transition: all .15s ease-in-out;
+}
+input{
+  cursor: text;
+  &:focus{
+      outline: none;
+  }
+}
+.theme-color{
+  &-1{
+    color: @color_theme-1;
+  }
+  &-2{
+    color: @color_theme-2;
+  }
+  &-3{
+    color: @color_theme-3;
+  }
+}

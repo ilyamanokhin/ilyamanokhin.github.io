@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+		<base href="../">
+		<title>Portfolio Project page</title>
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+	</head>
+	<body>
+		<div class="page">
+			<button class="debugGrid-btn debugGrid-btn__create" onclick="debugGridCreate()"></button>
+			<button class="debugGrid-btn debugGrid-btn__remove debugGrid-btn__hidden" onclick="debugGridRemove()"></button>
+			<div class="debugGrid debugGrid__z-index-negative"></div>
+			<section class="theme">
+				<div class="theme-color theme-color-3"></div>
+				<div class="theme-color theme-color-2"></div>
+				<div class="theme-color theme-color-1"></div>
+			</section>
+			<section class="bg">
+				<div class="wrapper">
+					<div class="bg-grid">
+						<div class="bg-grid__line"></div>
+						<div class="bg-grid__line"></div>
+						<div class="bg-grid__line"></div>
+						<div class="bg-grid__line"></div>
+					</div>
+				</div>
+			</section>
+			<header class="header">
+				<div class="wrapper">
+					<div class="header-content">
+						<nav class="header__navbar"><a class="header__navbar-link page__subtitle" href="./">Ilya<span class="page_bold">Manokhin</span></a>
+							<div class="header__navbar-link"><a href="./">Навыки </a></div>
+							<div class="header__navbar-link"><a href="./projects/projects.html">Проекты</a></div>
+							<div class="header__navbar-link"><a href="./project-page/project-page.html">Обо мне </a></div>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<section class="project-page">
+				<div class="wrapper">
+					<div class="project-page-content tab-contents" id="tabs">
+												<div class="page__title page_transform-uppercase">
+													<h2 class="page__subtitle_big">Интернет-магазин</h2>
+													<h2 class="page__title_main page__title-h2 page_bold">Get-advanced</h2>
+												</div>
+						<div class="project-page-content__description">
+							<div class="tab-content is-active">
+								<div class="page__text">Мы – группа компаний Advanced, а лучше сказать – группа людей. Мы развиваем консалтинговый бизнес с тремя дополняющими друг друга подразделениями – Analytix, Adwise и Augmento – которые преследуют одну важную цель – помогать бизнесу становиться проще, быстрее и, главное, совершеннее. Это в нашей ДНК, все именно с этого и началось – с IT-решений. Мы придирчиво выбираем признанные и восходящие платформы со всего мира, которые призваны упростить работу, ускорить бизнес процессы и в итоге усовершенствовать процессы планирования и управления данными. Чтобы бизнес был сконцентрирован на объяснении своих успешных решений, а не причин неудач.</div>
+							</div>
+						</div>
+						<div class="project-page-content__info">
+							<aside class="project-info">
+								<div class="project-info__element">
+									<h3 class="page__title-h3">Ссылка:</h3><a class="page__link page__link_site" href="#">get-advanced.com</a>
+								</div>
+								<div class="project-info__element project-info__element_list">
+									<h3 class="page__title-h3">Список страниц:</h3>
+									<nav class="tab-nav">
+										<div class="tab-link is-active" href="">О проекте</div>
+									</nav>
+								</div>
+								<div class="project-info__element project-info__task">
+									<h3 class="page__title-h3">Задача:</h3>
+									<p class="page__text">Разработка сайта для компании Get-advanced.</p>
+								</div>
+								<div class="project-info__element project-info__technology">
+									<h3 class="page__title-h3">Используемые технологии:</h3>
+									<ul class="page__list">
+										<li class="page__list_text">Frontend:
+											<ul class="page__list">
+												<li class="page__list_icon"><img class="page__img" src="../assets/img/logos/img-html-logo.png"></li>
+												<li class="page__list_icon"><img class="page__img" src="../assets/img/logos/img-css-logo.png"></li>
+												<li class="page__list_icon"><img class="page__img" src="../assets/img/logos/img-javascript-logo.png"></li>
+												<li class="page__list_icon"><img class="page__img" src="../assets/img/logos/img-jq-logo.png"></li>
+											</ul>
+										</li>
+										<li class="page__list_text">Backend:
+											<ul class="page__list">
+												<li class="page__list_icon"><img class="apge__img" src="../assets/img/logos/img-php-logo.png"></li>
+											</ul>
+										</li>
+										<li class="page__list_text">CMS:
+											<ul class="page__list">
+												<li class="page__list_icon"><img class="apge__img" src="../assets/img/logos/img-wordpress-logo.png"></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="project-info__element project-info__days">
+									<h3 class="page__title-h3">Сроки:</h3>
+									<p class="page__text"> <span class="page__number_days">40 </span> дней.</p>
+								</div>
+								<div class="project-info__element project-info__date">
+									<h3 class="page__title-h3">Дата создания:</h3>
+									<p class="page__text">9 февраля 2019</p>
+								</div>
+							</aside>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="footer">
+			<div class="wrapper">
+				<div class="footer-content">
+					<div class="footer-content__item">
+						<h2 class="page__title-h2 page_bold page_transform-uppercase page_padding-bottom-25">Контакты</h2>
+						<div class="page__copyright">Москва, 2020</div>
+					</div>
+					<div class="footer-content__item">
+						<div class="page__subtitle page_padding-bottom-25">телефон</div><a class="page__subtitle page_bold" href="tel:89680548333">89680548333</a>
+					</div>
+					<div class="footer-content__item">
+						<div class="page__subtitle page_padding-bottom-25">почта</div><a class="page__subtitle page_bold" href="tel:89680548333">manokhin.il.@yandex.ru</a>
+					</div>
+					<div class="footer-content__item">
+						<div class="page__subtitle page_padding-bottom-25">социальные сети</div>
+						<div class="social"><a class="social__item-link social__item-icon" href="https://www.facebook.com/profile.php?id=100013452931335&amp;ref=bookmarks" target="_blank"><img class="page__img" src="../assets/img/social/icon-social-fb.svg"></a><a class="social__item-link social__item-icon" href="https://vk.com/ilya_manokhin" target="_blank"><img class="page__img" src="../assets/img/social/icon-social-vk.svg"></a><a class="social__item-link social__item-icon" href="https://join.skype.com/invite/fcSLPdcmNNcH" target="_blank"><img class="page__img" src="../assets/img/social/icon-social-skype.svg"></a><a class="social__item-link social__item-icon" href="telegram.me/@ilya_manokhin" target="_blank"><img class="page__img" src="../assets/img/social/icon-social-telegram.svg"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- The core Firebase JS SDK is always required and must be listed first-->
+		<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-storage.js"></script>
+		<!--
+		TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries
+		-->
+		<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+		<script src="js/debug-grid-create.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/store-scroll.js"></script>
+		<script src="assets/data/data.json"></script>
+		<script src="../js/render-content.js"></script>
+		<script src="../js/tabs.js"></script>
+	</body>
+</html>

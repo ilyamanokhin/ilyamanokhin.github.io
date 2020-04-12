@@ -1,0 +1,22 @@
+section.modal.modal-callback.page_hidden
+    .wrapper
+        .modal__action
+            button.page__btn.page__btn_circle.page__btn_close
+        .modal__content
+            h2.page__title-h2 Связаться со мной
+            p.page__text Свяжитесь со мной любым из способов ниже
+            .social
+                include ../mixins/mixin-social
+                +social("../../assets/img/social/icon-social-phone.svg", "89680548333")
+                +social("../../assets/img/social/icon-social-email.svg", "89680548333")
+                +social("../../assets/img/social/icon-social-fb.svg","https://www.facebook.com/profile.php?id=100013452931335&ref=bookmarks")
+                +social("../../assets/img/social/icon-social-vk.svg", "https://vk.com/ilya_manokhin")
+                +social("../../assets/img/social/icon-social-skype.svg", "https://join.skype.com/invite/fcSLPdcmNNcH")
+                +social("../../assets/img/social/icon-social-telegram.svg", "telegram.me/@ilya_manokhin")
+            p.page__text
+                | Любую сделку Вы можете оформить безопасным способом через 
+                a.page__link(href="https://www.fl.ru/users/manokhinil/") FL 
+                a.page__link(href="https://freelance.habr.com/info/safe_deal") Freelansim 
+                a.page__link(href="https://freelance.habr.com/info/safe_deal") Сбербанк
+            
+                

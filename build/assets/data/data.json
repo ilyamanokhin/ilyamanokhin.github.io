@@ -1,0 +1,311 @@
+{
+    "projects": [
+        {
+            "name": "Yoga",
+            "code": "yoga",
+            "format": "Landing-Page",
+            "miniature":"../assets/img/projects/yoga.jpg",
+            "title": "Yoga",
+            "description": "Мы – группа компаний Advanced, а лучше сказать – группа людей. Мы развиваем консалтинговый бизнес с тремя дополняющими друг друга подразделениями – Analytix, Adwise и Augmento – которые преследуют одну важную цель – помогать бизнесу становиться проще, быстрее и, главное, совершеннее. Это в нашей ДНК, все именно с этого и началось – с IT-решений. Мы придирчиво выбираем признанные и восходящие платформы со всего мира, которые призваны упростить работу, ускорить бизнес процессы и в итоге усовершенствовать процессы планирования и управления данными. Чтобы бизнес был сконцентрирован на объяснении своих успешных решений, а не причин неудач.",
+            "short_description": "yoga desc",
+            "site_link": "get-advanced.com",
+            "pages":[
+                {
+                    "page":"Главная",
+                    "images":"../assets/img/projects/estate/real-estate.jpg"
+                },
+                {
+                    "page":"Услуги",
+                    "images":"../assets/img/projects/estate/real-estate.jpg"
+                }
+            ],
+            "task":"Разработка сайта для компании Get-advanced.",
+            "technology": [
+                {
+                    "name": "Frontend:",
+                    "content" : [
+                        {
+                            "name": "HTML 5",
+                            "images": "../assets/img/logos/img-html-logo.png"
+                        },
+                        {
+                            "name": "CSS 3",
+                            "images": "../assets/img/logos/img-css-logo.png"
+                        },
+                        {
+                            "name": "JavaScript",
+                            "images": "../assets/img/logos/img-javascript-logo.png"
+                        }
+                    ]
+                },
+                {
+                    "name": "Backend:",
+                    "content" : [
+                        {
+                            "name": "Php",
+                            "images": "../assets/img/logos/img-php-logo.png"
+                        }
+                    ]
+                },
+                {
+                    "name": "CMS:",
+                    "content": [
+                        {
+                            "name": "Wordpress",
+                            "images": "../assets/img/logos/img-wordpress-logo.png"
+                        }
+                    ]
+                }
+            ],
+            "days":40,
+            "date":"9 февраля 2019"
+        },
+        {
+            "name": "IDS",
+            "code": "ids",
+            "miniature": "../assets/img/projects/idsmedia.png",
+            "title": "IDS",
+            "description": "IDS desc"
+        },
+        {
+            "name": "fitnes",
+            "code": "fitnes",
+            "miniature": "../assets/img/projects/fitnes.jpg",
+            "title": "fitnes",
+            "description": "fitnes desc"
+        },
+        {
+            "name": "medical",
+            "code": "medical",
+            "miniature": "../assets/img/projects/medical.jpg",
+            "title": "medical",
+            "description": "medical desc"
+        },
+        {
+            "name": "decoreto",
+            "code": "decoreto",
+            "miniature": "../assets/img/projects/decoreto.png",
+            "title": "decoreto",
+            "description": "decoreto desc"
+        },
+        {
+            "name": "hospital",
+            "code": "hospital",
+            "miniature": "../assets/img/projects/hospital.jpg",
+            "title": "hospital",
+            "description": "hospital desc"
+        },
+        {
+            "name": "multi",
+            "code": "multi",
+            "miniature": "../assets/img/projects/multi.jpg",
+            "title": "multi",
+            "description": "multi desc"
+        },
+        {
+            "name": "event",
+            "code": "event",
+            "miniature": "../assets/img/projects/event.jpg",
+            "title": "event",
+            "description": "event desc"
+        },
+        {
+            "name": "ebook",
+            "code": "ebook",
+            "miniature": "../assets/img/projects/ebook.jpg",
+            "title": "ebook",
+            "description": "ebook desc"
+        },
+        {
+            "name": "edication",
+            "code": "edication",
+            "miniature": "../assets/img/projects/edication.jpg",
+            "title": "edication",
+            "description": "edication desc"
+        },
+        {
+            "name": "theopticalshop",
+            "code": "theopticalshop",
+            "miniature": "../assets/img/projects/theopticalshop.png",
+            "title": "theopticalshop",
+            "description": "theopticalshop desc"
+        },
+        {
+            "name": "estate",
+            "code": "estate",
+            "miniature": "../assets/img/projects/estate.jpg",
+            "title": "estate",
+            "description": "estate desc"
+        },
+        {
+            "name": "VR Jazz",
+            "code": "vrjazz",
+            "miniature": "../assets/img/projects/img-vr-jazz-bg.png",
+            "title": "VR Jazz",
+            "description": "VR Jazz desc"
+        },
+        {
+            "name": "finansvest",
+            "code": "finansvest",
+            "miniature": "../assets/img/projects/finansvest.png",
+            "title": "finansvest",
+            "description": "finansvest desc"
+        },
+        {
+            "name": "evakuator",
+            "code": "evakuator",
+            "miniature": "../assets/img/projects/evakuator.png",
+            "title": "evakuator",
+            "description": "evakuator desc"
+        },
+        {
+            "name": "euchet",
+            "code": "euchet",
+            "miniature": "../assets/img/projects/euchet.png",
+            "title": "euchet",
+            "description": "euchet desc"
+        },
+        {
+            "name": "akvahit",
+            "code": "akvahit",
+            "miniature": "../assets/img/projects/akvahit.png",
+            "title": "akvahit",
+            "description": "akvahit desc"
+        },
+        {
+            "name": "pulsar",
+            "code": "pulsar",
+            "miniature": "../assets/img/projects/pulsar.png",
+            "title": "pulsar",
+            "description": "pulsar desc"
+        },
+        {
+            "name": "danfoss",
+            "code": "danfoss",
+            "miniature": "../assets/img/projects/danfoss.png",
+            "title": "danfoss",
+            "description": "danfoss desc"
+        },
+        {
+            "name": "furycoins",
+            "code": "furycoins",
+            "miniature": "../assets/img/projects/furycoins.png",
+            "title": "furycoins",
+            "description": "furycoins desc"
+        },
+        {
+            "name": "obed-ru",
+            "code": "obed",
+            "miniature": "../assets/img/projects/obed-ru.png",
+            "title": "obed-ru",
+            "description": "obed-ru desc"
+        },
+        {
+            "name": "test",
+            "code": "test",
+            "miniature": "../assets/img/projects/img-vr-jazz-bg.png",
+            "title": "Вёрстка сайта гроссмейстера",
+            "description": "Сетка Bootstrap4, flex, lightbox, owl, адаптив, изотоп, счётчик цифр."
+        },
+        {
+            "name": "bookkeeping",
+            "code": "bookkeeping",
+            "miniature": "../assets/img/projects/bookkeeping.png",
+            "title": "bookkeeping",
+            "description": "bookkeeping desc"
+        },
+        {
+            "name": "tetris",
+            "code": "tetris",
+            "miniature": "../assets/img/projects/tetris-demo.jpg",
+            "title": "tetris",
+            "description": "tetris desc"
+        }
+    ],
+    "technology": [
+        {
+            "name": "HTML 5",
+            "images": "../assets/img/logos/img-html-logo.png"
+        },
+        {
+            "name": "CSS 3",
+            "images": "../assets/img/logos/img-css-logo.png"
+        },
+        {
+            "name": "JavaScript",
+            "images": "../assets/img/logos/img-javascript-logo.png"
+        },
+        {
+            "name": "TypeScript",
+            "images": "../assets/img/logos/img-typescript-logo.png"
+        },
+        {
+            "name": "Git",
+            "images": "../assets/img/logos/img-git-logo.png"
+        },
+        {
+            "name": "БЭМ",
+            "images": "../assets/img/logos/img-bem-logo.png"
+        },
+        {
+            "name": "JQuery",
+            "images": "../assets/img/logos/img-jq-logo.png"
+        },
+        {
+            "name": "Angular 2+",
+            "images": "../assets/img/logos/img-angular-logo.png"
+        },
+        {
+            "name": "Less",
+            "images": "../assets/img/logos/img-less-logo.png"
+        },
+        {
+            "name": "Sass",
+            "images": "../assets/img/logos/img-sass-logo.png"
+        },
+        {
+            "name": "Gulp",
+            "images": "../assets/img/logos/img-gulp-logo.png"
+        },
+        {
+            "name": "SmartGrid",
+            "images": "../assets/img/logos/img-smartgrid-logo.png"
+        },
+        {
+            "name": "Pug",
+            "images": "../assets/img/logos/img-pug-logo.png"
+        },
+        {
+            "name": "Bootstrap",
+            "images": "../assets/img/logos/img-bootstrap-logo.png"
+        },
+        {
+            "name": "WebPack",
+            "images": "../assets/img/logos/img-webpack-logo.png"
+        },
+        {
+            "name": "Node.js",
+            "images": "../assets/img/logos/img-nodejs-logo.png"
+        },
+        {
+            "name": "Nest.js",
+            "images": "../assets/img/logos/img-nestjs-logo.png"
+        },
+        {
+            "name": "Wordpress",
+            "images": "../assets/img/logos/img-wordpress-logo.png"
+        },
+        {
+            "name": "1C Bitrix",
+            "images": "../assets/img/logos/img-1c-bitrix-logo.png"
+        },
+        {
+            "name": "modx",
+            "images": "../assets/img/logos/img-modx-logo.png"
+        },
+        {
+            "name": "Php",
+            "images": "../assets/img/logos/img-php-logo.png"
+        }
+    ]
+}
