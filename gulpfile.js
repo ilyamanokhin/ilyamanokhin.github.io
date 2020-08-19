@@ -87,6 +87,7 @@ function pugc() {
 	return gulp.src(['./src/**/*.pug','!./src/**/content.pug', '!./src/modules/*.pug', '!./src/blocks/*.pug', '!./src/blocks/**/*.pug', '!./src/templates/*.pug'])
 		.pipe(pug({ pretty: '\t' }))
 		.pipe(gulp.dest('./build'))
+		.pipe(gulp.dest('./'))
 		.pipe(gulpif(isSync, browserSync.stream()));
 }
 
@@ -108,7 +109,7 @@ function styles() {
 				}
 			  }
 		})))
-		.pipe(gulpif(isDev, sourcemaps.write()))
+		// .pipe(gulpif(isDev, sourcemaps.write()))
 		.pipe(gulp.dest('./build/css'))
 		.pipe(gulpif(isSync, browserSync.stream()));
 }
@@ -121,7 +122,7 @@ function scripts() {
 		// .pipe(uglify({
 		// 	toplevel: false//жесткое сжатие js
 		// }))
-		.pipe(gulpif(isDev, sourcemaps.write()))
+		// .pipe(gulpif(isDev, sourcemaps.write()))
 		.pipe(gulp.dest('./build/js'))
 		.pipe(gulpif(isSync, browserSync.stream()));
 }
