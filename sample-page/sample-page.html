@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<base href="../">
+		<title>Sample page</title>
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+	</head>
+	<body>
+		<div class="page">
+			<button class="debugGrid-btn debugGrid-btn__create" onclick="debugGridCreate()"></button>
+			<button class="debugGrid-btn debugGrid-btn__remove debugGrid-btn__hidden" onclick="debugGridRemove()"></button>
+			<div class="debugGrid debugGrid__z-index-negative"></div>
+			<header>
+				<div class="wrapper">
+					<div>Header</div>
+				</div>
+			</header>
+			<section class="sample-page">
+				<div class="wrapper">
+					<div class="sample-page-content">
+						<div>Sample Page</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script src="js/debug-grid-create.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

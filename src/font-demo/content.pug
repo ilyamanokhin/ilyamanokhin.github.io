@@ -1,0 +1,17 @@
+mixin font(title, classFont, size, text)
+    h2(class=classFont)=title
+    p(class=classFont)=size
+        span=text
+mixin Fonts()
+    each val in [96, 72, 60, 48, 36]
+        +font('PT Sans Regular','ptsans Regular '+val, val, "The five boxing wizards")
+        +font('PT Sans Italic','ptsans', val, "The five boxing wizards")
+        //- +font('PT Sans Bold','ptsans', val, "The five boxing wizards")
+        //- +font('PT Sans Bold Italic','ptsans', val, "The five boxing wizards")
+        //- +font('PT Sans Caption Regular','ptsans', val, "The five boxing wizards")
+        //- +font('PT Sans Caption Bold','ptsans', val, "The five boxing wizards")
+        //- +font('PT Sans Narrow Regular','ptsans', val, "The five boxing wizards")
+        //- +font('PT Sans Narrow Bold','ptsans', val, "The five boxing wizards")
+section.font
+    .wrapper
+        +Fonts
