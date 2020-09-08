@@ -87,6 +87,12 @@ function pugc() {
 	return gulp.src(['./src/**/*.pug','!./src/**/content.pug', '!./src/modules/*.pug', '!./src/blocks/*.pug', '!./src/blocks/**/*.pug', '!./src/templates/*.pug'])
 		.pipe(pug({ pretty: '\t' }))
 		.pipe(gulp.dest('./build'))
+		.pipe(gulpif(isSync, browserSync.stream()));
+}
+
+function pugProd(){
+	return gulp.src(['./src/*.pug',])
+		.pipe(pug({ pretty: '\t' }))
 		.pipe(gulp.dest('./'))
 		.pipe(gulpif(isSync, browserSync.stream()));
 }
@@ -158,12 +164,16 @@ function grid(done) {
 }
 
 let build = gulp.series(clear,
-	gulp.parallel(sprite, images, fonts, html, pugc, styles, scripts)
+	gulp.parallel(sprite, images, fonts, html, pugc, pugProd, styles, scripts)
 );
 
 gulp.task('build', gulp.series(grid, build));
 gulp.task('watch', gulp.series(build, watch));
 gulp.task('grid', grid);
+
+gulp.task('pugProd', pugProd);
+//gulp pugProd собирает index.html в корне (чтобы не переносить из build)
+
 // gulp sprite запускать отдельно(после) т.к. тормозит общую сборку
 gulp.task('sprite', sprite);
 // минификация в конце
